@@ -2,11 +2,11 @@ name: Daily Scrape
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # every day at 12:00 UTC
-  workflow_dispatch:         # manual trigger button
+    - cron: "0 12 * * *"   # 12:00 UTC daily (~6 am CT). Adjust as you like.
+  workflow_dispatch:         # allow manual runs
 
 permissions:
-  contents: write
+  contents: write            # needed to commit JSON updates
 
 jobs:
   scrape:
@@ -26,6 +26,10 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Run scraper
+        env:
+          # You can override these with repo secrets or envs if you like
+          APPLE_TEAM_URLS: "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT,https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE"
+          ZILLOW_BOARD_URL: "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External"
         run: python scrape.py
 
       - name: Commit JSON results
