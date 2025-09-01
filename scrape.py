@@ -162,86 +162,134 @@ def scrape_apple(playwright_context, team_urls):
                 pass
     save_json("apple.json", out)
 
-# ----------------- Zillow (Workday via Playwright) -----------------
 def scrape_zillow_workday(playwright_context, board_url: str):
     """
     Robust Zillow (Workday) scraper:
-      1) Collect anchors from rendered list (with pagination)
-      2) Scroll to force render and try again
-      3) Fallback: call cxs JSON endpoint from page context (same-origin)
-      4) Visit detail pages for title/location
+      1) Accept cookie banner (OneTrust) if present
+      2) Wait for client render (networkidle) and try multiple link selectors
+      3) Paginate via "Next" or "Show more"
+      4) Force-render by scrolling
+      5) Same-origin CxS JSON fallback; save zillow_cxs.json for debug
+      6) Visit details for real title/location
+      7) If nothing found, save zillow_debug.html to help inspect structure
     """
+    import json, re
+    from pathlib import Path
+
     page = playwright_context.new_page()
     out, seen = [], set()
 
-    def clean(s):
+    def clean(s): 
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    try:
-        page.goto(board_url, wait_until="domcontentloaded", timeout=30000)
+    def collect_links():
+        # Try a few common Workday link selectors and generic /job/ anchors
+        sel_js = """
+          (sels) => {
+            const seen = new Set();
+            const acc = [];
+            for (const sel of sels) {
+              document.querySelectorAll(sel).forEach(a => {
+                const href = a.href || a.getAttribute('href') || '';
+                if (!href) return;
+                const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
+                if (!/(login|apply|search)/i.test(abs) && /\/job\//i.test(abs) && !seen.has(abs)) {
+                  seen.add(abs);
+                  acc.push(abs);
+                }
+              });
+            }
+            return acc;
+          }
+        """
+        selectors = [
+          "a[data-automation-id='jobTitle']",
+          "a[data-automation-id='jobPostingTitle']",
+          "a[href*='/job/']",
+          "a[href*='/jobs/']"
+        ]
+        hrefs = page.evaluate(sel_js, selectors)
+        return list(dict.fromkeys(hrefs))
 
-        # Wait for job anchor(s) if possible
+    try:
+        # 1) Open board & try to accept cookie banner
+        page.goto(board_url, wait_until="networkidle", timeout=45000)
+
+        # OneTrust accept button
         try:
-            page.wait_for_selector("a[data-automation-id='jobTitle']", timeout=12000)
+            if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
+                page.click("#onetrust-accept-btn-handler", timeout=3000)
         except Exception:
             pass
 
-        def collect_links():
-            hrefs = page.eval_on_selector_all(
-                "a[data-automation-id='jobTitle'], a[href*='/job/']",
-                "els => [...new Set(els.map(a => a.href))]"
-            )
-            # filter obvious non-detail
-            hrefs = [h for h in hrefs if not re.search(r'/(login|apply|search)', h, re.I)]
-            return hrefs
-
+        # 2) First attempt to collect links
         links = collect_links()
 
-        # Try pagination (up to ~8 pages)
+        # 3) Pagination attempts: "Next" / "Show more"
+        # Try up to ~8 page advances
+        def try_paginate_once():
+            # Next variants
+            for sel in [
+                "[data-automation-id='pagination-next']",
+                "button[aria-label='Next Page']",
+                "button[aria-label='Next']",
+                "button:has-text('Next')",
+                "a[aria-label='Next']"
+            ]:
+                loc = page.locator(sel).first
+                if loc.count() > 0 and loc.is_enabled():
+                    try:
+                        loc.click(timeout=2500)
+                        page.wait_for_load_state("networkidle", timeout=10000)
+                        return True
+                    except Exception:
+                        pass
+            # Show more variants
+            for sel in [
+                "[data-automation-id='showMore']",
+                "button:has-text('Show more')",
+                "button:has-text('More Jobs')"
+            ]:
+                loc = page.locator(sel).first
+                if loc.count() > 0 and loc.is_enabled():
+                    try:
+                        loc.click(timeout=2500)
+                        page.wait_for_timeout(1200)
+                        return True
+                    except Exception:
+                        pass
+            return False
+
         if links:
             for _ in range(8):
                 for u in links:
                     seen.add(u)
-                clicked = False
-                for sel in [
-                    "[data-automation-id='pagination-next']",
-                    "button[aria-label='Next Page']",
-                    "button[aria-label='Next']"
-                ]:
-                    loc = page.locator(sel).first
-                    if loc.count() > 0:
-                        try:
-                            loc.click(timeout=3000)
-                            page.wait_for_timeout(1200)
-                            clicked = True
-                            break
-                        except Exception:
-                            pass
-                if not clicked:
+                if not try_paginate_once():
                     break
                 links = collect_links()
 
-        # If none yet, force-render by scrolling
+        # 4) Force render by scrolling if still empty
         if not seen:
-            for _ in range(10):
+            for _ in range(12):
                 page.mouse.wheel(0, 2000)
                 page.wait_for_timeout(350)
             links = collect_links()
             for u in links:
                 seen.add(u)
 
-        # Fallback: in-page cxs API (same-origin)
+        # 5) Same-origin CxS fallback (and save JSON for debug)
         if not seen:
             try:
                 postings = page.evaluate(
                     """
                     async () => {
                       const parts = location.pathname.split('/').filter(Boolean);
+                      // workday locales look like /en-US/<boardSlug>
                       const board = parts[parts.length - 1];
                       const tenant = location.host.split('.')[0];
                       const api = `/wday/cxs/${tenant}/${board}/jobs`;
                       let out = [], offset = 0, limit = 50;
-                      for (let i = 0; i < 6; i++) {
+                      for (let i = 0; i < 8; i++) {
                         const resp = await fetch(api, {
                           method: 'POST',
                           headers: { 'Content-Type': 'application/json' },
@@ -258,6 +306,11 @@ def scrape_zillow_workday(playwright_context, board_url: str):
                     }
                     """
                 )
+                # Save debug json
+                try:
+                    Path("zillow_cxs.json").write_text(json.dumps(postings, indent=2))
+                except Exception:
+                    pass
                 for j in postings or []:
                     ep = j.get("externalPath") or ""
                     if ep:
@@ -265,9 +318,9 @@ def scrape_zillow_workday(playwright_context, board_url: str):
             except Exception:
                 pass
 
-        # Visit detail pages
-        links = list(seen)[:120]
-        for href in links:
+        # 6) Visit detail pages for real title/location
+        final_links = list(seen)[:150]
+        for href in final_links:
             try:
                 page.goto(href, wait_until="domcontentloaded", timeout=30000)
                 title = ""
@@ -298,11 +351,16 @@ def scrape_zillow_workday(playwright_context, board_url: str):
             except Exception:
                 pass
 
+        # 7) If still nothing, dump board HTML for inspection
+        if not out:
+            try:
+                Path("zillow_debug.html").write_text(page.content())
+            except Exception:
+                pass
+
     finally:
-        try:
-            page.close()
-        except Exception:
-            pass
+        try: page.close()
+        except Exception: pass
 
     save_json("zillow.json", out)
     return out
