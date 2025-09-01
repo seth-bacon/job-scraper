@@ -281,49 +281,46 @@ def on_response(resp: Response):
         if captured_posts:
             normalize_and_add_from_posts(captured_posts)
 
-        print(f"[Zillow sniff] after page 1: rows={len(rows)} total_label={total_label or '?'} search_clicked={clicked_search}")
+                print(f"[Zillow sniff] after page 1: rows={len(rows)} total_label={total_label or '?'} search_clicked={clicked_search}")
 
-        # If we saw the real CxS API URL, use it to fetch all remaining pages directly.
-if api_url_seen["url"]:
-    try:
-        remaining_added = 0
-        # Workday often serves 20 per page for UI calls; use step=20
-        more = page.evaluate(
-            """
-            async (apiUrl) => {
-              const out = [];
-              const step = 20;   // UI batch size
-              for (let offset = step; offset < 4000; offset += step) {
-                const resp = await fetch(apiUrl, {
-                  method: 'POST',
-                  headers: {'Content-Type':'application/json;charset=UTF-8'},
-                  body: JSON.stringify({appliedFacets:{}, limit: step, offset, searchText: ''}),
-                  credentials: 'same-origin'
-                });
-                if (!resp.ok) break;
-                const data = await resp.json();
-                const batch = (data && (data.jobPostings || data.items || [])) || [];
-                out.push(...batch);
-                if (batch.length < step) break;
-              }
-              return out;
-            }
-            """,
-            api_url_seen["url"]
-        ) or []
+        # ---------- Tier A2: if we saw the API URL, pull remaining offsets directly ----------
+        if api_url_seen["url"]:
+            try:
+                remaining_added = 0
+                more = page.evaluate(
+                    """
+                    async (apiUrl) => {
+                      const out = [];
+                      const step = 20;   // Zillow batch size
+                      for (let offset = step; offset < 4000; offset += step) {
+                        const resp = await fetch(apiUrl, {
+                          method: 'POST',
+                          headers: {'Content-Type':'application/json;charset=UTF-8'},
+                          body: JSON.stringify({appliedFacets:{}, limit: step, offset, searchText: ''}),
+                          credentials: 'same-origin'
+                        });
+                        if (!resp.ok) break;
+                        const data = await resp.json();
+                        const batch = (data && (data.jobPostings || data.items || [])) || [];
+                        out.push(...batch);
+                        if (batch.length < step) break;
+                      }
+                      return out;
+                    }
+                    """,
+                    api_url_seen["url"]
+                ) or []
 
-        # Dedup/append
-        rem = normalize_and_add_from_posts(more)
-        remaining_added += rem
-        print(f"[Zillow direct] fetched {len(more)} more via {api_url_seen['url']} (added {remaining_added})")
+                rem = normalize_and_add_from_posts(more)
+                remaining_added += rem
+                print(f"[Zillow direct] fetched {len(more)} more via {api_url_seen['url']} (added {remaining_added})")
 
-        # If we successfully pulled everything this way, skip UI pagination
-        if remaining_added > 0:
-            Path("zillow.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
-            print(f"[Zillow] final total: {len(rows)} jobs (bypassed UI pagination)")
-            return rows
-    except Exception as e:
-        print(f"[Zillow direct] error: {e}")
+                if remaining_added > 0:
+                    Path("zillow.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
+                    print(f"[Zillow] final total: {len(rows)} jobs (bypassed UI pagination)")
+                    return rows
+            except Exception as e:
+                print(f"[Zillow direct] error: {e}")
 
         # --- pagination helpers (operate on the same page; no iframe for Zillow) ---
         def click_next_or_number(pg, page_number):
