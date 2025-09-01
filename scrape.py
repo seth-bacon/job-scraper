@@ -164,10 +164,10 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(board_url: str, playwright_context):
     """
-    Zillow (Workday) robust fetcher:
-      Tier 1: requests -> CxS POST with full headers (limit/offset pagination)
+    Zillow (Workday) robust:
+      Tier 1: requests -> CxS POST (limit/offset)
       Tier 2: in-page CxS POST via Playwright (same-origin)
-      Tier 3: UI pagination (Next / page numbers) via Playwright
+      Tier 3: UI pagination (click Search, then Next / numeric)
     Writes zillow.json.
     """
     import json, re
@@ -177,25 +177,20 @@ def scrape_zillow_workday(board_url: str, playwright_context):
     def clean(s): 
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    # ---------- common helpers ----------
+    # ---------- helpers ----------
     def cxs_url_from_board(u: str):
         p = urlparse(u)
-        host = p.netloc                     # e.g. zillow.wd5.myworkdayjobs.com
+        host = p.netloc
         parts = [x for x in p.path.split("/") if x]
-        board = parts[-1]                   # e.g. Zillow_Group_External
-        tenant = host.split(".")[0]         # e.g. zillow
+        board = parts[-1] if parts else "Zillow_Group_External"
+        tenant = host.split(".")[0]
         return f"https://{host}/wday/cxs/{tenant}/{board}/jobs", host, board
 
     def build_detail(board_u: str, external_path: str):
         return board_u.rstrip("/") + "/job/" + external_path.lstrip("/")
 
     def cxs_payload(limit, offset):
-        return {
-            "appliedFacets": {},
-            "limit": limit,
-            "offset": offset,
-            "searchText": ""
-        }
+        return {"appliedFacets": {}, "limit": limit, "offset": offset, "searchText": ""}
 
     def normalize_from_postings(postings):
         out = []
@@ -229,7 +224,7 @@ def scrape_zillow_workday(board_url: str, playwright_context):
 
     limit, offset, all_posts = 50, 0, []
     try:
-        for _ in range(60):  # safety
+        for _ in range(60):
             r = requests.post(cxs, headers=headers, json=cxs_payload(limit, offset), timeout=40)
             if r.status_code != 200:
                 print(f"[Zillow CxS Tier1] HTTP {r.status_code} at offset {offset}")
@@ -251,19 +246,33 @@ def scrape_zillow_workday(board_url: str, playwright_context):
     except Exception as e:
         print(f"[Zillow CxS Tier1] error: {e}")
 
-    # ---------- Tier 2: in-page CxS via Playwright (same-origin) ----------
-    from playwright.sync_api import TimeoutError as PWTimeoutError
+    # ---------- Tier 2: in-page CxS via Playwright ----------
     page = playwright_context.new_page()
     try:
         page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
-        # Accept OneTrust if present
         try:
             if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
                 page.click("#onetrust-accept-btn-handler", timeout=2500)
         except Exception:
             pass
 
-        # Derive tenant/board on the page and POST via fetch()
+        # Sometimes the list doesn't populate until you click "Search"
+        try:
+            for sel in [
+                "[data-automation-id='searchButton']",
+                "button:has-text('Search')",
+            ]:
+                btn = page.locator(sel).first
+                if btn.count() > 0 and btn.is_enabled():
+                    btn.click(timeout=2000)
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=10000)
+                    except Exception:
+                        page.wait_for_timeout(1000)
+                    break
+        except Exception:
+            pass
+
         try:
             postings = page.evaluate(
                 """
@@ -302,12 +311,10 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             print(f"[Zillow CxS Tier2] final {len(rows)} jobs")
             return rows
     finally:
-        try:
-            page.close()
-        except Exception:
-            pass
+        try: page.close()
+        except Exception: pass
 
-    # ---------- Tier 3: UI pagination (Next / numeric) ----------
+    # ---------- Tier 3: UI pagination (click Search, then Next / numeric) ----------
     page = playwright_context.new_page()
     out, seen = [], set()
     try:
@@ -317,8 +324,24 @@ def scrape_zillow_workday(board_url: str, playwright_context):
                 page.click("#onetrust-accept-btn-handler", timeout=2500)
         except Exception:
             pass
+        # Click Search to load results if needed
+        try:
+            for sel in [
+                "[data-automation-id='searchButton']",
+                "button:has-text('Search')",
+            ]:
+                btn = page.locator(sel).first
+                if btn.count() > 0 and btn.is_enabled():
+                    btn.click(timeout=2000)
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=10000)
+                    except Exception:
+                        page.wait_for_timeout(800)
+                    break
+        except Exception:
+            pass
 
-        # Helper: collect links on current page
+        # Collect links on current page
         def collect_links_here():
             js = """
               (sels) => {
@@ -345,9 +368,8 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             except Exception:
                 return []
 
-        # Helper: click Next or page numbers
+        # Click Next / numeric page buttons
         def click_next_or_number(page_number):
-            # Next variants
             for sel in [
                 "[data-automation-id='pagination-next']",
                 "button[aria-label='Next Page']",
@@ -356,42 +378,38 @@ def scrape_zillow_workday(board_url: str, playwright_context):
                 "button:has-text('Next')",
             ]:
                 btn = page.locator(sel).first
-                try:
-                    if btn.count() > 0 and btn.is_enabled():
+                if btn.count() > 0 and btn.is_enabled():
+                    try:
                         btn.click(timeout=2500)
                         try:
                             page.wait_for_load_state("networkidle", timeout=8000)
                         except Exception:
                             page.wait_for_timeout(800)
                         return True
-                except Exception:
-                    pass
-            # Numeric page button
+                    except Exception:
+                        pass
+            # Numeric page button “2”, “3”, …
             num_sel = f"[data-automation-id='pagination-page'] button:has-text('{page_number}')"
             btn = page.locator(num_sel).first
-            try:
-                if btn.count() > 0 and btn.is_enabled():
+            if btn.count() > 0 and btn.is_enabled():
+                try:
                     btn.click(timeout=2500)
                     try:
                         page.wait_for_load_state("networkidle", timeout=8000)
                     except Exception:
                         page.wait_for_timeout(800)
                     return True
-            except Exception:
-                pass
+                except Exception:
+                    pass
             return False
 
         # Page 1
         for u in collect_links_here(): seen.add(u)
         print(f"[Zillow Tier3] page 1: {len(seen)} links")
 
-        # Try to parse the "of N jobs" label for progress
+        # Try to read "of N jobs" label for progress
         def parse_total():
-            cand = [
-                "[data-automation-id='pagination-label']",
-                "[data-automation-id='pagination-info']"
-            ]
-            for sel in cand:
+            for sel in ["[data-automation-id='pagination-label']", "[data-automation-id='pagination-info']"]:
                 el = page.locator(sel).first
                 if el.count() > 0:
                     txt = el.text_content(timeout=800) or ""
@@ -401,7 +419,7 @@ def scrape_zillow_workday(board_url: str, playwright_context):
         total_label = parse_total()
 
         # Walk pages
-        MAX_PAGES = 50
+        MAX_PAGES = 80
         for pidx in range(2, MAX_PAGES+1):
             if not click_next_or_number(pidx):
                 break
@@ -413,7 +431,7 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             if total_label and len(seen) >= total_label:
                 break
 
-        # Normalize minimal items (slug as title fallback)
+        # Normalize items (use slug as fallback title)
         for href in sorted(seen):
             m = re.search(r"/job/[^/]+/([^/?#]+)", href)
             title = ""
@@ -428,7 +446,7 @@ def scrape_zillow_workday(board_url: str, playwright_context):
                 "url": href
             })
 
-        save(out)
+        Path("zillow.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
         print(f"[Zillow Tier3] final total: {len(out)} jobs")
         return out
 
@@ -436,23 +454,29 @@ def scrape_zillow_workday(board_url: str, playwright_context):
         try: page.close()
         except Exception: pass
 
-
 # ----------------- main -----------------
 def main():
-    # ... (Airbnb + Liberty the same)
-
     print("Scraping Apple + Zillow…")
-with sync_playwright() as p:
-    browser = p.chromium.launch(args=["--no-sandbox"])
-    context = browser.new_context(user_agent=UA, locale="en-US")
-    # Apple via Playwright (unchanged)
-    scrape_apple(context, [
-        "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT",
-        "https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE",
-    ])
-    # Zillow robust
-    scrape_zillow_workday("https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External", context)
-    context.close(); browser.close()
+    with sync_playwright() as p:
+        browser = p.chromium.launch(args=["--no-sandbox"])
+        context = browser.new_context(user_agent=UA, locale="en-US")
+
+        # Apple (unchanged)
+        scrape_apple(context, [
+            "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT",
+            "https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE",
+        ])
+
+        # ✅ Zillow — call the ROBUST function below (NOT the old _cxs one)
+        scrape_zillow_workday(
+            "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External",
+            context
+        )
+
+        context.close()
+        browser.close()
+
+    print("Done. Wrote airbnb.json, libertymutual.json, apple.json, zillow.json")
 
 if __name__ == "__main__":
     main()
