@@ -182,6 +182,7 @@ def scrape_zillow_workday(board_url: str, playwright_context):
 
     # --- accumulators
     captured_posts = []   # raw jobPosting dicts from network
+    api_url_seen = {"url": None}  # mutable holder so the closure can set it
     seen_paths = set()    # dedupe by externalPath
     seen_urls = set()     # dedupe final hrefs
 
@@ -217,22 +218,20 @@ def scrape_zillow_workday(board_url: str, playwright_context):
     page = playwright_context.new_page()
 
     # ---- NETWORK SNIFFER ----
-    def on_response(resp: Response):
-        try:
-            url = resp.url
-            # Only Workday job data endpoints
-            if ("myworkdayjobs.com" in url or "workdayjobs.com" in url) and "/wday/" in url and "/jobs" in url:
-                ctype = resp.headers.get("content-type", "")
-                if "application/json" in ctype:
-                    data = resp.json()
-                    batch = (data.get("jobPostings")
-                             or data.get("items")
-                             or [])
-                    if isinstance(batch, list) and batch:
-                        captured_posts.extend(batch)
-                        print(f"[Zillow sniff] captured {len(batch)} from {url}")
-        except Exception:
-            pass
+def on_response(resp: Response):
+    try:
+        url = resp.url
+        if ("myworkdayjobs.com" in url or "workdayjobs.com" in url) and "/wday/" in url and "/jobs" in url:
+            ctype = resp.headers.get("content-type", "")
+            if "application/json" in ctype:
+                data = resp.json()
+                batch = (data.get("jobPostings") or data.get("items") or [])
+                if isinstance(batch, list) and batch:
+                    captured_posts.extend(batch)
+                    api_url_seen["url"] = url  # <-- remember exact endpoint
+                    print(f"[Zillow sniff] captured {len(batch)} from {url}")
+    except Exception:
+        pass
 
     page.on("response", on_response)
 
@@ -283,6 +282,48 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             normalize_and_add_from_posts(captured_posts)
 
         print(f"[Zillow sniff] after page 1: rows={len(rows)} total_label={total_label or '?'} search_clicked={clicked_search}")
+
+        # If we saw the real CxS API URL, use it to fetch all remaining pages directly.
+if api_url_seen["url"]:
+    try:
+        remaining_added = 0
+        # Workday often serves 20 per page for UI calls; use step=20
+        more = page.evaluate(
+            """
+            async (apiUrl) => {
+              const out = [];
+              const step = 20;   // UI batch size
+              for (let offset = step; offset < 4000; offset += step) {
+                const resp = await fetch(apiUrl, {
+                  method: 'POST',
+                  headers: {'Content-Type':'application/json;charset=UTF-8'},
+                  body: JSON.stringify({appliedFacets:{}, limit: step, offset, searchText: ''}),
+                  credentials: 'same-origin'
+                });
+                if (!resp.ok) break;
+                const data = await resp.json();
+                const batch = (data && (data.jobPostings || data.items || [])) || [];
+                out.push(...batch);
+                if (batch.length < step) break;
+              }
+              return out;
+            }
+            """,
+            api_url_seen["url"]
+        ) or []
+
+        # Dedup/append
+        rem = normalize_and_add_from_posts(more)
+        remaining_added += rem
+        print(f"[Zillow direct] fetched {len(more)} more via {api_url_seen['url']} (added {remaining_added})")
+
+        # If we successfully pulled everything this way, skip UI pagination
+        if remaining_added > 0:
+            Path("zillow.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
+            print(f"[Zillow] final total: {len(rows)} jobs (bypassed UI pagination)")
+            return rows
+    except Exception as e:
+        print(f"[Zillow direct] error: {e}")
 
         # --- pagination helpers (operate on the same page; no iframe for Zillow) ---
         def click_next_or_number(pg, page_number):
