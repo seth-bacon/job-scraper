@@ -164,183 +164,162 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(playwright_context, board_url: str):
     """
-    Zillow (Workday) — FULL pagination via CxS first, then DOM fallback.
-      1) Use same-origin CxS JSON API to fetch all postings (limit/offset loop)
-      2) Build items from JSON (title, locationsText, externalPath) — no detail visits needed
-      3) If CxS fails/empty, fall back to DOM anchors + paginate/scroll + (optional) detail visits
-      4) Save zillow_cxs.json for debugging
+    Zillow (Workday) — UI pagination walker
+      - Handles iframe or top-level page
+      - Collects links via DOM
+      - Clicks "Show more" or "Next" until exhausted
+      - Scrolls to bottom to trigger lazy loads
+      - De-dups and writes zillow.json
     """
-    import json, re
+    import re, json
     from pathlib import Path
 
-    def clean(s):
+    def clean(s): 
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    def build_detail(board_url_, url_or_path: str) -> str:
-        if url_or_path.startswith("http"):
-            return url_or_path
-        return board_url_.rstrip("/") + "/job/" + url_or_path.lstrip("/")
+    def visible_enabled(loc):
+        try:
+            return loc.count() > 0 and loc.is_visible(timeout=500) and loc.is_enabled()
+        except Exception:
+            return False
 
-    out = []
+    def get_workday_frame(page):
+        # Some Workday boards load inside an iframe; pick the frame that contains job anchors
+        for fr in page.frames:
+            try:
+                if fr.url and 'workdayjobs' in fr.url:
+                    if fr.locator("a[data-automation-id='jobTitle']").first.count() > 0:
+                        return fr
+            except Exception:
+                pass
+        return page  # fallback to main page
+
+    def collect_links(ctx):
+        # grab job detail links from the current context (frame or page)
+        sel_js = """
+          (sels) => {
+            const seen = new Set(), acc = [];
+            for (const sel of sels) {
+              document.querySelectorAll(sel).forEach(a => {
+                const href = a.href || a.getAttribute('href') || '';
+                if (!href) return;
+                const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
+                if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs) && !seen.has(abs)) {
+                  seen.add(abs);
+                  acc.push(abs);
+                }
+              });
+            }
+            return acc;
+          }
+        """
+        selectors = [
+          "a[data-automation-id='jobTitle']",
+          "a[data-automation-id='jobPostingTitle']",
+          "a[href*='/job/']",
+          "a[href*='/jobs/']"
+        ]
+        try:
+            return ctx.evaluate(sel_js, selectors)
+        except Exception:
+            return []
+
     page = playwright_context.new_page()
+    out, seen = [], set()
 
     try:
-        # --- Open board
-        page.goto(board_url, wait_until="domcontentloaded", timeout=45000)
-
-        # --- Derive tenant + board for the CxS endpoint from location
-        try:
-            tenant, board = page.evaluate("""
-                () => {
-                  const parts = location.pathname.split('/').filter(Boolean);
-                  // e.g. /en-US/Zillow_Group_External  -> board = last segment
-                  const board = parts[parts.length - 1];
-                  const tenant = location.host.split('.')[0]; // 'zillow'
-                  return { tenant, board };
-                }
-            """)
-        except Exception:
-            tenant, board = None, None
-
-        # --- 1) CxS full pagination (preferred)
-        postings = []
-        if tenant and board:
-            try:
-                postings = page.evaluate(
-                    """
-                    async ({tenant, board}) => {
-                      const api = `/wday/cxs/${tenant}/${board}/jobs`;
-                      const limit = 50;
-                      let offset = 0, all = [];
-                      for (let i = 0; i < 40; i++) {           // up to 2000 jobs safe-guard
-                        const resp = await fetch(api, {
-                          method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify({ appliedFacets: {}, limit, offset, searchText: '' })
-                        });
-                        if (!resp.ok) break;
-                        const data = await resp.json();
-                        const batch = (data && data.jobPostings) || [];
-                        all = all.concat(batch);
-                        if (batch.length < limit) break;      // last page
-                        offset += limit;
-                      }
-                      return all;
-                    }
-                    """,
-                    {"tenant": tenant, "board": board}
-                )
-            except Exception:
-                postings = []
-
-        # Save CxS for debug & use it if non-empty
-        try:
-            Path("zillow_cxs.json").write_text(json.dumps(postings or [], indent=2))
-        except Exception:
-            pass
-
-        if postings:
-            # 2) Build items directly from JSON (no detail visits required)
-            for j in postings:
-                title = clean(j.get("title") or j.get("titleFacet") or "")
-                locs = clean(j.get("locationsText") or "")
-                ep = j.get("externalPath") or ""
-                if ep:
-                    href = build_detail(board_url, ep)
-                    out.append({
-                        "source": "workday",
-                        "company": "Zillow",
-                        "title": title or "(Zillow role)",
-                        "location": locs,
-                        "url": href
-                    })
-            # done — write json & return
-            save_json("zillow.json", out)
-            print(f"[DEBUG] Zillow via CxS: {len(out)} jobs")
-            return out
-
-        # --- 3) Fallback: DOM scraping + basic paginate/scroll
-        # Accept cookies if present
+        # Load the board
+        page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
+        # Cookie banner
         try:
             if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
                 page.click("#onetrust-accept-btn-handler", timeout=2500)
         except Exception:
             pass
-        try:
-            page.wait_for_load_state("networkidle", timeout=12000)
-        except Exception:
-            pass
+        # If the tenant puts content in an iframe, use that frame
+        ctx = get_workday_frame(page)
 
-        def collect_links_dom():
-            sel_js = """
-              (sels) => {
-                const seen = new Set(), acc = [];
-                for (const sel of sels) {
-                  document.querySelectorAll(sel).forEach(a => {
-                    const href = a.href || a.getAttribute('href') || '';
-                    if (!href) return;
-                    const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
-                    if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs) && !seen.has(abs)) {
-                      seen.add(abs); acc.push(abs);
-                    }
-                  });
-                }
-                return acc;
-              }
-            """
-            selectors = [
-              "a[data-automation-id='jobTitle']",
-              "a[data-automation-id='jobPostingTitle']",
-              "a[href*='/job/']",
-              "a[href*='/jobs/']"
-            ]
-            try:
-                hrefs = page.evaluate(sel_js, selectors)
-            except Exception:
-                hrefs = []
-            return list(dict.fromkeys(hrefs))
+        # Initial collect
+        links = collect_links(ctx)
+        for u in links: seen.add(u)
+        print(f"[Zillow] initial links: {len(seen)}")
 
-        seen = set(collect_links_dom())
+        # Pagination/scroll loop
+        stagnant_rounds = 0
+        MAX_ROUNDS = 40  # plenty for 100+ jobs
+        for round_idx in range(MAX_ROUNDS):
+            new_before = len(seen)
 
-        def try_paginate_once():
+            # Try "Show more" first (common on Workday)
+            clicked = False
             for sel in [
-                "[data-automation-id='pagination-next']",
-                "button[aria-label='Next Page']",
-                "button[aria-label='Next']",
-                "button:has-text('Next')",
-                "a[aria-label='Next']",
                 "[data-automation-id='showMore']",
                 "button:has-text('Show more')",
-                "button:has-text('More Jobs')"
+                "button:has-text('More Jobs')",
+                "button:has-text('Show More')",
             ]:
-                loc = page.locator(sel).first
-                if loc.count() > 0 and loc.is_enabled():
+                btn = ctx.locator(sel).first
+                if visible_enabled(btn):
                     try:
-                        loc.click(timeout=2500)
-                        page.wait_for_load_state("networkidle", timeout=10000)
-                        return True
+                        btn.click(timeout=2500)
+                        # allow new items to render
+                        ctx.wait_for_timeout(1200)
+                        clicked = True
+                        break
                     except Exception:
                         pass
-            return False
 
-        if seen:
-            for _ in range(20):  # try many times; some boards have lots of pages
-                if not try_paginate_once():
-                    break
-                for u in collect_links_dom():
-                    seen.add(u)
-        else:
-            # force-render by scrolling
-            for _ in range(20):
-                page.mouse.wheel(0, 2000)
-                page.wait_for_timeout(300)
-            for u in collect_links_dom():
-                seen.add(u)
+            # If no Show more, try Next-page variants
+            if not clicked:
+                for sel in [
+                    "[data-automation-id='pagination-next']",
+                    "button[aria-label='Next Page']",
+                    "button[aria-label='Next']",
+                    "button:has-text('Next')",
+                    "a[aria-label='Next']"
+                ]:
+                    btn = ctx.locator(sel).first
+                    if visible_enabled(btn):
+                        try:
+                            btn.click(timeout=2500)
+                            # wait for network idle or at least some time
+                            try:
+                                ctx.wait_for_load_state("networkidle", timeout=10000)
+                            except Exception:
+                                ctx.wait_for_timeout(1200)
+                            clicked = True
+                            break
+                        except Exception:
+                            pass
 
-        # Build minimal items from links (no detail visit to keep it quick)
-        # Optionally, you can visit each link to enrich title/location if required.
+            # Always scroll to bottom to trigger lazy load
+            try:
+                for _ in range(3):
+                    ctx.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                    ctx.wait_for_timeout(400)
+            except Exception:
+                pass
+
+            # Re-collect after interaction
+            links = collect_links(ctx)
+            for u in links: seen.add(u)
+
+            new_after = len(seen)
+            gained = new_after - new_before
+            print(f"[Zillow] round {round_idx+1}: +{gained} (total {new_after}) clicked={clicked}")
+
+            if gained == 0:
+                stagnant_rounds += 1
+            else:
+                stagnant_rounds = 0
+
+            # Stop if: nothing new for 2 consecutive rounds OR no button was clickable
+            if stagnant_rounds >= 2 and not clicked:
+                break
+
+        # Build minimal items (we can enrich by visiting details, but not required)
         for href in sorted(seen):
-            # derive a readable title from slug as a fallback
+            # derive a readable fallback title from slug
             m = re.search(r"/job/[^/]+/([^/?#]+)", href)
             title = ""
             if m:
@@ -355,7 +334,7 @@ def scrape_zillow_workday(playwright_context, board_url: str):
             })
 
         save_json("zillow.json", out)
-        print(f"[DEBUG] Zillow via DOM fallback: {len(out)} jobs")
+        print(f"[Zillow] final total: {len(out)} jobs (expected ~118)")
         return out
 
     finally:
