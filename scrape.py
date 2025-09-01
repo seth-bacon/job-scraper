@@ -162,248 +162,102 @@ def scrape_apple(playwright_context, team_urls):
                 pass
     save_json("apple.json", out)
 
-def scrape_zillow_workday(playwright_context, board_url: str):
+# ---- Zillow (Workday) via CxS API with requests (no Playwright) ----
+def scrape_zillow_workday_cxs(board_url: str):
     """
-    Zillow (Workday) — numbered pagination walker
-      - Handles iframe or top-level page
-      - Collects detail links per page
-      - Clicks Next / numeric pagination until exhausted
-      - De-dups links and writes zillow.json
+    Hit Workday's CxS API directly to fetch ALL Zillow postings.
+    Examples:
+      board_url: https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External
+      cxs url:   https://zillow.wd5.myworkdayjobs.com/wday/cxs/zillow/Zillow_Group_External/jobs
     """
-    import re
+    import json, re
+    from urllib.parse import urlparse
+    out = []
 
     def clean(s):
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    def get_workday_frame(page):
-        # Some tenants embed in an iframe; pick frame that contains job anchors
-        for fr in page.frames:
-            try:
-                # Workday content host often includes myworkdayjobs / workdayjobs
-                if fr.url and ("myworkdayjobs" in fr.url or "workdayjobs" in fr.url):
-                    # sanity: does this frame have job anchors?
-                    if fr.locator("a[data-automation-id='jobTitle']").first.count() > 0 or \
-                       fr.locator("a[href*='/job/']").first.count() > 0:
-                        return fr
-            except Exception:
-                pass
-        return page  # fallback to main page
+    # Parse the URL to get host + last path segment (board)
+    u = urlparse(board_url)
+    host = u.netloc                          # e.g., zillow.wd5.myworkdayjobs.com
+    parts = [p for p in u.path.split("/") if p]
+    board = parts[-1] if parts else "Zillow_Group_External"
 
-    def collect_links(ctx):
-        js = """
-          (sels) => {
-            const acc = new Set();
-            for (const sel of sels) {
-              document.querySelectorAll(sel).forEach(a => {
-                const href = a.href || a.getAttribute('href') || '';
-                if (!href) return;
-                const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
-                if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs)) {
-                  acc.add(abs);
-                }
-              });
-            }
-            return [...acc];
-          }
-        """
-        selectors = [
-          "a[data-automation-id='jobTitle']",
-          "a[data-automation-id='jobPostingTitle']",
-          "a[href*='/job/']",
-          "a[href*='/jobs/']",
-        ]
-        try:
-            return ctx.evaluate(js, selectors)
-        except Exception:
-            return []
+    # Tenant is the subdomain before the first dot (e.g., 'zillow')
+    tenant = host.split(".")[0]
 
-    def visible_enabled(loc):
-        try:
-            return loc.count() > 0 and loc.is_visible(timeout=400) and loc.is_enabled()
-        except Exception:
-            return False
+    cxs = f"https://{host}/wday/cxs/{tenant}/{board}/jobs"
 
-    def parse_total_jobs(ctx):
-        # Try to read "1 - 20 of 118 jobs" label
-        candidates = [
-            "[data-automation-id='pagination-label']",
-            "[data-automation-id='pagination-info']",
-            "div:has-text('of') >> text=/\\bof\\b/",  # fallback text search
-        ]
-        for sel in candidates:
-            try:
-                el = ctx.locator(sel).first
-                if el.count() > 0:
-                    txt = el.text_content(timeout=1000) or ""
-                    m = re.search(r"\bof\s+(\d+)\s+jobs?\b", txt, flags=re.I)
-                    if m:
-                        return int(m.group(1)), txt.strip()
-            except Exception:
-                pass
-        return None, ""
+    headers = {
+        "User-Agent": UA,
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "Origin": f"https://{host}",
+        "Referer": board_url,
+    }
 
-    page = playwright_context.new_page()
-    out, seen = [], set()
+    limit = 50
+    offset = 0
+    max_pages = 60  # safety
+    total = None
 
-    try:
-        page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
+    for _ in range(max_pages):
+        payload = {
+            "appliedFacets": {},
+            "limit": limit,
+            "offset": offset,
+            "searchText": ""
+        }
+        r = get(cxs, headers=headers) if False else requests.post(cxs, headers=headers, json=payload, timeout=40)
+        if r.status_code != 200:
+            print(f"[Zillow CxS] HTTP {r.status_code} at offset {offset}")
+            break
+        data = r.json()
+        batch = (data or {}).get("jobPostings", [])
+        if total is None:
+            total = (data or {}).get("total", None)
+        for j in batch:
+            title = clean(j.get("title") or j.get("titleFacet") or "")
+            locs  = clean(j.get("locationsText") or "")
+            ep    = j.get("externalPath") or ""
+            if ep:
+                url = board_url.rstrip("/") + "/job/" + ep.lstrip("/")
+                out.append({
+                    "source": "workday",
+                    "company": "Zillow",
+                    "title": title or "(Zillow role)",
+                    "location": locs,
+                    "url": url
+                })
+        print(f"[Zillow CxS] got {len(batch)} (offset {offset}) total_so_far={len(out)} total_label={total}")
+        if len(batch) < limit:
+            break
+        offset += limit
 
-        # Cookie banner
-        try:
-            if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
-                page.click("#onetrust-accept-btn-handler", timeout=2000)
-        except Exception:
-            pass
-
-        ctx = get_workday_frame(page)
-
-        # Initial collect
-        links = collect_links(ctx)
-        for u in links: seen.add(u)
-
-        total_jobs, label = parse_total_jobs(ctx)
-        print(f"[Zillow] page 1: +{len(links)} (total {len(seen)}) label='{label}'")
-
-        # Pagination loop — prefer "Next Page" control; if absent, try numeric pages
-        MAX_PAGES = 50
-        for page_idx in range(2, MAX_PAGES + 1):
-            clicked = False
-
-            # Try Next-page variants
-            for sel in [
-                "[data-automation-id='pagination-next']",
-                "button[aria-label='Next Page']",
-                "button[aria-label='Next']",
-                "a[aria-label='Next']",
-                "button:has-text('Next')",
-            ]:
-                btn = ctx.locator(sel).first
-                if visible_enabled(btn):
-                    try:
-                        btn.click(timeout=2500)
-                        # wait for re-render
-                        try:
-                            ctx.wait_for_load_state("networkidle", timeout=8000)
-                        except Exception:
-                            ctx.wait_for_timeout(800)
-                        clicked = True
-                        break
-                    except Exception:
-                        pass
-            # If no "Next", try direct numeric page button “2”, “3”, …
-            if not clicked:
-                num_sel = f"[data-automation-id='pagination-page'] button:has-text('{page_idx}')"
-                btn = ctx.locator(num_sel).first
-                if visible_enabled(btn):
-                    try:
-                        btn.click(timeout=2500)
-                        try:
-                            ctx.wait_for_load_state("networkidle", timeout=8000)
-                        except Exception:
-                            ctx.wait_for_timeout(800)
-                        clicked = True
-                    except Exception:
-                        pass
-
-            if not clicked:
-                # No more pages
-                break
-
-            # Collect after navigation
-            before = len(seen)
-            for u in collect_links(ctx): seen.add(u)
-            gained = len(seen) - before
-
-            total_jobs, label = parse_total_jobs(ctx)
-            if total_jobs:
-                print(f"[Zillow] page {page_idx}: +{gained} (total {len(seen)}/{total_jobs}) label='{label}'")
-                # Stop early if we’ve gathered all items the label says exist
-                if len(seen) >= total_jobs:
-                    break
-            else:
-                print(f"[Zillow] page {page_idx}: +{gained} (total {len(seen)})")
-
-            # If a page added nothing, try one extra advance; otherwise bail
-            if gained == 0:
-                # try one more "Next" click; if still nothing, stop
-                tried_extra = False
-                for sel in [
-                    "[data-automation-id='pagination-next']",
-                    "button[aria-label='Next Page']",
-                    "button[aria-label='Next']",
-                    "a[aria-label='Next']",
-                    "button:has-text('Next')",
-                ]:
-                    btn = ctx.locator(sel).first
-                    if visible_enabled(btn):
-                        try:
-                            btn.click(timeout=2500)
-                            try:
-                                ctx.wait_for_load_state("networkidle", timeout=8000)
-                            except Exception:
-                                ctx.wait_for_timeout(800)
-                            tried_extra = True
-                            break
-                        except Exception:
-                            pass
-                if not tried_extra:
-                    break
-                # collect again
-                before2 = len(seen)
-                for u in collect_links(ctx): seen.add(u)
-                if len(seen) == before2:
-                    break
-
-        # Build minimal items (use slug as title fallback; Apps Script filters on title/location later)
-        for href in sorted(seen):
-            m = re.search(r"/job/[^/]+/([^/?#]+)", href)
-            title = ""
-            if m:
-                slug = m.group(1)
-                title = clean(re.sub(r"[_-]+", " ", re.sub(r"\bR?\d{4,}\b", "", slug)))
-            out.append({
-                "source": "workday",
-                "company": "Zillow",
-                "title": title or "(Zillow role)",
-                "location": "",
-                "url": href
-            })
-
-        save_json("zillow.json", out)
-        tj = total_jobs if total_jobs is not None else "?"
-        print(f"[Zillow] final total: {len(out)} jobs (board label says {tj})")
-        return out
-
-    finally:
-        try: page.close()
-        except Exception: pass
+    save_json("zillow.json", out)
+    print(f"[Zillow CxS] final: {len(out)} jobs (Workday total label: {total})")
+    return out
 
 # ----------------- main -----------------
 def main():
-    # env overrides (optional)
-    apple_team_env = os.getenv("APPLE_TEAM_URLS", "")
-    apple_team_urls = [u.strip() for u in apple_team_env.split(",") if u.strip()] or [
-        "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT",
-        "https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE",
-    ]
-    zillow_board_url = os.getenv("ZILLOW_BOARD_URL", "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External")
+    # ... (Airbnb + Liberty the same)
 
-    print("Scraping Airbnb (Greenhouse)…")
-    scrape_airbnb_greenhouse()
-
-    print("Scraping Liberty Mutual (iCIMS)…")
-    scrape_liberty_icims()
-
-    print("Scraping Apple + Zillow (Playwright)…")
+    print("Scraping Apple + Zillow…")
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--no-sandbox"])
         context = browser.new_context(user_agent=UA, locale="en-US")
 
-        scrape_apple(context, apple_team_urls)
-        scrape_zillow_workday(context, zillow_board_url)
+        # Apple still needs Playwright
+        scrape_apple(context, [
+            "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT",
+            "https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE",
+        ])
 
         context.close()
         browser.close()
+
+    # 👉 Zillow via requests (no Playwright)
+    scrape_zillow_workday_cxs("https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External")
 
     print("Done. Wrote airbnb.json, libertymutual.json, apple.json, zillow.json")
 
