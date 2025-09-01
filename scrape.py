@@ -454,10 +454,5 @@ with sync_playwright() as p:
     scrape_zillow_workday("https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External", context)
     context.close(); browser.close()
 
-    # 👉 Zillow via requests (no Playwright)
-    scrape_zillow_workday_cxs("https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External")
-
-    print("Done. Wrote airbnb.json, libertymutual.json, apple.json, zillow.json")
-
 if __name__ == "__main__":
     main()
