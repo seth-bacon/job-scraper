@@ -325,35 +325,98 @@ def scrape_zillow_workday(playwright_context, board_url: str):
             except Exception as e:
                 print(f"[DEBUG] CxS fallback error: {e}")
 
-        # E) Visit details for title/location
+        # E) Visit details for title/location (robust + don't require title)
+        def extract_title_loc(page):
+            # Try several selectors
+            for sel in [
+                "h1",
+                "[data-automation-id='jobPostingTitle']",
+                "header h1",
+            ]:
+                try:
+                    el = page.locator(sel).first
+                    if el.count() > 0:
+                        t = el.text_content(timeout=2500) or ""
+                        t = clean(t)
+                        if t:
+                            return t
+                except Exception:
+                    pass
+            # Fallbacks: <title>, og:title, JSON-LD
+            try:
+                t = page.title()
+                if t:
+                    t = re.sub(r"\s*\|\s*Workday\s*$", "", t)  # tidy common suffix
+                    t = clean(t)
+                    if t:
+                        return t
+            except Exception:
+                pass
+            try:
+                og = page.locator("meta[property='og:title']").first
+                if og.count() > 0:
+                    t = og.get_attribute("content") or ""
+                    t = clean(t)
+                    if t:
+                        return t
+            except Exception:
+                pass
+            try:
+                # JSON-LD sometimes has "title" or "positionTitle"
+                ld = page.locator('script[type="application/ld+json"]').first
+                if ld.count() > 0:
+                    raw = ld.text_content(timeout=1500) or ""
+                    import json
+                    data = json.loads(raw)
+                    if isinstance(data, dict):
+                        for k in ["title", "positionTitle", "name"]:
+                            if data.get(k):
+                                t = clean(data[k])
+                                if t:
+                                    return t
+            except Exception:
+                pass
+            return ""
+
+        def extract_location(page):
+            for sel in [".locations", "[data-automation-id='jobLocation']", "span.job-location"]:
+                try:
+                    el = page.locator(sel).first
+                    if el.count() > 0:
+                        txt = el.text_content(timeout=2500) or ""
+                        txt = clean(txt)
+                        if txt:
+                            return txt
+                except Exception:
+                    pass
+            return ""
+
         final_links = list(seen)[:150]
         for href in final_links:
             try:
                 page.goto(href, wait_until="domcontentloaded", timeout=30000)
-                title = ""
-                try:
-                    title = page.locator("h1").first.text_content(timeout=6000) or ""
-                except Exception:
-                    pass
-                title = clean(title)
-                location = ""
-                for sel in [".locations", "[data-automation-id='jobLocation']", "span.job-location"]:
-                    try:
-                        el = page.locator(sel).first
-                        if el.count() > 0:
-                            txt = el.text_content(timeout=2500) or ""
-                            location = clean(txt)
-                            if location: break
-                    except Exception:
-                        pass
-                if title:
-                    out.append({
-                        "source": "workday",
-                        "company": "Zillow",
-                        "title": title,
-                        "location": location,
-                        "url": href
-                    })
+
+                title = extract_title_loc(page)
+                loc = extract_location(page)
+
+                # As a LAST resort, derive a readable title from the URL slug
+                if not title:
+                    # /job/…/Some-Role-Title_R1234
+                    m = re.search(r"/job/[^/]+/([^/?#]+)", href)
+                    if m:
+                        slug = m.group(1)
+                        # Replace dashes/underscores with spaces, strip trailing req id
+                        slug = re.sub(r"[_-]+", " ", slug)
+                        slug = re.sub(r"\bR?\d{4,}\b", "", slug)
+                        title = clean(slug)
+
+                out.append({
+                    "source": "workday",
+                    "company": "Zillow",
+                    "title": title or "(Zillow role)",
+                    "location": loc,
+                    "url": href
+                })
             except Exception:
                 pass
 
