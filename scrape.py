@@ -164,27 +164,21 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(board_url: str, playwright_context):
     """
-    Zillow (Workday) — network-sniff approach:
-      - Attach page.on('response') and capture any /wday/*/jobs JSON
-      - Click Search (if needed) then walk Next / numeric pages
-      - Build rows from captured 'jobPostings' (or 'items') payloads
-      - Fallback: parse 'externalPath' from HTML per page
-      - Writes zillow.json
+    Zillow (Workday) — sniff API URL, then fetch all offsets directly.
     """
     import json, re
     from pathlib import Path
     from playwright.sync_api import Response
 
-    def clean(s): return re.sub(r"\s+", " ", (s or "").strip())
+    def clean(s):
+        return re.sub(r"\s+", " ", (s or "").strip())
 
     def build_detail(external_path: str) -> str:
         return board_url.rstrip("/") + "/job/" + external_path.lstrip("/")
 
-    # --- accumulators
-    captured_posts = []   # raw jobPosting dicts from network
-    api_url_seen = {"url": None}  # mutable holder so the closure can set it
-    seen_paths = set()    # dedupe by externalPath
-    seen_urls = set()     # dedupe final hrefs
+    rows, seen_paths, seen_urls = [], set(), set()
+    captured_posts = []
+    api_url_seen = {"url": None}  # store API URL we sniff
 
     def normalize_and_add_from_posts(posts):
         added = 0
@@ -207,45 +201,37 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             added += 1
         return added
 
-    def parse_total_from_text(txt: str):
-        m = re.search(r"\bof\s+(\d+)\s+jobs?\b", txt, flags=re.I)
-        return int(m.group(1)) if m else None
-
-    def collect_external_paths_from_html(html: str):
-        return re.findall(r'"externalPath"\s*:\s*"([^"]+)"', html)
-
-    rows = []
+    # --- Playwright page setup ---
     page = playwright_context.new_page()
 
-    # ---- NETWORK SNIFFER ----
-def on_response(resp: Response):
-    try:
-        url = resp.url
-        if ("myworkdayjobs.com" in url or "workdayjobs.com" in url) and "/wday/" in url and "/jobs" in url:
-            ctype = resp.headers.get("content-type", "")
-            if "application/json" in ctype:
-                data = resp.json()
-                batch = (data.get("jobPostings") or data.get("items") or [])
-                if isinstance(batch, list) and batch:
-                    captured_posts.extend(batch)
-                    api_url_seen["url"] = url  # <-- remember exact endpoint
-                    print(f"[Zillow sniff] captured {len(batch)} from {url}")
-    except Exception:
-        pass
+    def on_response(resp: Response):
+        try:
+            url = resp.url
+            if ("myworkdayjobs.com" in url or "workdayjobs.com" in url) and "/wday/" in url and "/jobs" in url:
+                ctype = resp.headers.get("content-type", "")
+                if "application/json" in ctype:
+                    data = resp.json()
+                    batch = (data.get("jobPostings") or data.get("items") or [])
+                    if isinstance(batch, list) and batch:
+                        captured_posts.extend(batch)
+                        api_url_seen["url"] = url  # remember this API URL
+                        print(f"[Zillow sniff] captured {len(batch)} from {url}")
+        except Exception:
+            pass
 
     page.on("response", on_response)
 
     try:
         page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
 
-        # Cookie banner (outer page)
+        # Accept cookie banner
         try:
             if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
                 page.click("#onetrust-accept-btn-handler", timeout=2000)
         except Exception:
             pass
 
-        # Some tenants require explicit Search
+        # Optional search click
         def click_search(pg):
             for sel in ("[data-automation-id='searchButton']",
                         "button[aria-label='Search']",
@@ -265,14 +251,7 @@ def on_response(resp: Response):
 
         clicked_search = click_search(page)
 
-        # Read label total (optional)
-        try:
-            txt = page.evaluate("() => document.body.innerText || ''")
-        except Exception:
-            txt = ""
-        total_label = parse_total_from_text(txt)
-
-        # Give any initial XHR a moment
+        # Let initial XHRs finish
         try:
             page.wait_for_load_state("networkidle", timeout=4000)
         except Exception:
@@ -280,18 +259,18 @@ def on_response(resp: Response):
 
         if captured_posts:
             normalize_and_add_from_posts(captured_posts)
+            captured_posts.clear()
 
-                print(f"[Zillow sniff] after page 1: rows={len(rows)} total_label={total_label or '?'} search_clicked={clicked_search}")
+        print(f"[Zillow sniff] after page 1: rows={len(rows)} search_clicked={clicked_search}")
 
-        # ---------- Tier A2: if we saw the API URL, pull remaining offsets directly ----------
+        # ---- Direct fetch using sniffed API URL ----
         if api_url_seen["url"]:
             try:
-                remaining_added = 0
                 more = page.evaluate(
                     """
                     async (apiUrl) => {
                       const out = [];
-                      const step = 20;   // Zillow batch size
+                      const step = 20;
                       for (let offset = step; offset < 4000; offset += step) {
                         const resp = await fetch(apiUrl, {
                           method: 'POST',
@@ -310,116 +289,24 @@ def on_response(resp: Response):
                     """,
                     api_url_seen["url"]
                 ) or []
+                added = normalize_and_add_from_posts(more)
+                print(f"[Zillow direct] fetched {len(more)} jobs via {api_url_seen['url']} (added {added})")
 
-                rem = normalize_and_add_from_posts(more)
-                remaining_added += rem
-                print(f"[Zillow direct] fetched {len(more)} more via {api_url_seen['url']} (added {remaining_added})")
-
-                if remaining_added > 0:
+                if added > 0:
                     Path("zillow.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
                     print(f"[Zillow] final total: {len(rows)} jobs (bypassed UI pagination)")
                     return rows
             except Exception as e:
                 print(f"[Zillow direct] error: {e}")
 
-        # --- pagination helpers (operate on the same page; no iframe for Zillow) ---
-        def click_next_or_number(pg, page_number):
-            for sel in (
-                "[data-automation-id='pagination-next']",
-                "button[aria-label='Next Page']",
-                "button[aria-label='Next']",
-                "a[aria-label='Next']",
-                "button:has-text('Next')",
-                "//button[@data-uxi-element-id='next']",
-            ):
-                btn = pg.locator(sel).first
-                if btn.count() > 0 and btn.is_enabled():
-                    try:
-                        btn.click(timeout=2000)
-                        try:
-                            pg.wait_for_load_state("networkidle", timeout=8000)
-                        except Exception:
-                            pg.wait_for_timeout(800)
-                        return True
-                    except Exception:
-                        pass
-            # numeric page button
-            num_sel = f"[data-automation-id='pagination-page'] button:has-text('{page_number}')"
-            btn = pg.locator(num_sel).first
-            if btn.count() > 0 and btn.is_enabled():
-                try:
-                    btn.click(timeout=2000)
-                    try:
-                        pg.wait_for_load_state("networkidle", timeout=8000)
-                    except Exception:
-                        pg.wait_for_timeout(800)
-                    return True
-                except Exception:
-                    pass
-            return False
-
-        # Walk pages, harvesting XHR on each turn
-        MAX_PAGES = 80
-        for pidx in range(2, MAX_PAGES + 1):
-            prev_count = len(rows)
-            if not click_next_or_number(page, pidx):
-                break
-
-            # allow XHRs to fire
-            try:
-                page.wait_for_load_state("networkidle", timeout=4000)
-            except Exception:
-                page.wait_for_timeout(800)
-
-            # capture any newly sniffed postings
-            if captured_posts:
-                added = normalize_and_add_from_posts(captured_posts)
-                print(f"[Zillow sniff] page {pidx}: +{added} (total {len(rows)})")
-                # clear buffer we already processed
-                captured_posts.clear()
-            else:
-                # Fallback: try HTML for externalPath (in case XHR is blocked by A/B)
-                html = page.content()
-                paths = collect_external_paths_from_html(html)
-                added = 0
-                for pth in paths:
-                    href = build_detail(pth)
-                    if href not in seen_urls:
-                        seen_urls.add(href)
-                        rows.append({
-                            "source": "workday",
-                            "company": "Zillow",
-                            "title": "(Zillow role)",
-                            "location": "",
-                            "url": href
-                        })
-                        added += 1
-                print(f"[Zillow fallback-HTML] page {pidx}: +{added} (total {len(rows)})")
-
-            # stop if label reached
-            if total_label:
-                if len(rows) >= total_label:
-                    break
-            else:
-                # try to get label if it appears later
-                try:
-                    txt = page.evaluate("() => document.body.innerText || ''")
-                    total_label = parse_total_from_text(txt) or total_label
-                except Exception:
-                    pass
-
-            # stop if no growth twice
-            if len(rows) == prev_count:
-                # one more try
-                continue
-
-        # Save file
+        # ---- Fallback: nothing fetched ----
         Path("zillow.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
-        print(f"[Zillow] final total: {len(rows)} jobs (label {total_label or '?'})")
+        print(f"[Zillow] final total: {len(rows)} jobs (fallback)")
         return rows
 
     finally:
-        try: page.close()
+        try:
+            page.close()
         except Exception:
             pass
 
