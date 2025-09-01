@@ -164,234 +164,85 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(board_url: str, playwright_context):
     """
-    Zillow (Workday) robust:
-      Tier 1: requests -> CxS POST (limit/offset)
-      Tier 2: in-page CxS POST via Playwright (same-origin)
-      Tier 3: UI pagination (click Search, then Next / numeric)
-    Writes zillow.json.
+    Zillow (Workday) — numbered pagination + shadow DOM aware
+      - Clicks Search if present
+      - Collects job detail links via plain + shadow-piercing selectors
+      - Walks Next and numeric page buttons
+      - De-dups links and writes zillow.json
     """
-    import json, re
-    from urllib.parse import urlparse
+    import re, json
     from pathlib import Path
 
     def clean(s): 
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    # ---------- helpers ----------
-    def cxs_url_from_board(u: str):
-        p = urlparse(u)
-        host = p.netloc
-        parts = [x for x in p.path.split("/") if x]
-        board = parts[-1] if parts else "Zillow_Group_External"
-        tenant = host.split(".")[0]
-        return f"https://{host}/wday/cxs/{tenant}/{board}/jobs", host, board
-
-    def build_detail(board_u: str, external_path: str):
-        return board_u.rstrip("/") + "/job/" + external_path.lstrip("/")
-
-    def cxs_payload(limit, offset):
-        return {"appliedFacets": {}, "limit": limit, "offset": offset, "searchText": ""}
-
-    def normalize_from_postings(postings):
-        out = []
-        for j in postings or []:
-            ep = j.get("externalPath") or ""
-            if not ep:
-                continue
-            out.append({
-                "source": "workday",
-                "company": "Zillow",
-                "title": clean(j.get("title") or j.get("titleFacet") or "(Zillow role)"),
-                "location": clean(j.get("locationsText") or ""),
-                "url": build_detail(board_url, ep),
-            })
-        return out
-
-    def save(rows):
-        Path("zillow.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
-
-    # ---------- Tier 1: requests -> CxS ----------
-    cxs, host, board = cxs_url_from_board(board_url)
-    headers = {
-        "User-Agent": UA,
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Content-Type": "application/json;charset=UTF-8",
-        "Origin": f"https://{host}",
-        "Referer": board_url,
-        "Connection": "keep-alive",
-    }
-
-    limit, offset, all_posts = 50, 0, []
-    try:
-        for _ in range(60):
-            r = requests.post(cxs, headers=headers, json=cxs_payload(limit, offset), timeout=40)
-            if r.status_code != 200:
-                print(f"[Zillow CxS Tier1] HTTP {r.status_code} at offset {offset}")
-                all_posts = []
-                break
-            data = r.json() or {}
-            batch = data.get("jobPostings", []) or []
-            all_posts.extend(batch)
-            print(f"[Zillow CxS Tier1] got {len(batch)} @offset {offset}, total {len(all_posts)}")
-            if len(batch) < limit:
-                break
-            offset += limit
-
-        if all_posts:
-            rows = normalize_from_postings(all_posts)
-            save(rows)
-            print(f"[Zillow CxS Tier1] final {len(rows)} jobs")
-            return rows
-    except Exception as e:
-        print(f"[Zillow CxS Tier1] error: {e}")
-
-    # ---------- Tier 2: in-page CxS via Playwright ----------
-    page = playwright_context.new_page()
-    try:
-        page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
-        try:
-            if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
-                page.click("#onetrust-accept-btn-handler", timeout=2500)
-        except Exception:
-            pass
-
-        # Sometimes the list doesn't populate until you click "Search"
-        try:
-            for sel in [
-                "[data-automation-id='searchButton']",
-                "button:has-text('Search')",
-            ]:
-                btn = page.locator(sel).first
-                if btn.count() > 0 and btn.is_enabled():
-                    btn.click(timeout=2000)
-                    try:
-                        page.wait_for_load_state("networkidle", timeout=10000)
-                    except Exception:
-                        page.wait_for_timeout(1000)
-                    break
-        except Exception:
-            pass
-
-        try:
-            postings = page.evaluate(
-                """
-                async () => {
-                  const parts = location.pathname.split('/').filter(Boolean);
-                  const board = parts[parts.length - 1];
-                  const tenant = location.host.split('.')[0];
-                  const api = `/wday/cxs/${tenant}/${board}/jobs`;
-                  const limit = 50;
-                  let offset = 0, all = [];
-                  for (let i = 0; i < 60; i++) {
-                    const resp = await fetch(api, {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json;charset=UTF-8' },
-                      body: JSON.stringify({ appliedFacets: {}, limit, offset, searchText: '' }),
-                      credentials: 'same-origin'
-                    });
-                    if (!resp.ok) break;
-                    const data = await resp.json();
-                    const batch = (data && data.jobPostings) || [];
-                    all = all.concat(batch);
-                    if (batch.length < limit) break;
-                    offset += limit;
-                  }
-                  return all;
-                }
-                """
-            )
-        except Exception as e:
-            print(f"[Zillow CxS Tier2] eval error: {e}")
-            postings = []
-
-        if postings:
-            rows = normalize_from_postings(postings)
-            save(rows)
-            print(f"[Zillow CxS Tier2] final {len(rows)} jobs")
-            return rows
-    finally:
-        try: page.close()
-        except Exception: pass
-
-    # ---------- Tier 3: UI pagination (click Search, then Next / numeric) ----------
     page = playwright_context.new_page()
     out, seen = [], set()
-    try:
-        page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
-        try:
-            if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
-                page.click("#onetrust-accept-btn-handler", timeout=2500)
-        except Exception:
-            pass
-        # Click Search to load results if needed
-        try:
-            for sel in [
-                "[data-automation-id='searchButton']",
-                "button:has-text('Search')",
-            ]:
-                btn = page.locator(sel).first
-                if btn.count() > 0 and btn.is_enabled():
-                    btn.click(timeout=2000)
-                    try:
-                        page.wait_for_load_state("networkidle", timeout=10000)
-                    except Exception:
-                        page.wait_for_timeout(800)
-                    break
-        except Exception:
-            pass
 
-        # Collect links on current page
-        def collect_links_here():
-            js = """
-              (sels) => {
-                const acc = new Set();
-                for (const sel of sels) {
-                  document.querySelectorAll(sel).forEach(a => {
-                    const href = a.href || a.getAttribute('href') || '';
-                    if (!href) return;
-                    const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
-                    if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs)) acc.add(abs);
-                  });
-                }
-                return [...acc];
-              }
-            """
-            sels = [
-                "a[data-automation-id='jobTitle']",
-                "a[data-automation-id='jobPostingTitle']",
-                "a[href*='/job/']",
-                "a[href*='/jobs/']",
-            ]
+    def visible_enabled(loc):
+        try:
+            return loc.count() > 0 and loc.is_visible(timeout=500) and loc.is_enabled()
+        except Exception:
+            return False
+
+    def collect_links_here():
+        """Collect anchors from main DOM and shadow DOM."""
+        links = set()
+
+        # A) Standard DOM (multiple variants)
+        for sel in [
+            "a[data-automation-id='jobTitle']",
+            "a[data-automation-id='jobPostingTitle']",
+            "a[href*='/job/']",
+            "a[href*='/jobs/']",
+        ]:
             try:
-                return page.evaluate(js, sels)
+                for href in page.eval_on_selector_all(sel, "els => els.map(a => a.href || a.getAttribute('href') || '')"):
+                    if href and "/job/" in href and not any(x in href.lower() for x in ["/login", "/apply", "/search"]):
+                        links.add(href if href.startswith("http") else page.url.split("/", 3)[0] + "//" + page.url.split("/",3)[2] + href)
             except Exception:
-                return []
+                pass
 
-        # Click Next / numeric page buttons
-        def click_next_or_number(page_number):
-            for sel in [
-                "[data-automation-id='pagination-next']",
-                "button[aria-label='Next Page']",
-                "button[aria-label='Next']",
-                "a[aria-label='Next']",
-                "button:has-text('Next')",
-            ]:
-                btn = page.locator(sel).first
-                if btn.count() > 0 and btn.is_enabled():
-                    try:
-                        btn.click(timeout=2500)
-                        try:
-                            page.wait_for_load_state("networkidle", timeout=8000)
-                        except Exception:
-                            page.wait_for_timeout(800)
-                        return True
-                    except Exception:
-                        pass
-            # Numeric page button “2”, “3”, …
-            num_sel = f"[data-automation-id='pagination-page'] button:has-text('{page_number}')"
-            btn = page.locator(num_sel).first
-            if btn.count() > 0 and btn.is_enabled():
+        # B) Shadow DOM (pierce with >>>)
+        for sel in [
+            ">>> a[data-automation-id='jobTitle']",
+            ">>> a[data-automation-id='jobPostingTitle']",
+        ]:
+            try:
+                for href in page.eval_on_selector_all(sel, "els => els.map(a => a.href || a.getAttribute('href') || '')"):
+                    if href and "/job/" in href and not any(x in href.lower() for x in ["/login", "/apply", "/search"]):
+                        links.add(href if href.startswith("http") else page.url.split("/", 3)[0] + "//" + page.url.split("/",3)[2] + href)
+            except Exception:
+                pass
+
+        # C) XPath fallback you shared (class-based LI layout)
+        try:
+            items = page.locator("//li[@class='css-1q2dra3']").all()
+            for li in items:
+                try:
+                    a = li.locator(".//h3/a")
+                    if a.count() > 0:
+                        href = a.get_attribute("href") or ""
+                        if href:
+                            absu = href if href.startswith("http") else page.url.split("/", 3)[0] + "//" + page.url.split("/",3)[2] + href
+                            if "/job/" in absu:
+                                links.add(absu)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+        return sorted(set(links))
+
+    def click_search_if_needed():
+        for sel in [
+            "[data-automation-id='searchButton']",
+            "button:has-text('Search')",
+            ">>> [data-automation-id='searchButton']",
+            ">>> button:has-text('Search')",
+        ]:
+            btn = page.locator(sel).first
+            if visible_enabled(btn):
                 try:
                     btn.click(timeout=2500)
                     try:
@@ -401,37 +252,105 @@ def scrape_zillow_workday(board_url: str, playwright_context):
                     return True
                 except Exception:
                     pass
-            return False
+        return False
 
-        # Page 1
-        for u in collect_links_here(): seen.add(u)
-        print(f"[Zillow Tier3] page 1: {len(seen)} links")
+    def click_next_or_number(page_number):
+        # Next variants (standard + shadow)
+        for sel in [
+            "[data-automation-id='pagination-next']",
+            "button[aria-label='Next Page']",
+            "button[aria-label='Next']",
+            "a[aria-label='Next']",
+            "button:has-text('Next')",
+            "//button[@data-uxi-element-id='next']",
+            ">>> [data-automation-id='pagination-next']",
+            ">>> button[aria-label='Next Page']",
+            ">>> button[aria-label='Next']",
+        ]:
+            btn = page.locator(sel).first
+            if visible_enabled(btn):
+                try:
+                    btn.click(timeout=2500)
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=8000)
+                    except Exception:
+                        page.wait_for_timeout(800)
+                    return True
+                except Exception:
+                    pass
+        # Numeric page button (standard + shadow)
+        for sel in [
+            f"[data-automation-id='pagination-page'] button:has-text('{page_number}')",
+            f">>> [data-automation-id='pagination-page'] button:has-text('{page_number}')",
+        ]:
+            btn = page.locator(sel).first
+            if visible_enabled(btn):
+                try:
+                    btn.click(timeout=2500)
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=8000)
+                    except Exception:
+                        page.wait_for_timeout(800)
+                    return True
+                except Exception:
+                    pass
+        return False
 
-        # Try to read "of N jobs" label for progress
-        def parse_total():
-            for sel in ["[data-automation-id='pagination-label']", "[data-automation-id='pagination-info']"]:
-                el = page.locator(sel).first
-                if el.count() > 0:
+    def parse_total_label():
+        for sel in [
+            "[data-automation-id='pagination-label']",
+            "[data-automation-id='pagination-info']",
+            ">>> [data-automation-id='pagination-label']",
+            ">>> [data-automation-id='pagination-info']",
+        ]:
+            el = page.locator(sel).first
+            if el.count() > 0:
+                try:
                     txt = el.text_content(timeout=800) or ""
                     m = re.search(r"\bof\s+(\d+)\s+jobs?\b", txt, flags=re.I)
-                    if m: return int(m.group(1))
-            return None
-        total_label = parse_total()
+                    if m:
+                        return int(m.group(1)), txt.strip()
+                except Exception:
+                    pass
+        return None, ""
 
-        # Walk pages
+    try:
+        page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
+
+        # Accept cookies if present
+        try:
+            if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
+                page.click("#onetrust-accept-btn-handler", timeout=2000)
+        except Exception:
+            pass
+
+        # Some boards require an explicit "Search"
+        clicked_search = click_search_if_needed()
+
+        # Page 1
+        for u in collect_links_here():
+            seen.add(u)
+        total_jobs, label = parse_total_label()
+        print(f"[Zillow] page 1: +{len(seen)} (total {len(seen)}) label='{label}' search_clicked={clicked_search}")
+
+        # Walk subsequent pages
         MAX_PAGES = 80
-        for pidx in range(2, MAX_PAGES+1):
+        for pidx in range(2, MAX_PAGES + 1):
             if not click_next_or_number(pidx):
                 break
             before = len(seen)
-            for u in collect_links_here(): seen.add(u)
+            for u in collect_links_here():
+                seen.add(u)
             gained = len(seen) - before
-            t = total_label or "?"
-            print(f"[Zillow Tier3] page {pidx}: +{gained} (total {len(seen)}/{t})")
-            if total_label and len(seen) >= total_label:
-                break
+            total_jobs, label = parse_total_label()
+            if total_jobs:
+                print(f"[Zillow] page {pidx}: +{gained} (total {len(seen)}/{total_jobs}) label='{label}'")
+                if len(seen) >= total_jobs:
+                    break
+            else:
+                print(f"[Zillow] page {pidx}: +{gained} (total {len(seen)})")
 
-        # Normalize items (use slug as fallback title)
+        # Normalize (use slug as fallback title)
         for href in sorted(seen):
             m = re.search(r"/job/[^/]+/([^/?#]+)", href)
             title = ""
@@ -447,36 +366,56 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             })
 
         Path("zillow.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
-        print(f"[Zillow Tier3] final total: {len(out)} jobs")
+        tj = total_jobs if total_jobs is not None else "?"
+        print(f"[Zillow] final total: {len(out)} jobs (board label says {tj})")
         return out
 
     finally:
-        try: page.close()
-        except Exception: pass
+        try:
+            page.close()
+        except Exception:
+            pass
 
 # ----------------- main -----------------
+# ----------------- main -----------------
 def main():
+    import os
+    from playwright.sync_api import sync_playwright
+
+    # Optional overrides via repo Variables/Secrets
+    apple_team_env = os.getenv("APPLE_TEAM_URLS", "")
+    apple_team_urls = [u.strip() for u in apple_team_env.split(",") if u.strip()] or [
+        "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT",
+        "https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE",
+    ]
+    zillow_board_url = os.getenv(
+        "ZILLOW_BOARD_URL",
+        "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External"
+    )
+
+    print("Scraping Airbnb (Greenhouse)…")
+    scrape_airbnb_greenhouse()
+
+    print("Scraping Liberty Mutual (iCIMS)…")
+    scrape_liberty_icims()
+
     print("Scraping Apple + Zillow…")
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--no-sandbox"])
         context = browser.new_context(user_agent=UA, locale="en-US")
 
-        # Apple (unchanged)
-        scrape_apple(context, [
-            "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT",
-            "https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE",
-        ])
+        # Apple (Playwright)
+        scrape_apple(context, apple_team_urls)
 
-        # ✅ Zillow — call the ROBUST function below (NOT the old _cxs one)
-        scrape_zillow_workday(
-            "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External",
-            context
-        )
+        # Zillow (robust: CxS + shadow-aware pagination inside this function)
+        scrape_zillow_workday(zillow_board_url, context)
 
         context.close()
         browser.close()
 
     print("Done. Wrote airbnb.json, libertymutual.json, apple.json, zillow.json")
 
+
 if __name__ == "__main__":
     main()
+
