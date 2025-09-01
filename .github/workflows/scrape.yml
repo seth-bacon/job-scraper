@@ -2,11 +2,11 @@ name: Daily Scrape
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # 12:00 UTC daily (~6 am CT). Adjust as you like.
-  workflow_dispatch:         # allow manual runs
+    - cron: "0 15 * * *"   # daily at 12:00 UTC (~7:00am CT during DST)
+  workflow_dispatch:       # allow manual trigger
 
 permissions:
-  contents: write            # needed to commit JSON updates
+  contents: write
 
 jobs:
   scrape:
@@ -25,17 +25,20 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
+      # (Optional) override targets via repo Variables/Secrets
+      # - name: Export targets
+      #   run: |
+      #     echo "APPLE_TEAM_URLS=${{ vars.APPLE_TEAM_URLS }}" >> $GITHUB_ENV
+      #     echo "ZILLOW_BOARD_URL=${{ vars.ZILLOW_BOARD_URL }}" >> $GITHUB_ENV
+
       - name: Run scraper
-        env:
-          # You can override these with repo secrets or envs if you like
-          APPLE_TEAM_URLS: "https://jobs.apple.com/en-us/search?team=software-quality-automation-and-tools-SFTWR-SQAT,https://jobs.apple.com/en-us/search?team=quality-engineering-OPMFG-QE"
-          ZILLOW_BOARD_URL: "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External"
         run: python scrape.py
 
-      - name: Commit JSON results
+      # ⬇️ Commit EVERYTHING produced by the run (JSON + HTML debug, etc.)
+      - name: Commit results (JSON + debug files)
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add *.json || true
-          git commit -m "Update job data" || echo "No changes"
+          git add -A
+          git commit -m "Update job data + debug artifacts" || echo "No changes"
           git push

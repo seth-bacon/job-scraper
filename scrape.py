@@ -311,6 +311,7 @@ def scrape_zillow_workday(playwright_context, board_url: str):
                     Path("zillow_cxs.json").write_text(json.dumps(postings, indent=2))
                 except Exception:
                     pass
+                print(f"[DEBUG] Zillow postings found: {len(postings) if postings else 0}")
                 for j in postings or []:
                     ep = j.get("externalPath") or ""
                     if ep:
