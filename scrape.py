@@ -164,98 +164,57 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(board_url: str, playwright_context):
     """
-    Zillow (Workday) — numbered pagination + shadow DOM aware
-      - Clicks Search if present
-      - Collects job detail links via plain + shadow-piercing selectors
-      - Walks Next and numeric page buttons
-      - De-dups links and writes zillow.json
+    Zillow (Workday) — robust numbered pagination without fragile locators:
+      - Clicks Search if required
+      - On each page, parses HTML for "externalPath" and builds detail URLs
+      - Reads "of N jobs" via document text (regex), not DOM locators
+      - Clicks Next / numeric buttons until done
+      - Writes zillow.json
     """
     import re, json
     from pathlib import Path
 
-    def clean(s): 
+    def clean(s):
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    page = playwright_context.new_page()
-    out, seen = [], set()
+    def parse_total_jobs_from_text(txt: str):
+        # e.g., "1 - 20 of 118 jobs"
+        m = re.search(r"\bof\s+(\d+)\s+jobs?\b", txt, flags=re.I)
+        return int(m.group(1)) if m else None
 
-    def visible_enabled(loc):
-        try:
-            return loc.count() > 0 and loc.is_visible(timeout=500) and loc.is_enabled()
-        except Exception:
-            return False
+    def collect_links_from_html(html: str):
+        # Workday embeds job identifiers as "externalPath":"<path>"
+        paths = re.findall(r'"externalPath"\s*:\s*"([^"]+)"', html)
+        links = []
+        seen = set()
+        for pth in paths:
+            # normalize
+            href = board_url.rstrip("/") + "/job/" + pth.lstrip("/")
+            if href not in seen:
+                seen.add(href)
+                links.append(href)
+        return links
 
-    def collect_links_here():
-        """Collect anchors from main DOM and shadow DOM."""
-        links = set()
-
-        # A) Standard DOM (multiple variants)
-        for sel in [
-            "a[data-automation-id='jobTitle']",
-            "a[data-automation-id='jobPostingTitle']",
-            "a[href*='/job/']",
-            "a[href*='/jobs/']",
-        ]:
-            try:
-                for href in page.eval_on_selector_all(sel, "els => els.map(a => a.href || a.getAttribute('href') || '')"):
-                    if href and "/job/" in href and not any(x in href.lower() for x in ["/login", "/apply", "/search"]):
-                        links.add(href if href.startswith("http") else page.url.split("/", 3)[0] + "//" + page.url.split("/",3)[2] + href)
-            except Exception:
-                pass
-
-        # B) Shadow DOM (pierce with >>>)
-        for sel in [
-            ">>> a[data-automation-id='jobTitle']",
-            ">>> a[data-automation-id='jobPostingTitle']",
-        ]:
-            try:
-                for href in page.eval_on_selector_all(sel, "els => els.map(a => a.href || a.getAttribute('href') || '')"):
-                    if href and "/job/" in href and not any(x in href.lower() for x in ["/login", "/apply", "/search"]):
-                        links.add(href if href.startswith("http") else page.url.split("/", 3)[0] + "//" + page.url.split("/",3)[2] + href)
-            except Exception:
-                pass
-
-        # C) XPath fallback you shared (class-based LI layout)
-        try:
-            items = page.locator("//li[@class='css-1q2dra3']").all()
-            for li in items:
-                try:
-                    a = li.locator(".//h3/a")
-                    if a.count() > 0:
-                        href = a.get_attribute("href") or ""
-                        if href:
-                            absu = href if href.startswith("http") else page.url.split("/", 3)[0] + "//" + page.url.split("/",3)[2] + href
-                            if "/job/" in absu:
-                                links.add(absu)
-                except Exception:
-                    pass
-        except Exception:
-            pass
-
-        return sorted(set(links))
-
-    def click_search_if_needed():
+    def click_search_if_needed(page):
         for sel in [
             "[data-automation-id='searchButton']",
             "button:has-text('Search')",
-            ">>> [data-automation-id='searchButton']",
-            ">>> button:has-text('Search')",
         ]:
             btn = page.locator(sel).first
-            if visible_enabled(btn):
-                try:
+            try:
+                if btn.count() > 0 and btn.is_enabled():
                     btn.click(timeout=2500)
                     try:
                         page.wait_for_load_state("networkidle", timeout=8000)
                     except Exception:
                         page.wait_for_timeout(800)
                     return True
-                except Exception:
-                    pass
+            except Exception:
+                pass
         return False
 
-    def click_next_or_number(page_number):
-        # Next variants (standard + shadow)
+    def click_next_or_number(page, page_number):
+        # Try "Next" variants
         for sel in [
             "[data-automation-id='pagination-next']",
             "button[aria-label='Next Page']",
@@ -263,94 +222,84 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             "a[aria-label='Next']",
             "button:has-text('Next')",
             "//button[@data-uxi-element-id='next']",
-            ">>> [data-automation-id='pagination-next']",
-            ">>> button[aria-label='Next Page']",
-            ">>> button[aria-label='Next']",
         ]:
             btn = page.locator(sel).first
-            if visible_enabled(btn):
-                try:
+            try:
+                if btn.count() > 0 and btn.is_enabled():
                     btn.click(timeout=2500)
                     try:
                         page.wait_for_load_state("networkidle", timeout=8000)
                     except Exception:
                         page.wait_for_timeout(800)
                     return True
-                except Exception:
-                    pass
-        # Numeric page button (standard + shadow)
-        for sel in [
-            f"[data-automation-id='pagination-page'] button:has-text('{page_number}')",
-            f">>> [data-automation-id='pagination-page'] button:has-text('{page_number}')",
-        ]:
-            btn = page.locator(sel).first
-            if visible_enabled(btn):
+            except Exception:
+                pass
+        # Try numeric page button “2”, “3”, …
+        num_sel = f"[data-automation-id='pagination-page'] button:has-text('{page_number}')"
+        btn = page.locator(num_sel).first
+        try:
+            if btn.count() > 0 and btn.is_enabled():
+                btn.click(timeout=2500)
                 try:
-                    btn.click(timeout=2500)
-                    try:
-                        page.wait_for_load_state("networkidle", timeout=8000)
-                    except Exception:
-                        page.wait_for_timeout(800)
-                    return True
+                    page.wait_for_load_state("networkidle", timeout=8000)
                 except Exception:
-                    pass
+                    page.wait_for_timeout(800)
+                return True
+        except Exception:
+            pass
         return False
 
-    def parse_total_label():
-        for sel in [
-            "[data-automation-id='pagination-label']",
-            "[data-automation-id='pagination-info']",
-            ">>> [data-automation-id='pagination-label']",
-            ">>> [data-automation-id='pagination-info']",
-        ]:
-            el = page.locator(sel).first
-            if el.count() > 0:
-                try:
-                    txt = el.text_content(timeout=800) or ""
-                    m = re.search(r"\bof\s+(\d+)\s+jobs?\b", txt, flags=re.I)
-                    if m:
-                        return int(m.group(1)), txt.strip()
-                except Exception:
-                    pass
-        return None, ""
-
+    page = playwright_context.new_page()
+    out, seen = [], set()
     try:
         page.goto(board_url, wait_until="domcontentloaded", timeout=60000)
 
-        # Accept cookies if present
+        # Accept OneTrust cookies if shown
         try:
             if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
                 page.click("#onetrust-accept-btn-handler", timeout=2000)
         except Exception:
             pass
 
-        # Some boards require an explicit "Search"
-        clicked_search = click_search_if_needed()
+        clicked_search = click_search_if_needed(page)
 
-        # Page 1
-        for u in collect_links_here():
-            seen.add(u)
-        total_jobs, label = parse_total_label()
-        print(f"[Zillow] page 1: +{len(seen)} (total {len(seen)}) label='{label}' search_clicked={clicked_search}")
+        # Read the total "of N jobs" from page text (no selectors)
+        try:
+            txt = page.evaluate("() => document.body.innerText || ''")
+        except Exception:
+            txt = ""
+        total_jobs = parse_total_jobs_from_text(txt)
 
-        # Walk subsequent pages
+        # Page 1: collect via HTML externalPath
+        html = page.content()
+        links = collect_links_from_html(html)
+        for u in links: seen.add(u)
+        print(f"[Zillow] page 1: +{len(links)} (total {len(seen)}/{total_jobs or '?'}) search_clicked={clicked_search}")
+
+        # Walk pages
         MAX_PAGES = 80
         for pidx in range(2, MAX_PAGES + 1):
-            if not click_next_or_number(pidx):
+            if not click_next_or_number(page, pidx):
                 break
             before = len(seen)
-            for u in collect_links_here():
-                seen.add(u)
-            gained = len(seen) - before
-            total_jobs, label = parse_total_label()
-            if total_jobs:
-                print(f"[Zillow] page {pidx}: +{gained} (total {len(seen)}/{total_jobs}) label='{label}'")
-                if len(seen) >= total_jobs:
-                    break
-            else:
-                print(f"[Zillow] page {pidx}: +{gained} (total {len(seen)})")
+            # refresh total in case label is only visible after first page
+            try:
+                txt = page.evaluate("() => document.body.innerText || ''")
+            except Exception:
+                txt = ""
+            if total_jobs is None:
+                total_jobs = parse_total_jobs_from_text(txt)
 
-        # Normalize (use slug as fallback title)
+            html = page.content()
+            links = collect_links_from_html(html)
+            for u in links: seen.add(u)
+            gained = len(seen) - before
+            print(f"[Zillow] page {pidx}: +{gained} (total {len(seen)}/{total_jobs or '?'})")
+
+            if total_jobs and len(seen) >= total_jobs:
+                break
+
+        # Normalize items (use slug as fallback title; Apps Script filters later)
         for href in sorted(seen):
             m = re.search(r"/job/[^/]+/([^/?#]+)", href)
             title = ""
@@ -366,17 +315,14 @@ def scrape_zillow_workday(board_url: str, playwright_context):
             })
 
         Path("zillow.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
-        tj = total_jobs if total_jobs is not None else "?"
-        print(f"[Zillow] final total: {len(out)} jobs (board label says {tj})")
+        print(f"[Zillow] final total: {len(out)} jobs (board label says {total_jobs or '?'})")
         return out
 
     finally:
-        try:
-            page.close()
+        try: page.close()
         except Exception:
             pass
 
-# ----------------- main -----------------
 # ----------------- main -----------------
 def main():
     import os
