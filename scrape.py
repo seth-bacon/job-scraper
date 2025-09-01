@@ -164,14 +164,12 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(playwright_context, board_url: str):
     """
-    Robust Zillow (Workday) scraper:
-      1) Accept cookie banner (OneTrust) if present
-      2) Wait for client render (networkidle) and try multiple link selectors
-      3) Paginate via "Next" or "Show more"
-      4) Force-render by scrolling
-      5) Same-origin CxS JSON fallback; save zillow_cxs.json for debug
-      6) Visit details for real title/location
-      7) If nothing found, save zillow_debug.html to help inspect structure
+    Zillow (Workday) — robust:
+      A) Parse initial HTML for /job/ anchors and "externalPath" JSON
+      B) Accept cookies, wait for render, collect anchors
+      C) Paginate/scroll if needed
+      D) Same-origin CxS JSON fallback (+ debug)
+      E) Visit detail pages to get title/location
     """
     import json, re
     from pathlib import Path
@@ -179,23 +177,26 @@ def scrape_zillow_workday(playwright_context, board_url: str):
     page = playwright_context.new_page()
     out, seen = [], set()
 
-    def clean(s): 
+    def clean(s):
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    def collect_links():
-        # Try a few common Workday link selectors and generic /job/ anchors
+    def build_detail(url_or_path: str) -> str:
+        # Normalize relative paths from "externalPath"
+        if url_or_path.startswith("http"):
+            return url_or_path
+        return board_url.rstrip("/") + "/job/" + url_or_path.lstrip("/")
+
+    def collect_links_dom():
         sel_js = """
           (sels) => {
-            const seen = new Set();
-            const acc = [];
+            const seen = new Set(), acc = [];
             for (const sel of sels) {
               document.querySelectorAll(sel).forEach(a => {
                 const href = a.href || a.getAttribute('href') || '';
                 if (!href) return;
                 const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
-                if (!/(login|apply|search)/i.test(abs) && /\/job\//i.test(abs) && !seen.has(abs)) {
-                  seen.add(abs);
-                  acc.push(abs);
+                if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs) && !seen.has(abs)) {
+                  seen.add(abs); acc.push(abs);
                 }
               });
             }
@@ -208,33 +209,58 @@ def scrape_zillow_workday(playwright_context, board_url: str):
           "a[href*='/job/']",
           "a[href*='/jobs/']"
         ]
-        hrefs = page.evaluate(sel_js, selectors)
+        try:
+            hrefs = page.evaluate(sel_js, selectors)
+        except Exception:
+            hrefs = []
+        # filter obvious non-detail
+        hrefs = [h for h in hrefs if not re.search(r'/(login|apply|search)', h, re.I)]
         return list(dict.fromkeys(hrefs))
 
     try:
-        # 1) Open board & try to accept cookie banner
-        page.goto(board_url, wait_until="networkidle", timeout=45000)
+        # Open board and capture raw HTML immediately
+        page.goto(board_url, wait_until="domcontentloaded", timeout=45000)
+        html = page.content()
 
-        # OneTrust accept button
+        # A1) Direct /job/ anchors in the HTML string
+        for m in re.finditer(r'href="([^"]+/job/[^"]+)"', html, flags=re.I):
+            seen.add(m.group(1))
+
+        # A2) Embedded JSON with "externalPath"
+        for m in re.finditer(r'"externalPath"\s*:\s*"([^"]+)"', html, flags=re.I):
+            seen.add(build_detail(m.group(1)))
+
+        print(f"[DEBUG] Initial HTML pass links: {len(seen)}")
+
+        # Accept cookies (OneTrust), then wait for network idle
         try:
             if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
-                page.click("#onetrust-accept-btn-handler", timeout=3000)
+                page.click("#onetrust-accept-btn-handler", timeout=2500)
+        except Exception:
+            pass
+        try:
+            page.wait_for_load_state("networkidle", timeout=12000)
         except Exception:
             pass
 
-        # 2) First attempt to collect links
-        links = collect_links()
+        # B) DOM query after client render
+        links = collect_links_dom()
+        for u in links:
+            seen.add(u)
 
-        # 3) Pagination attempts: "Next" / "Show more"
-        # Try up to ~8 page advances
+        print(f"[DEBUG] After DOM collect: {len(seen)}")
+
+        # C) Try paginating / show more / scroll to force render
         def try_paginate_once():
-            # Next variants
             for sel in [
                 "[data-automation-id='pagination-next']",
                 "button[aria-label='Next Page']",
                 "button[aria-label='Next']",
                 "button:has-text('Next')",
-                "a[aria-label='Next']"
+                "a[aria-label='Next']",
+                "[data-automation-id='showMore']",
+                "button:has-text('Show more')",
+                "button:has-text('More Jobs')"
             ]:
                 loc = page.locator(sel).first
                 if loc.count() > 0 and loc.is_enabled():
@@ -244,47 +270,31 @@ def scrape_zillow_workday(playwright_context, board_url: str):
                         return True
                     except Exception:
                         pass
-            # Show more variants
-            for sel in [
-                "[data-automation-id='showMore']",
-                "button:has-text('Show more')",
-                "button:has-text('More Jobs')"
-            ]:
-                loc = page.locator(sel).first
-                if loc.count() > 0 and loc.is_enabled():
-                    try:
-                        loc.click(timeout=2500)
-                        page.wait_for_timeout(1200)
-                        return True
-                    except Exception:
-                        pass
             return False
 
         if links:
             for _ in range(8):
-                for u in links:
-                    seen.add(u)
                 if not try_paginate_once():
                     break
-                links = collect_links()
+                for u in collect_links_dom():
+                    seen.add(u)
 
-        # 4) Force render by scrolling if still empty
         if not seen:
             for _ in range(12):
                 page.mouse.wheel(0, 2000)
                 page.wait_for_timeout(350)
-            links = collect_links()
-            for u in links:
+            for u in collect_links_dom():
                 seen.add(u)
 
-        # 5) Same-origin CxS fallback (and save JSON for debug)
+        print(f"[DEBUG] After paginate/scroll: {len(seen)}")
+
+        # D) Same-origin CxS fallback; save JSON for debugging
         if not seen:
             try:
                 postings = page.evaluate(
                     """
                     async () => {
                       const parts = location.pathname.split('/').filter(Boolean);
-                      // workday locales look like /en-US/<boardSlug>
                       const board = parts[parts.length - 1];
                       const tenant = location.host.split('.')[0];
                       const api = `/wday/cxs/${tenant}/${board}/jobs`;
@@ -306,20 +316,16 @@ def scrape_zillow_workday(playwright_context, board_url: str):
                     }
                     """
                 )
-                # Save debug json
-                try:
-                    Path("zillow_cxs.json").write_text(json.dumps(postings, indent=2))
-                except Exception:
-                    pass
-                print(f"[DEBUG] Zillow postings found: {len(postings) if postings else 0}")
+                Path("zillow_cxs.json").write_text(json.dumps(postings or [], indent=2))
+                print(f"[DEBUG] Zillow postings found via CxS: {len(postings) if postings else 0}")
                 for j in postings or []:
                     ep = j.get("externalPath") or ""
                     if ep:
-                        seen.add(board_url.rstrip("/") + "/job/" + ep)
-            except Exception:
-                pass
+                        seen.add(build_detail(ep))
+            except Exception as e:
+                print(f"[DEBUG] CxS fallback error: {e}")
 
-        # 6) Visit detail pages for real title/location
+        # E) Visit details for title/location
         final_links = list(seen)[:150]
         for href in final_links:
             try:
@@ -337,8 +343,7 @@ def scrape_zillow_workday(playwright_context, board_url: str):
                         if el.count() > 0:
                             txt = el.text_content(timeout=2500) or ""
                             location = clean(txt)
-                            if location:
-                                break
+                            if location: break
                     except Exception:
                         pass
                 if title:
@@ -352,12 +357,8 @@ def scrape_zillow_workday(playwright_context, board_url: str):
             except Exception:
                 pass
 
-        # 7) If still nothing, dump board HTML for inspection
         if not out:
-            try:
-                Path("zillow_debug.html").write_text(page.content())
-            except Exception:
-                pass
+            Path("zillow_debug.html").write_text(page.content())
 
     finally:
         try: page.close()
