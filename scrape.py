@@ -164,75 +164,103 @@ def scrape_apple(playwright_context, team_urls):
 
 def scrape_zillow_workday(playwright_context, board_url: str):
     """
-    Zillow (Workday) — robust:
-      A) Parse initial HTML for /job/ anchors and "externalPath" JSON
-      B) Accept cookies, wait for render, collect anchors
-      C) Paginate/scroll if needed
-      D) Same-origin CxS JSON fallback (+ debug)
-      E) Visit detail pages to get title/location
+    Zillow (Workday) — FULL pagination via CxS first, then DOM fallback.
+      1) Use same-origin CxS JSON API to fetch all postings (limit/offset loop)
+      2) Build items from JSON (title, locationsText, externalPath) — no detail visits needed
+      3) If CxS fails/empty, fall back to DOM anchors + paginate/scroll + (optional) detail visits
+      4) Save zillow_cxs.json for debugging
     """
     import json, re
     from pathlib import Path
 
-    page = playwright_context.new_page()
-    out, seen = [], set()
-
     def clean(s):
         return re.sub(r"\s+", " ", (s or "").strip())
 
-    def build_detail(url_or_path: str) -> str:
-        # Normalize relative paths from "externalPath"
+    def build_detail(board_url_, url_or_path: str) -> str:
         if url_or_path.startswith("http"):
             return url_or_path
-        return board_url.rstrip("/") + "/job/" + url_or_path.lstrip("/")
+        return board_url_.rstrip("/") + "/job/" + url_or_path.lstrip("/")
 
-    def collect_links_dom():
-        sel_js = """
-          (sels) => {
-            const seen = new Set(), acc = [];
-            for (const sel of sels) {
-              document.querySelectorAll(sel).forEach(a => {
-                const href = a.href || a.getAttribute('href') || '';
-                if (!href) return;
-                const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
-                if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs) && !seen.has(abs)) {
-                  seen.add(abs); acc.push(abs);
-                }
-              });
-            }
-            return acc;
-          }
-        """
-        selectors = [
-          "a[data-automation-id='jobTitle']",
-          "a[data-automation-id='jobPostingTitle']",
-          "a[href*='/job/']",
-          "a[href*='/jobs/']"
-        ]
-        try:
-            hrefs = page.evaluate(sel_js, selectors)
-        except Exception:
-            hrefs = []
-        # filter obvious non-detail
-        hrefs = [h for h in hrefs if not re.search(r'/(login|apply|search)', h, re.I)]
-        return list(dict.fromkeys(hrefs))
+    out = []
+    page = playwright_context.new_page()
 
     try:
-        # Open board and capture raw HTML immediately
+        # --- Open board
         page.goto(board_url, wait_until="domcontentloaded", timeout=45000)
-        html = page.content()
 
-        # A1) Direct /job/ anchors in the HTML string
-        for m in re.finditer(r'href="([^"]+/job/[^"]+)"', html, flags=re.I):
-            seen.add(m.group(1))
+        # --- Derive tenant + board for the CxS endpoint from location
+        try:
+            tenant, board = page.evaluate("""
+                () => {
+                  const parts = location.pathname.split('/').filter(Boolean);
+                  // e.g. /en-US/Zillow_Group_External  -> board = last segment
+                  const board = parts[parts.length - 1];
+                  const tenant = location.host.split('.')[0]; // 'zillow'
+                  return { tenant, board };
+                }
+            """)
+        except Exception:
+            tenant, board = None, None
 
-        # A2) Embedded JSON with "externalPath"
-        for m in re.finditer(r'"externalPath"\s*:\s*"([^"]+)"', html, flags=re.I):
-            seen.add(build_detail(m.group(1)))
+        # --- 1) CxS full pagination (preferred)
+        postings = []
+        if tenant and board:
+            try:
+                postings = page.evaluate(
+                    """
+                    async ({tenant, board}) => {
+                      const api = `/wday/cxs/${tenant}/${board}/jobs`;
+                      const limit = 50;
+                      let offset = 0, all = [];
+                      for (let i = 0; i < 40; i++) {           // up to 2000 jobs safe-guard
+                        const resp = await fetch(api, {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({ appliedFacets: {}, limit, offset, searchText: '' })
+                        });
+                        if (!resp.ok) break;
+                        const data = await resp.json();
+                        const batch = (data && data.jobPostings) || [];
+                        all = all.concat(batch);
+                        if (batch.length < limit) break;      // last page
+                        offset += limit;
+                      }
+                      return all;
+                    }
+                    """,
+                    {"tenant": tenant, "board": board}
+                )
+            except Exception:
+                postings = []
 
-        print(f"[DEBUG] Initial HTML pass links: {len(seen)}")
+        # Save CxS for debug & use it if non-empty
+        try:
+            Path("zillow_cxs.json").write_text(json.dumps(postings or [], indent=2))
+        except Exception:
+            pass
 
-        # Accept cookies (OneTrust), then wait for network idle
+        if postings:
+            # 2) Build items directly from JSON (no detail visits required)
+            for j in postings:
+                title = clean(j.get("title") or j.get("titleFacet") or "")
+                locs = clean(j.get("locationsText") or "")
+                ep = j.get("externalPath") or ""
+                if ep:
+                    href = build_detail(board_url, ep)
+                    out.append({
+                        "source": "workday",
+                        "company": "Zillow",
+                        "title": title or "(Zillow role)",
+                        "location": locs,
+                        "url": href
+                    })
+            # done — write json & return
+            save_json("zillow.json", out)
+            print(f"[DEBUG] Zillow via CxS: {len(out)} jobs")
+            return out
+
+        # --- 3) Fallback: DOM scraping + basic paginate/scroll
+        # Accept cookies if present
         try:
             if page.locator("#onetrust-accept-btn-handler").first.count() > 0:
                 page.click("#onetrust-accept-btn-handler", timeout=2500)
@@ -243,14 +271,37 @@ def scrape_zillow_workday(playwright_context, board_url: str):
         except Exception:
             pass
 
-        # B) DOM query after client render
-        links = collect_links_dom()
-        for u in links:
-            seen.add(u)
+        def collect_links_dom():
+            sel_js = """
+              (sels) => {
+                const seen = new Set(), acc = [];
+                for (const sel of sels) {
+                  document.querySelectorAll(sel).forEach(a => {
+                    const href = a.href || a.getAttribute('href') || '';
+                    if (!href) return;
+                    const abs = href.startsWith('http') ? href : new URL(href, location.href).href;
+                    if (!/(login|apply|search)/i.test(abs) && /\\/job\\//i.test(abs) && !seen.has(abs)) {
+                      seen.add(abs); acc.push(abs);
+                    }
+                  });
+                }
+                return acc;
+              }
+            """
+            selectors = [
+              "a[data-automation-id='jobTitle']",
+              "a[data-automation-id='jobPostingTitle']",
+              "a[href*='/job/']",
+              "a[href*='/jobs/']"
+            ]
+            try:
+                hrefs = page.evaluate(sel_js, selectors)
+            except Exception:
+                hrefs = []
+            return list(dict.fromkeys(hrefs))
 
-        print(f"[DEBUG] After DOM collect: {len(seen)}")
+        seen = set(collect_links_dom())
 
-        # C) Try paginating / show more / scroll to force render
         def try_paginate_once():
             for sel in [
                 "[data-automation-id='pagination-next']",
@@ -272,163 +323,44 @@ def scrape_zillow_workday(playwright_context, board_url: str):
                         pass
             return False
 
-        if links:
-            for _ in range(8):
+        if seen:
+            for _ in range(20):  # try many times; some boards have lots of pages
                 if not try_paginate_once():
                     break
                 for u in collect_links_dom():
                     seen.add(u)
-
-        if not seen:
-            for _ in range(12):
+        else:
+            # force-render by scrolling
+            for _ in range(20):
                 page.mouse.wheel(0, 2000)
-                page.wait_for_timeout(350)
+                page.wait_for_timeout(300)
             for u in collect_links_dom():
                 seen.add(u)
 
-        print(f"[DEBUG] After paginate/scroll: {len(seen)}")
+        # Build minimal items from links (no detail visit to keep it quick)
+        # Optionally, you can visit each link to enrich title/location if required.
+        for href in sorted(seen):
+            # derive a readable title from slug as a fallback
+            m = re.search(r"/job/[^/]+/([^/?#]+)", href)
+            title = ""
+            if m:
+                slug = m.group(1)
+                title = clean(re.sub(r"[_-]+", " ", re.sub(r"\bR?\d{4,}\b", "", slug)))
+            out.append({
+                "source": "workday",
+                "company": "Zillow",
+                "title": title or "(Zillow role)",
+                "location": "",
+                "url": href
+            })
 
-        # D) Same-origin CxS fallback; save JSON for debugging
-        if not seen:
-            try:
-                postings = page.evaluate(
-                    """
-                    async () => {
-                      const parts = location.pathname.split('/').filter(Boolean);
-                      const board = parts[parts.length - 1];
-                      const tenant = location.host.split('.')[0];
-                      const api = `/wday/cxs/${tenant}/${board}/jobs`;
-                      let out = [], offset = 0, limit = 50;
-                      for (let i = 0; i < 8; i++) {
-                        const resp = await fetch(api, {
-                          method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify({ appliedFacets: {}, limit, offset, searchText: '' })
-                        });
-                        if (!resp.ok) break;
-                        const data = await resp.json();
-                        const jobs = (data && data.jobPostings) || [];
-                        out = out.concat(jobs);
-                        if (jobs.length < limit) break;
-                        offset += limit;
-                      }
-                      return out;
-                    }
-                    """
-                )
-                Path("zillow_cxs.json").write_text(json.dumps(postings or [], indent=2))
-                print(f"[DEBUG] Zillow postings found via CxS: {len(postings) if postings else 0}")
-                for j in postings or []:
-                    ep = j.get("externalPath") or ""
-                    if ep:
-                        seen.add(build_detail(ep))
-            except Exception as e:
-                print(f"[DEBUG] CxS fallback error: {e}")
-
-        # E) Visit details for title/location (robust + don't require title)
-        def extract_title_loc(page):
-            # Try several selectors
-            for sel in [
-                "h1",
-                "[data-automation-id='jobPostingTitle']",
-                "header h1",
-            ]:
-                try:
-                    el = page.locator(sel).first
-                    if el.count() > 0:
-                        t = el.text_content(timeout=2500) or ""
-                        t = clean(t)
-                        if t:
-                            return t
-                except Exception:
-                    pass
-            # Fallbacks: <title>, og:title, JSON-LD
-            try:
-                t = page.title()
-                if t:
-                    t = re.sub(r"\s*\|\s*Workday\s*$", "", t)  # tidy common suffix
-                    t = clean(t)
-                    if t:
-                        return t
-            except Exception:
-                pass
-            try:
-                og = page.locator("meta[property='og:title']").first
-                if og.count() > 0:
-                    t = og.get_attribute("content") or ""
-                    t = clean(t)
-                    if t:
-                        return t
-            except Exception:
-                pass
-            try:
-                # JSON-LD sometimes has "title" or "positionTitle"
-                ld = page.locator('script[type="application/ld+json"]').first
-                if ld.count() > 0:
-                    raw = ld.text_content(timeout=1500) or ""
-                    import json
-                    data = json.loads(raw)
-                    if isinstance(data, dict):
-                        for k in ["title", "positionTitle", "name"]:
-                            if data.get(k):
-                                t = clean(data[k])
-                                if t:
-                                    return t
-            except Exception:
-                pass
-            return ""
-
-        def extract_location(page):
-            for sel in [".locations", "[data-automation-id='jobLocation']", "span.job-location"]:
-                try:
-                    el = page.locator(sel).first
-                    if el.count() > 0:
-                        txt = el.text_content(timeout=2500) or ""
-                        txt = clean(txt)
-                        if txt:
-                            return txt
-                except Exception:
-                    pass
-            return ""
-
-        final_links = list(seen)[:150]
-        for href in final_links:
-            try:
-                page.goto(href, wait_until="domcontentloaded", timeout=30000)
-
-                title = extract_title_loc(page)
-                loc = extract_location(page)
-
-                # As a LAST resort, derive a readable title from the URL slug
-                if not title:
-                    # /job/…/Some-Role-Title_R1234
-                    m = re.search(r"/job/[^/]+/([^/?#]+)", href)
-                    if m:
-                        slug = m.group(1)
-                        # Replace dashes/underscores with spaces, strip trailing req id
-                        slug = re.sub(r"[_-]+", " ", slug)
-                        slug = re.sub(r"\bR?\d{4,}\b", "", slug)
-                        title = clean(slug)
-
-                out.append({
-                    "source": "workday",
-                    "company": "Zillow",
-                    "title": title or "(Zillow role)",
-                    "location": loc,
-                    "url": href
-                })
-            except Exception:
-                pass
-
-        if not out:
-            Path("zillow_debug.html").write_text(page.content())
+        save_json("zillow.json", out)
+        print(f"[DEBUG] Zillow via DOM fallback: {len(out)} jobs")
+        return out
 
     finally:
         try: page.close()
         except Exception: pass
-
-    save_json("zillow.json", out)
-    return out
 
 # ----------------- main -----------------
 def main():
