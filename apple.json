@@ -2,65 +2,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Wireless Tools & Automation Engineer",
+    "title": "Image Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200619946-3543/wireless-tools-automation-engineer?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Data Solutions Product Manager",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200619817-3401/data-solutions-product-manager?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Development Engineer - Firmware",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200618675-0836/software-development-engineer-firmware?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Wi-Fi Software Systems Performance Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200620177-3543/wi-fi-software-systems-performance-engineer?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer (Desktop Support Engineer), IS&T Enterprise Systems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200617037-0240/software-engineer-desktop-support-engineer-is-t-enterprise-systems?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "SWE - Sr Software Engineer, Siri Experiences Framework and Tooling",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200619253-0836/swe-sr-software-engineer-siri-experiences-framework-and-tooling?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Development Engineer - Test",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200618682-0836/software-development-engineer-test?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Administrative Assistant",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200612658-2114/administrative-assistant?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Senior SW Test Engineer - Location Technologies",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200601181-0865/senior-sw-test-engineer-location-technologies?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200620379-0836/image-quality-engineer?team=SFTWR"
   },
   {
     "source": "apple",
@@ -72,6 +16,125 @@
   {
     "source": "apple",
     "company": "Apple",
+    "title": "Lab Validation Storage Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200620298-0865/lab-validation-storage-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Data Solutions Product Manager",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619817-3401/data-solutions-product-manager?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer (Desktop Support Engineer), IS&T Enterprise Systems",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200617037-0240/software-engineer-desktop-support-engineer-is-t-enterprise-systems?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Validation Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200620343-0865/validation-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Sr Software Engineering Program Manager - Hardware Test Engineering",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200620032-0836/sr-software-engineering-program-manager-hardware-test-engineering?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Senior SW Test Engineer - Location Technologies",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200601181-0865/senior-sw-test-engineer-location-technologies?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "CAD Engineer - Static Timing Analysis & Physical Design",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619146-1451/cad-engineer-static-timing-analysis-physical-design?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Audio Expert",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619564-1756/audio-expert?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Wi-Fi Software Systems Performance Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200620177-3543/wi-fi-software-systems-performance-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Developer in Test, LocalStorage QA",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619510-0157/software-developer-in-test-localstorage-qa?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Administrative Assistant",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200612658-2114/administrative-assistant?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Accessibility Software Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619212-0836/accessibility-software-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Full Stack Engineer (Frontend & Design Focus), Siri",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619956-1251/full-stack-engineer-frontend-design-focus-siri?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Sr. Software Developer in Test - Core OS Systems Quality Engineering",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619273-3543/sr-software-developer-in-test-core-os-systems-quality-engineering?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Wireless Tools & Automation Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200619946-3543/wireless-tools-automation-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software QA Manager, Apps",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200620367-0836/software-qa-manager-apps?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Senior Site Reliability Engineer (SRE), Data - Apple Ads",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200620419-0836/senior-site-reliability-engineer-sre-data-apple-ads?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
     "title": "Software Developer for Validation team",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200619864-0865/software-developer-for-validation-team?team=SFTWR"
@@ -79,23 +142,37 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Technical Lead- Systems Architecture",
+    "title": "Manufacturing Design Engineer-Beats Enclosure",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200617192-1052/technical-lead-systems-architecture?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200617140-3916/manufacturing-design-engineer-beats-enclosure?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer - Beats Enclosures",
+    "title": "Brittle Deco Subject Matter Expert",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200617139-3435/manufacturing-quality-engineer-beats-enclosures?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200618830-0836/brittle-deco-subject-matter-expert?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Product Quality Engineer",
+    "title": "Manufacturing Quality Engineer, iPhone",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200599259-1731/product-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200597432-3435/manufacturing-quality-engineer-iphone?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Design Engineer-Beats Enclosure",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200617140-3435/manufacturing-design-engineer-beats-enclosure?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Design Engineer-Beats Enclosure",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200617140-3715/manufacturing-design-engineer-beats-enclosure?team=OPMFG"
   },
   {
     "source": "apple",
@@ -107,16 +184,51 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "iPad Manufacturing Quality Engineer",
+    "title": "Product Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200590201-1340/ipad-manufacturing-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200599259-1731/product-quality-engineer?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Manager, iPhone",
+    "title": "Manufacturing Quality Engineer - Beats Enclosures",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200615104-3435/manufacturing-quality-manager-iphone?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200617139-3916/manufacturing-quality-engineer-beats-enclosures?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Core Technologies Supplier Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200615549-0836/core-technologies-supplier-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer - iPad",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200609151-0836/manufacturing-quality-engineer-ipad?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Thermal Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200612616-3435/thermal-manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Technical Lead- Systems Architecture",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200617192-1052/technical-lead-systems-architecture?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Engineer, Watch",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200607940-1340/product-quality-engineer-watch?team=OPMFG"
   },
   {
     "source": "apple",
@@ -128,6 +240,20 @@
   {
     "source": "apple",
     "company": "Apple",
+    "title": "Manufacturing Quality Manager, iPhone",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200615104-3435/manufacturing-quality-manager-iphone?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer - Beats Enclosures",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200617139-3435/manufacturing-quality-engineer-beats-enclosures?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
     "title": "Manufacturing Quality Engineer- Battery",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200613166-3956/manufacturing-quality-engineer-battery?team=OPMFG"
@@ -135,8 +261,22 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Thermal Manufacturing Quality Engineer",
+    "title": "Technical Lead- Systems Architecture",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200612616-3435/thermal-manufacturing-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200617192-0321/technical-lead-systems-architecture?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Quality Engineer - Product Operations Graduate Programme 2026",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200617202-1418/quality-engineer-product-operations-graduate-programme-2026?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "iPad Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200590201-1340/ipad-manufacturing-quality-engineer?team=OPMFG"
   }
 ]
