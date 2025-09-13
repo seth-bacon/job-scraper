@@ -2,6 +2,27 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Employee Service Coordinator",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Employee-Service-Coordinator_P747939-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Workforce Management Systems Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Workforce-Management-Systems-Lead_P747936"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Model Designer",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Model-Designer_P747858-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Premier Loan Officer",
     "location": "Overland Park-KS-Foster Street",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Overland-Park-KS-Foster-Street/Mortgage-Loan-Officer_P747644"
@@ -131,13 +152,6 @@
     "title": "Mortgage Disclosure Analyst",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mortgage-Disclosure-Analyst_P747914-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Mortgage Disclosure Analyst",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Mortgage-Disclosure-Analyst_P747915-1"
   },
   {
     "source": "workday",
@@ -348,13 +362,6 @@
     "title": "Principal Machine Learning Engineer, Agentic AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Machine-Learning-Engineer--Agentic-AI_P747612"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Director, Sales Enablement, ZHL",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal--Sales-Enablement--ZHL_P747278"
   },
   {
     "source": "workday",
@@ -712,13 +719,6 @@
     "title": "Senior Software Development Engineer, Big Data",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer--Big-Data_P746595-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Software Development Engineer, Platform",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer--Platform_P746756"
   },
   {
     "source": "workday",
