@@ -431,13 +431,6 @@
     "company": "Liberty Mutual",
     "title": "(Job)",
     "location": "",
-    "url": "https://careers-libertymutual.icims.com/jobs/72048/senior-software-engineer/job"
-  },
-  {
-    "source": "icims",
-    "company": "Liberty Mutual",
-    "title": "(Job)",
-    "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/71804/senior-underwriter%2c-environmental-wholesale-distribution/job"
   },
   {
@@ -1398,5 +1391,12 @@
     "title": "(Job)",
     "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/71597/product-design-counsel/job"
+  },
+  {
+    "source": "icims",
+    "company": "Liberty Mutual",
+    "title": "(Job)",
+    "location": "",
+    "url": "https://careers-libertymutual.icims.com/jobs/70674/senior-executive-assistant-i%2c-liberty-mutual-investments/job"
   }
 ]
