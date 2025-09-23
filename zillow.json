@@ -2,6 +2,34 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Senior Financial Analyst",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Financial-Analyst_P747966-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Machine Learning Engineer, Agentic AI – User Understanding",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Machine-Learning-Engineer--Agentic-AI---User-Understanding_P747938-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Technical Program Manager, Shopping",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Technical-Program-Manager--Shopping_P747973-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Pricing Strategy Director",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Pricing-Director_P747429"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Principal Product Manager, Multimodal & Vision AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager---Multimodal---Vision-AI_P746709"
@@ -443,13 +471,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior UX Researcher, Agentic AI",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-UX-Researcher--Agentic-AI_P747780"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Manager, Product Design (StreetEasy)",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Manager--Product-Design--StreetEasy-_P746843"
@@ -457,23 +478,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Product Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Product-Manager_P747717"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Software Development Engineer - Laravel/PHP + React",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer---Laravel-PHP---React_P747569"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Lifecycle Marketing Operations Specialist",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Lifecycle-Marketing-Operations-Specialist_P746814"
   },
   {
     "source": "workday",
@@ -495,13 +502,6 @@
     "title": "Senior ServiceNow Developer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-ServiceNow-Developer_P747668"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Product Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager_P747401-1"
   },
   {
     "source": "workday",
@@ -667,27 +667,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Machine Learning Engineer",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Machine-Learning-Engineer_P747039"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Cloud Network Engineer",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Network-Engineer_P747027"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Security Engineer",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Security-Engineer_P746926"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Software Development Engineer - Big Data",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer---Big-Data_P744612"
@@ -712,13 +691,6 @@
     "title": "Sr. Data Analyst",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Sr-Data-Analyst_P747453"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Business Intelligence Analyst",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Business-Intelligence-Analyst_P747297"
   },
   {
     "source": "workday",
