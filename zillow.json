@@ -2,9 +2,30 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Sales Operations and Planning Manager",
+    "title": "Product Designer",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Product-Designer_P748044"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "AI Applied Scientist - PhD Intern, Foundational IQ",
+    "location": "Remote-Germany",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-Germany/AI-Applied-Scientist---PhD-Intern--Foundational-IQ_P748121"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "AI Applied Scientist - PhD Intern, Evaluation Systems and Metrics",
+    "location": "Remote-Germany",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-Germany/AI-Applied-Scientist---PhD-Intern--Evaluation-Systems-and-Metrics_P748120"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Closing Assistant",
     "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sr-Program-Mgr--Sales-Operations-and-Planning_P747277-1"
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mortgage-Closing-Assistant_P748072-1"
   },
   {
     "source": "workday",
@@ -33,13 +54,6 @@
     "title": "Principal Product Designer, Rentals Enterprise Experience",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Designer--Rentals-Enterprise-Experience_P747969-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Insuring Specialist",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Insuring-Specialist_P748065"
   },
   {
     "source": "workday",
@@ -170,23 +184,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Quality Insight and Sentiment Analyst",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Quality-Insight-and-Sentiment-Analyst_P748068"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior HRBP, Sales and Go-to-Market",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-HRBP--Sales-and-Go-to-Market_P747929"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Program Manager, Performance Management",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Program-Manager--Performance-Managment_P747671"
   },
   {
     "source": "workday",
@@ -803,26 +803,5 @@
     "title": "Manager, Mortgage Loan Underwriting",
     "location": "Irvine-CA-Michelson Dr",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Manager--Mortgage-Loan-Underwriting_P747990-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Software Development Engineer - Observability",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer---Observability_P746327-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Software Development Engineer, Big Data",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Software-Development-Engineer--Big-Data_P745879"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Site Reliability Engineer",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Site-Reliability-Engineer_P746010-1"
   }
 ]
