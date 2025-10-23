@@ -107,6 +107,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "CS Labs Ambassador",
+    "location": "Gurugram, India",
+    "url": "https://careers.airbnb.com/positions/7348532?gh_jid=7348532"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Data Scientist (Contractor), Economics & Policy",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7341887?gh_jid=7341887"
@@ -226,13 +233,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Lead Program Manager, Design",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7114234?gh_jid=7114234"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Legal Counsel, Korea",
     "location": "Seoul, Korea",
     "url": "https://careers.airbnb.com/positions/7294079?gh_jid=7294079"
@@ -297,8 +297,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Localization - Americas",
-    "location": "Brazil",
-    "url": "https://careers.airbnb.com/positions/6804906?gh_jid=6804906"
+    "location": "Mexico",
+    "url": "https://careers.airbnb.com/positions/6804446?gh_jid=6804446"
   },
   {
     "source": "greenhouse",
@@ -311,8 +311,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Localization - Americas",
-    "location": "Mexico",
-    "url": "https://careers.airbnb.com/positions/6804446?gh_jid=6804446"
+    "location": "Brazil",
+    "url": "https://careers.airbnb.com/positions/6804906?gh_jid=6804906"
   },
   {
     "source": "greenhouse",
@@ -380,9 +380,9 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Market Manager, France (12 Months FTC)",
-    "location": "Paris, France",
-    "url": "https://careers.airbnb.com/positions/7338283?gh_jid=7338283"
+    "title": "Market Manager, Germany",
+    "location": "Berlin, Germany",
+    "url": "https://careers.airbnb.com/positions/7244854?gh_jid=7244854"
   },
   {
     "source": "greenhouse",
@@ -446,13 +446,6 @@
     "title": "Platform Manager, Provisioning & Access Management",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7113476?gh_jid=7113476"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Principal, LATAM & Canada Tax",
-    "location": "Sao Paulo, Brazil",
-    "url": "https://careers.airbnb.com/positions/7295859?gh_jid=7295859"
   },
   {
     "source": "greenhouse",
@@ -562,6 +555,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Senior Business Expansion Lead EMEA, Experiences",
+    "location": "Paris, France",
+    "url": "https://careers.airbnb.com/positions/6933575?gh_jid=6933575"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Senior Business Solutions Engineer, BizTech",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7306160?gh_jid=7306160"
@@ -653,6 +653,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Senior Manager, Partner Service Delivery, APAC",
+    "location": "Philippines",
+    "url": "https://careers.airbnb.com/positions/7351753?gh_jid=7351753"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Senior Manager, Product Lead (Pilot Product)",
     "location": "China",
     "url": "https://careers.airbnb.com/positions/6639450?gh_jid=6639450"
@@ -674,30 +681,9 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Senior Marketing Manager",
-    "location": "Barcelona, Spain",
-    "url": "https://careers.airbnb.com/positions/7204317?gh_jid=7204317"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Market Manager",
-    "location": "San Francisco, United States, Los Angeles, United States, Portland, United States, Seattle, United States",
-    "url": "https://careers.airbnb.com/positions/7261688?gh_jid=7261688"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Market Manager",
-    "location": "Texas, United States",
-    "url": "https://careers.airbnb.com/positions/7255759?gh_jid=7255759"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Senior Market Manager",
     "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/7255684?gh_jid=7255684"
+    "url": "https://careers.airbnb.com/positions/7255685?gh_jid=7255685"
   },
   {
     "source": "greenhouse",
@@ -710,8 +696,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Market Manager",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/7255685?gh_jid=7255685"
+    "location": "Texas, United States",
+    "url": "https://careers.airbnb.com/positions/7255759?gh_jid=7255759"
   },
   {
     "source": "greenhouse",
@@ -719,6 +705,20 @@
     "title": "Senior Market Manager",
     "location": "Sydney, Australia",
     "url": "https://careers.airbnb.com/positions/7297214?gh_jid=7297214"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Market Manager",
+    "location": "Canada",
+    "url": "https://careers.airbnb.com/positions/7255684?gh_jid=7255684"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Market Manager",
+    "location": "San Francisco, United States, Los Angeles, United States, Portland, United States, Seattle, United States",
+    "url": "https://careers.airbnb.com/positions/7261688?gh_jid=7261688"
   },
   {
     "source": "greenhouse",
@@ -740,13 +740,6 @@
     "title": "Senior Market Manager, France",
     "location": "Paris, France",
     "url": "https://careers.airbnb.com/positions/7262102?gh_jid=7262102"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Market Manager, Germany",
-    "location": "Berlin, Germany",
-    "url": "https://careers.airbnb.com/positions/7244854?gh_jid=7244854"
   },
   {
     "source": "greenhouse",
@@ -885,15 +878,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Specialist, Premium Support (Spanish)",
-    "location": "Ireland",
-    "url": "https://careers.airbnb.com/positions/7164597?gh_jid=7164597"
+    "location": "Nevada, United States",
+    "url": "https://careers.airbnb.com/positions/7187237?gh_jid=7187237"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Specialist, Premium Support (Spanish)",
-    "location": "Nevada, United States",
-    "url": "https://careers.airbnb.com/positions/7187237?gh_jid=7187237"
+    "location": "Ireland",
+    "url": "https://careers.airbnb.com/positions/7164597?gh_jid=7164597"
   },
   {
     "source": "greenhouse",
@@ -1034,6 +1027,13 @@
     "title": "Staff Data Platform Engineer, Community Support Platform",
     "location": "REMOTE - US",
     "url": "https://careers.airbnb.com/positions/7183500?gh_jid=7183500"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Staff Data Scientist - Customer Relationship Management (CRM) & Loyalty",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7349808?gh_jid=7349808"
   },
   {
     "source": "greenhouse",
@@ -1213,6 +1213,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Taxonomist",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7350219?gh_jid=7350219"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Technical Staff Program Manager, Security (Identity Access Management)",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/6752810?gh_jid=6752810"
@@ -1242,15 +1249,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Workforce Planning Senior Analyst",
-    "location": "Philippines",
-    "url": "https://careers.airbnb.com/positions/7294061?gh_jid=7294061"
+    "location": "Canada",
+    "url": "https://careers.airbnb.com/positions/7237974?gh_jid=7237974"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Workforce Planning Senior Analyst",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/7237974?gh_jid=7237974"
+    "location": "Philippines",
+    "url": "https://careers.airbnb.com/positions/7294061?gh_jid=7294061"
   },
   {
     "source": "greenhouse",
