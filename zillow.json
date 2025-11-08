@@ -2,9 +2,23 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Workday Manager",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Manager--People-Tech-Operations_P748279-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Mortgage Sales & Support Rep",
     "location": "Irvine-CA-Michelson Dr",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Sales---Support-Rep_P748381-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Manager, Sales Operations and Planning",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--Sales-Operations-and-Planning_P747276-1"
   },
   {
     "source": "workday",
@@ -331,13 +345,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Principal Model Designer",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Model-Designer_P747858-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Principal Applied Scientist, Agentic AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Applied-Scientist--Agentic-AI_P747465"
@@ -355,13 +362,6 @@
     "title": "Principal Data Scientist - Rentals Marketplace Ads Team",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Data-Scientist---Rentals-Marketplace-Ads-Team_P747941"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Full Stack Software Development Engineer - Mexico",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Principal-Full-Stack-Software-Development-Engineer---Mexico_P747556"
   },
   {
     "source": "workday",
@@ -460,13 +460,6 @@
     "title": "Senior Machine Learning Engineer, Agentic AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Machine-Learning-Engineer--Agentic-AI_P747983"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Manager, Sales Operations and Planning",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--Sales-Operations-and-Planning_P747276-1"
   },
   {
     "source": "workday",
