@@ -2,6 +2,20 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Client Engineer",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Client-Engineer_P748390"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Strategic Account Executive",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Strategic-Account-Executive_P748340-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Underwriting Enablement Manager",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Underwriting-Enablement-Manager_P748275-1"
@@ -373,13 +387,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Indirect Tax, Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Indirect-Tax--Manager_P747782"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Program Manager, Agent Performance",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Program-Manager--Agent-Performance_P748189-1"
@@ -576,13 +583,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior ServiceNow Developer",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-ServiceNow-Developer_P747668"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Site Reliability Engineer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Site-Reliability-Engineer_P748039"
@@ -733,13 +733,6 @@
     "title": "Principal Software Development Engineer (Rich Media)",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Software-Development-Engineer--Rich-Media-_P748193-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Sales Compensation Governance Manager",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Sales-Compensation-Governance-Manager_P748191-1"
   },
   {
     "source": "workday",
