@@ -227,15 +227,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Localization - Americas",
-    "location": "Brazil",
-    "url": "https://careers.airbnb.com/positions/6804906?gh_jid=6804906"
+    "location": "Mexico",
+    "url": "https://careers.airbnb.com/positions/6804446?gh_jid=6804446"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Localization - Americas",
-    "location": "Mexico",
-    "url": "https://careers.airbnb.com/positions/6804446?gh_jid=6804446"
+    "location": "Brazil",
+    "url": "https://careers.airbnb.com/positions/6804906?gh_jid=6804906"
   },
   {
     "source": "greenhouse",
@@ -369,6 +369,13 @@
     "title": "Product Manager, LATAM (São Paulo, Brazil)",
     "location": "São Paulo, Brazil",
     "url": "https://careers.airbnb.com/positions/7139933?gh_jid=7139933"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Program Manager, Global Risk",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7345111?gh_jid=7345111"
   },
   {
     "source": "greenhouse",
@@ -677,13 +684,6 @@
     "title": "Senior Program Manager, Insights & Adoption",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7362297?gh_jid=7362297"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Public Policy Manager, Iberia",
-    "location": "Madrid, Spain",
-    "url": "https://careers.airbnb.com/positions/7204968?gh_jid=7204968"
   },
   {
     "source": "greenhouse",
@@ -1090,5 +1090,12 @@
     "title": "Technical Staff Program Manager, Security (Identity Access Management)",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/6752810?gh_jid=6752810"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Transaction Monitoring Associate - Payment Compliance",
+    "location": "Gurugram, India",
+    "url": "https://careers.airbnb.com/positions/7408171?gh_jid=7408171"
   }
 ]
