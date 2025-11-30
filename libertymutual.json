@@ -627,13 +627,6 @@
     "company": "Liberty Mutual",
     "title": "(Job)",
     "location": "",
-    "url": "https://careers-libertymutual.icims.com/jobs/72199/solutions-architect-engineer-%e2%80%93-liberty-mutual-global-risk-solutions%2c-claims-tech/job"
-  },
-  {
-    "source": "icims",
-    "company": "Liberty Mutual",
-    "title": "(Job)",
-    "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/72980/senior-litigation-counsel/job"
   },
   {
@@ -1398,5 +1391,12 @@
     "title": "(Job)",
     "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/73054/sales-representative%2c-inbound-remote/job"
+  },
+  {
+    "source": "icims",
+    "company": "Liberty Mutual",
+    "title": "(Job)",
+    "location": "",
+    "url": "https://careers-libertymutual.icims.com/jobs/73055/sales-representative%2c-inbound-remote/job"
   }
 ]
