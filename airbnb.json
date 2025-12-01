@@ -65,13 +65,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "CS Labs Ambassador",
-    "location": "Gurugram, India",
-    "url": "https://careers.airbnb.com/positions/7348532?gh_jid=7348532"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Data Science Lead, Guest Funnel Science",
     "location": "Remote",
     "url": "https://careers.airbnb.com/positions/7107054?gh_jid=7107054"
@@ -220,6 +213,13 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Localization - Americas",
+    "location": "Mexico",
+    "url": "https://careers.airbnb.com/positions/6804446?gh_jid=6804446"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Manager, Localization - Americas",
     "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/6804906?gh_jid=6804906"
   },
@@ -229,13 +229,6 @@
     "title": "Manager, Localization - Americas",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7293161?gh_jid=7293161"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Manager, Localization - Americas",
-    "location": "Mexico",
-    "url": "https://careers.airbnb.com/positions/6804446?gh_jid=6804446"
   },
   {
     "source": "greenhouse",
@@ -415,9 +408,9 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Senior Account Executive (12 Month Fixed-Term Contract)",
-    "location": "Paris, France",
-    "url": "https://careers.airbnb.com/positions/7326544?gh_jid=7326544"
+    "title": "Sales Operations & Vendor Performance Lead, APAC",
+    "location": "Singapore, Singapore",
+    "url": "https://careers.airbnb.com/positions/7433769?gh_jid=7433769"
   },
   {
     "source": "greenhouse",
@@ -425,6 +418,13 @@
     "title": "Senior Account Executive (12 Month Fixed-Term Contract)",
     "location": "Milan, Italy",
     "url": "https://careers.airbnb.com/positions/7326874?gh_jid=7326874"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Account Executive (12 Month Fixed-Term Contract)",
+    "location": "Paris, France",
+    "url": "https://careers.airbnb.com/positions/7326544?gh_jid=7326544"
   },
   {
     "source": "greenhouse",
@@ -619,15 +619,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Market Manager",
-    "location": "San Francisco, United States, Los Angeles, United States, Portland, United States, Seattle, United States",
-    "url": "https://careers.airbnb.com/positions/7261688?gh_jid=7261688"
+    "location": "Canada",
+    "url": "https://careers.airbnb.com/positions/7255685?gh_jid=7255685"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Market Manager",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/7255685?gh_jid=7255685"
+    "location": "San Francisco, United States, Los Angeles, United States, Portland, United States, Seattle, United States",
+    "url": "https://careers.airbnb.com/positions/7261688?gh_jid=7261688"
   },
   {
     "source": "greenhouse",
@@ -698,6 +698,13 @@
     "title": "Senior Program Manager, Insights & Adoption",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7362297?gh_jid=7362297"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Routing & Channel Optimisation Coordinator",
+    "location": "Dublin, Ireland",
+    "url": "https://careers.airbnb.com/positions/6873491?gh_jid=6873491"
   },
   {
     "source": "greenhouse",
@@ -842,13 +849,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Software Engineer, Guest & Host",
-    "location": "China",
-    "url": "https://careers.airbnb.com/positions/7028667?gh_jid=7028667"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Software Engineer, Search Infrastructure",
     "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/7365942?gh_jid=7365942"
@@ -871,15 +871,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Specialist, Premium Support (Italian)",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/7347431?gh_jid=7347431"
+    "location": "Ireland",
+    "url": "https://careers.airbnb.com/positions/7343336?gh_jid=7343336"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Specialist, Premium Support (Italian)",
-    "location": "Ireland",
-    "url": "https://careers.airbnb.com/positions/7343336?gh_jid=7343336"
+    "location": "Canada",
+    "url": "https://careers.airbnb.com/positions/7347431?gh_jid=7347431"
   },
   {
     "source": "greenhouse",
@@ -887,6 +887,13 @@
     "title": "Specialist, Premium Support (Portuguese)",
     "location": "Ireland",
     "url": "https://careers.airbnb.com/positions/7030320?gh_jid=7030320"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Specialist, Premium Support (Spanish)",
+    "location": "British Columbia, Canada",
+    "url": "https://careers.airbnb.com/positions/6960651?gh_jid=6960651"
   },
   {
     "source": "greenhouse",
@@ -1060,15 +1067,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Staff Software Engineer, Growth Platform",
-    "location": "Remote, USA",
-    "url": "https://careers.airbnb.com/positions/6886222?gh_jid=6886222"
+    "location": "Bangalore, India",
+    "url": "https://careers.airbnb.com/positions/7025506?gh_jid=7025506"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Staff Software Engineer, Growth Platform",
-    "location": "Bangalore, India",
-    "url": "https://careers.airbnb.com/positions/7025506?gh_jid=7025506"
+    "location": "Remote, USA",
+    "url": "https://careers.airbnb.com/positions/6886222?gh_jid=6886222"
   },
   {
     "source": "greenhouse",
