@@ -270,13 +270,6 @@
     "company": "Liberty Mutual",
     "title": "(Job)",
     "location": "",
-    "url": "https://careers-libertymutual.icims.com/jobs/73062/associate-claims-specialist---rideshare-commercial-claims-unrepresented-injury-adjuster/job"
-  },
-  {
-    "source": "icims",
-    "company": "Liberty Mutual",
-    "title": "(Job)",
-    "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/73523/director%2c-engineering---grs-underwriting-technology/job"
   },
   {
@@ -1398,5 +1391,12 @@
     "title": "(Job)",
     "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/72532/senior-surety-underwriter---hybrid-%28contract%29/job"
+  },
+  {
+    "source": "icims",
+    "company": "Liberty Mutual",
+    "title": "(Job)",
+    "location": "",
+    "url": "https://careers-libertymutual.icims.com/jobs/72720/senior-software-engineer/job"
   }
 ]
