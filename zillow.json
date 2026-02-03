@@ -2,6 +2,167 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Mortgage Loan Officer - Consumer Direct (Seattle, Washington)",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Mortgage-Loan-Officer---Consumer-Direct--Seattle--Washington-_P749047-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Loan Officer - Consumer Direct (Irvine, California)",
+    "location": "Irvine-CA-Michelson Dr",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Loan-Officer---Consumer-Direct--Irvine--California-_P749046"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (Idaho)",
+    "location": "Remote-ID",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-ID/Remote-Mortgage-Loan-Officer---Consumer-Direct--Idaho-_P749045-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (California)",
+    "location": "Remote-CA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CA/Mortgage-Loan-Officer---CA_P748721-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (Hawaii)",
+    "location": "Remote-HI",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-HI/Remote-Mortgage-Loan-Officer---Consumer-Direct--Hawaii-_P749044-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (Nevada)",
+    "location": "Remote-NV",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NV/Remote-Mortgage-Loan-Officer---Consumer-Direct--Nevada-_P749043-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (Arizona)",
+    "location": "Remote-AZ",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-AZ/Mortgage-Loan-Officer---AZ_P748722"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (Washington)",
+    "location": "Remote-WA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-WA/Mortgage-Loan-Officer---WA_P748723-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer - Consumer Direct (Oregon)",
+    "location": "Remote-OR",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OR/Remote-Mortgage-Loan-Officer---Consumer-Direct--Oregon-_P749042-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Premier Mortgage Loan Officer (Irvine, California)",
+    "location": "Irvine-CA-Michelson Dr",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Premier-Loan-Officer_P748860-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Premier Mortgage Loan Officer (Seattle, Washington)",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Premier-Loan-Officer_P748861-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (Hawaii)",
+    "location": "Remote-HI",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-HI/Premier-Loan-Officer---HI-Remote_P748858"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (Idaho)",
+    "location": "Remote-ID",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-ID/Premier-Loan-Officer---ID-Remote_P748859-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (Nevada)",
+    "location": "Remote-NV",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NV/Premier-Loan-Officer---NV-Remote_P748857-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (Oregon)",
+    "location": "Remote-OR",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OR/Premier-Loan-Officer---OR-Remote_P748856-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (Arizona)",
+    "location": "Remote-AZ",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-AZ/Premier-Loan-Officer---AZ-Remote_P748694-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (Washington)",
+    "location": "Remote-WA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-WA/Premier-Loan-Officer---WA-Remote_P748695-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Premier Mortgage Loan Officer (California)",
+    "location": "Remote-CA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CA/Premier-Loan-Officer---CA-Remote_P748693-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sales Manager, Major Market, Rentals",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Manager--Major-Market--Rentals_P748794-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sales Manager, Mid Market, Rentals",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Manager--Mid-Market--Rentals_P746414"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mid-Market Account Executive, Agent Software and Advertising",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mid-Market-Account-Executive--Agent-Software-and-Advertising_P748828-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Mortgage Support Specialist",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Mortgage-Support-Specialist_P749175-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Manager, Applied Science",
+    "location": "Remote-Germany",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-Germany/Senior-Manager--Applied-Science_P748740"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Team Lead, Mortgage Production Assistant",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Team-Lead--Mortgage-Production-Assistant_P749041-1"
@@ -709,13 +870,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Mid-Market Account Executive, Agent Software and Advertising",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mid-Market-Account-Executive--Agent-Software-and-Advertising_P748828-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Insuring Specialist",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Insuring-Specialist_P748821-1"
@@ -737,142 +891,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Mortgage Loan Officer - Consumer Direct (Seattle, Washington)",
-    "location": "Seattle-WA-2nd Ave",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Mortgage-Loan-Officer---Consumer-Direct--Seattle--Washington-_P749047-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mortgage Loan Officer - Consumer Direct (Irvine, California)",
-    "location": "Irvine-CA-Michelson Dr",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Loan-Officer---Consumer-Direct--Irvine--California-_P749046"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (Idaho)",
-    "location": "Remote-ID",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-ID/Remote-Mortgage-Loan-Officer---Consumer-Direct--Idaho-_P749045-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (Hawaii)",
-    "location": "Remote-HI",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-HI/Remote-Mortgage-Loan-Officer---Consumer-Direct--Hawaii-_P749044-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (Nevada)",
-    "location": "Remote-NV",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NV/Remote-Mortgage-Loan-Officer---Consumer-Direct--Nevada-_P749043-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (Oregon)",
-    "location": "Remote-OR",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OR/Remote-Mortgage-Loan-Officer---Consumer-Direct--Oregon-_P749042-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (Washington)",
-    "location": "Remote-WA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-WA/Mortgage-Loan-Officer---WA_P748723-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Sales Manager, SMB, Rentals",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Manager--SMB--Rentals_P748834-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (Arizona)",
-    "location": "Remote-AZ",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-AZ/Mortgage-Loan-Officer---AZ_P748722"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer - Consumer Direct (California)",
-    "location": "Remote-CA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CA/Mortgage-Loan-Officer---CA_P748721-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Recruiter",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Recruiter_P748827"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Premier Mortgage Loan Officer (Seattle, Washington)",
-    "location": "Seattle-WA-2nd Ave",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Premier-Loan-Officer_P748861-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Premier Mortgage Loan Officer (Irvine, California)",
-    "location": "Irvine-CA-Michelson Dr",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Premier-Loan-Officer_P748860-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (Idaho)",
-    "location": "Remote-ID",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-ID/Premier-Loan-Officer---ID-Remote_P748859-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (Hawaii)",
-    "location": "Remote-HI",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-HI/Premier-Loan-Officer---HI-Remote_P748858"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (Nevada)",
-    "location": "Remote-NV",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NV/Premier-Loan-Officer---NV-Remote_P748857-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (Oregon)",
-    "location": "Remote-OR",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OR/Premier-Loan-Officer---OR-Remote_P748856-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (Washington)",
-    "location": "Remote-WA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-WA/Premier-Loan-Officer---WA-Remote_P748695-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (Arizona)",
-    "location": "Remote-AZ",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-AZ/Premier-Loan-Officer---AZ-Remote_P748694-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Premier Mortgage Loan Officer (California)",
-    "location": "Remote-CA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CA/Premier-Loan-Officer---CA-Remote_P748693-1"
   },
   {
     "source": "workday",
