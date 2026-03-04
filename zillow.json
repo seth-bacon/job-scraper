@@ -2,6 +2,209 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "News Writer, Corporate Affairs",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/News-Writer--Communications_P749398-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Specialist, Corporate Social Media",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Specialist--Corporate-Social-Media_P749368-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Hawaii)",
+    "location": "Remote-HI",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-HI/Remote-Mortgage-Loan-Officer--Hawaii-_P749614-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (California)",
+    "location": "Remote-CA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CA/Remote-Mortgage-Loan-Officer--California-_P749613-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Arizona)",
+    "location": "Remote-AZ",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-AZ/Remote-Mortgage-Loan-Officer--Arizona-_P749612"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Portfolio Manager, Enterprise",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Portfolio-Manager--Enterprise_P749335-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Data Scientist",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Data-Scientist_P749270-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (West Virginia)",
+    "location": "Remote-WV",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-WV/Remote-Mortgage-Loan-Officer--West-Virginia-_P749599-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Washington DC)",
+    "location": "Remote-DC",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-DC/Remote-Mortgage-Loan-Officer--Washington-DC-_P749593-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Virginia)",
+    "location": "Remote-VA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-VA/Remote-Mortgage-Loan-Officer--Virginia-_P749589-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Vermont)",
+    "location": "Remote-VT",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-VT/Remote-Mortgage-Loan-Officer--Vermont-_P749588-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Pennsylvania)",
+    "location": "Remote-PA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-PA/Remote-Mortgage-Loan-Officer--Pennsylvania-_P749587-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Ohio)",
+    "location": "Remote-OH",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OH/Remote-Mortgage-Loan-Officer--Ohio-_P749586-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (North Carolina)",
+    "location": "Remote-NC",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NC/Remote-Mortgage-Loan-Officer--North-Carolina-_P749585-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (New Hampshire)",
+    "location": "Remote-NH",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NH/Remote-Mortgage-Loan-Officer--New-Hampshire-_P749584-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Michigan)",
+    "location": "Remote-MI",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MI/Remote-Mortgage-Loan-Officer--Michigan-_P749581-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Massachusetts)",
+    "location": "Remote-MA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MA/Remote-Mortgage-Loan-Officer--Massachusetts-_P749580-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Maryland)",
+    "location": "Remote-MD",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MD/Remote-Mortgage-Loan-Officer--Maryland-_P749579-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Kentucky)",
+    "location": "Remote-KY",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-KY/Remote-Mortgage-Loan-Officer--Kentucky-_P749578-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Indiana)",
+    "location": "Remote-IN",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-IN/Remote-Mortgage-Loan-Officer--Indiana-_P749577-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Florida)",
+    "location": "Remote-FL",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-FL/Remote-Mortgage-Loan-Officer--Florida-_P749576-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Connecticut)",
+    "location": "Remote-CT",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CT/Remote-Mortgage-Loan-Officer--Connecticut-_P749575-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Title Review Specialist",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Title-Review-Specialist_P749567"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Benefits Program Manager, Absence Management",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Benefits-Program-Manager--Absence-Management_P749333"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Appraisal Review Specialist",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Appraisal-Review-Specialist_P749563-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Appraisal Order Specialist",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Appraisal-Order-Specialist_P749564"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sales Manager, Aryeo",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Manager--Aryeo_P749323-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sr. Applied Scientist",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sr-Applied-Scientist_P749387-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Customer Support Consultant, ShowingTime",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Customer-Support-Consultant--ShowingTime_P749561-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Senior Director, Agent Sales",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Director--Agent-Sales_P749178"
@@ -828,13 +1031,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Business Advisor, Major Market, Rentals",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Business-Advisor--Major-Market--Rentals_P748779-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Photographer, Zillow Media Experts",
     "location": "Remote-FL",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-FL/Photographer--Zillow-Media-Experts_P749129-1"
@@ -964,13 +1160,6 @@
     "title": "Senior Product Manager, Quote-to-Cash",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Product-Manager--Quote-to-Cash_P748761-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Strategic Advisor, Enterprise, Rentals",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Strategic-Advisor--Enterprise--Rentals_P748782-2"
   },
   {
     "source": "workday",
