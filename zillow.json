@@ -2,6 +2,104 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Photo Editor",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Photo-Editor_P749393-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Strategy and Operations Associate",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Strategy-and-Operations-Associate_P749559"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "IT Support Specialist I",
+    "location": "Lenexa-KS-Lakeview Avenue",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Lenexa-KS-Lakeview-Avenue/IT-Support-Specialist-I_P749583"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sales Operations Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Operations-Manager_P749463-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Account Executive",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Account-Executive_P749392-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Program Manager – Media Products and Experiences",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Program-Manager---Media-Products-and-Experiences_P749336-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Technical Program Manager, FUB Engineering",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Technical-Program-Manager--FUB-Engineering_P749446-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Technical Program Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Technical-Program-Manager_P749703-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Technical Program Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Technical-Program-Manager_P749264-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Manager, Software Development Engineering, Big Data",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--Software-Development-Engineering--Big-Data_P749190-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Data Scientist",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Data-Scientist_P749556"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Software Development Engineer (Big Data)",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer--Big-Data-_P749426-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Manager, Software Engineering",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--Software-Engineering_P749438"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Product Manager, Workday",
+    "location": "",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Senior-Product-Manager--Workday_P749459-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Senior Regional Manager",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Regional-Manager_P749279-1"
@@ -12,13 +110,6 @@
     "title": "Software Development Engineer, Fullstack",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Software-Development-Engineer--Fullstack_P749282"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Product Manager, Workday",
-    "location": "",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Senior-Product-Manager--Workday_P749459-2"
   },
   {
     "source": "workday",
@@ -177,23 +268,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Manager, Software Engineering",
-    "location": "",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Senior-Manager--Software-Engineering_P749438"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Mortgage Operations Specialist",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mortgage-Operations-Specialist_P749628-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Data Analyst, Employee Service Center",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Data-Analyst--Employee-Service-Center_P749235-1"
   },
   {
     "source": "workday",
@@ -478,13 +555,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Manager, Software Development Engineering, Big Data",
-    "location": "",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Senior-Manager--Software-Development-Engineering--Big-Data_P749190-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Product Manager, Agent Performance",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Product-Manager--Agent-Performance_P749365-1"
@@ -667,20 +737,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Mid-Market Account Executive, Agent Software and Advertising - West Region",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mid-Market-Account-Executive--Agent-Software-and-Advertising---West-Region_P749317-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Manager, Employee Service Center",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--Employee-Service-Center_P749347-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Client Engineer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Client-Engineer_P748463-1"
@@ -765,13 +821,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Principal Technical Program Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Technical-Program-Manager_P748580-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Principal Data Scientist - Rentals Shopping",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Data-Scientist_P749116-1"
@@ -838,13 +887,6 @@
     "title": "Conversational AI Engineer",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Conversational-AI-Engineer_P749067-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Federal Government Relations Manager",
-    "location": "Remote-DC",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-DC/Federal-Government-Relations-Manager_P748232"
   },
   {
     "source": "workday",
