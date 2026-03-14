@@ -2,6 +2,27 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Senior iOS Engineer, 3D / Metal",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-iOS-Engineer_P748182-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Client Experience Specialist",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Client-Experience-Specialist_P749537-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Sales & Support Rep",
+    "location": "Irvine-CA-Michelson Dr",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Sales---Support-Rep_P749124"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Machine Learning Engineer, Agentic AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Machine-Learning-Engineer--Agentic-AI_P749437-2"
@@ -40,13 +61,6 @@
     "title": "Senior Strategy Business Partner",
     "location": "Remote-NY",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NY/Senior-Strategy-Business-Partner_P748809"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Pricing Strategy Director",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Pricing-Strategy-Director_P749757-1"
   },
   {
     "source": "workday",
@@ -222,13 +236,6 @@
     "title": "Software Development Engineer, Fullstack",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Software-Development-Engineer--Fullstack_P749282"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal, Sales Enablement",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal--Sales-Enablement_P749337"
   },
   {
     "source": "workday",
@@ -733,13 +740,6 @@
     "title": "Senior Product Manager, Data Platform",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Product-Manager--Data-Platform_P749415-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mortgage Sales & Support Rep",
-    "location": "Irvine-CA-Michelson Dr",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Sales---Support-Rep_P749124"
   },
   {
     "source": "workday",
@@ -1272,12 +1272,5 @@
     "title": "Senior Sales Operations Manager, Enhanced Market Sales Operations",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Operations-Manager--Enhanced-Market-Sales-Operations_P748117"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior iOS Engineer",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-iOS-Engineer_P748182-1"
   }
 ]
