@@ -2,6 +2,20 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Recruiter",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Recruiter_P749696"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Manager, Tax Planning",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Manager--Tax-Planning_P749644-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Remote Mortgage Loan Officer (Washington DC)",
     "location": "Remote-DC",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-DC/Remote-Mortgage-Loan-Officer--Washington-DC-_P749593-1"
@@ -131,13 +145,6 @@
     "title": "Senior Revenue Accountant",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Revenue-Accountant_P748810"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Photographer, Zillow Media Experts",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Photographer--Zillow-Media-Experts_P749791"
   },
   {
     "source": "workday",
@@ -362,13 +369,6 @@
     "title": "Senior Benefits Program Manager, Absence Management",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Benefits-Program-Manager--Absence-Management_P749333"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Quality Insights Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Quality-Insights-Program-Manager_P749027"
   },
   {
     "source": "workday",
@@ -758,13 +758,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Principal Product Manager, Sales Tools",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager--Sales-Tools_P749369-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Photographer, Zillow Media Experts",
     "location": "Remote-NY",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NY/Photographer--Zillow-Media-Experts_P749133"
@@ -775,13 +768,6 @@
     "title": "Senior Recruiter",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Recruiter_P749214"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Product Manager, Customer Experience Technology",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager--Customer-Experience-Technology_P749370-1"
   },
   {
     "source": "workday",
@@ -1018,13 +1004,6 @@
     "source": "workday",
     "company": "Zillow",
     "title": "Photographer, Zillow Media Experts",
-    "location": "Remote-CA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CA/Photographer--Zillow-Media-Experts_P749128"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Photographer, Zillow Media Experts",
     "location": "Remote-NY",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-NY/Photographer--Zillow-Media-Experts_P749135-1"
   },
@@ -1059,13 +1038,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Program Manager, Rental Ad Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Program-Manager--Rental-Ad-Manager_P748844-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Principal Program Manager, Ad Strategy and Operations",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Program-Manager--Ad-Strategy-and-Operations_P748813-1"
@@ -1087,23 +1059,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Business Advisor, Enterprise, Rentals",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Business-Advisor--Enterprise--Rentals_P748780-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Distinguished Scientist",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Distinguished-Scientist_P744870-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Product Manager, Rentals Applications & Screening",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager--Rentals-Applications---Screening_P748841-1"
   },
   {
     "source": "workday",
