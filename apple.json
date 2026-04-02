@@ -2,16 +2,30 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Data Scientist",
+    "title": "Tools and Automation Engineer - Trust and Safety",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200653418-3543/data-scientist?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200655217-0836/tools-and-automation-engineer-trust-and-safety?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software Engineer in Test, System Experience",
+    "title": "Software Engineer Graduate Program - 23 months",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200654275-0836/software-engineer-in-test-system-experience?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200653610-1418/software-engineer-graduate-program-23-months?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer, Platforms and Applications",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200647967-3543/software-engineer-platforms-and-applications?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "User Experience - Quality Engineering Manager",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200653562-0836/user-experience-quality-engineering-manager?team=SFTWR"
   },
   {
     "source": "apple",
@@ -30,16 +44,23 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software Engineer, Platforms and Applications",
+    "title": "Quality Engineer - Mail & Calendar Infrastructure, Enterprise Technology Services",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200647967-3543/software-engineer-platforms-and-applications?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200652929-0157/quality-engineer-mail-calendar-infrastructure-enterprise-technology-services?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Senior Security Engineering Manager",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200643802-3337/senior-security-engineering-manager?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
     "title": "Software Engineer in Test, System Experience",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200654275-3543/software-engineer-in-test-system-experience?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200654275-0836/software-engineer-in-test-system-experience?team=SFTWR"
   },
   {
     "source": "apple",
@@ -51,86 +72,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software QA Engineer, Apple Vision Pro, Vision Products Software",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200632669-3401/software-qa-engineer-apple-vision-pro-vision-products-software?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software QA Engineer, Wireless Technologies & Ecosystems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200654506-0836/software-qa-engineer-wireless-technologies-ecosystems?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Graphics Compositing UI Rendering Engineer, Graphics, Games, & ML",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200606688-0836/graphics-compositing-ui-rendering-engineer-graphics-games-ml?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
     "title": "Software Tools and Automation",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200653189-3337/software-tools-and-automation?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer (Python) - Supply Chain Integration",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200654501-0157/software-engineer-python-supply-chain-integration?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer Graduate Program - 23 months",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200653610-1418/software-engineer-graduate-program-23-months?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "User Experience - Quality Engineering Manager",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200653562-0836/user-experience-quality-engineering-manager?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Developer in Test - LocalStorage QA, Core OS",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646138-0157/software-developer-in-test-localstorage-qa-core-os?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Medical Device Quality Operations Lead - Health China",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200650668-3435/medical-device-quality-operations-lead-health-china?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Developer in Test - LocalStorage QA, Core OS",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646138-0836/software-developer-in-test-localstorage-qa-core-os?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Quality Engineer - Mail & Calendar Infrastructure, Enterprise Technology Services",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200652929-0157/quality-engineer-mail-calendar-infrastructure-enterprise-technology-services?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Quality Manager, Audio - Apple Vision Pro",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200654571-0365/software-quality-manager-audio-apple-vision-pro?team=SFTWR"
   },
   {
     "source": "apple",
@@ -142,6 +86,69 @@
   {
     "source": "apple",
     "company": "Apple",
+    "title": "Software Engineer (Python) - Supply Chain Integration",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200654501-0157/software-engineer-python-supply-chain-integration?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer in Test, System Experience",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200654275-3543/software-engineer-in-test-system-experience?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Data Engineer, Health Research Data",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200652830-0351/data-engineer-health-research-data?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software QA Engineer, Apple Vision Pro, Vision Products Software",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200632669-3401/software-qa-engineer-apple-vision-pro-vision-products-software?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Quality Manager, Audio - Apple Vision Pro",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200654571-0365/software-quality-manager-audio-apple-vision-pro?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software QA Engineer, Siri Speech",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200654955-0836/software-qa-engineer-siri-speech?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Optical Systems Integration Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200654988-0836/optical-systems-integration-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software QA Engineer, Wireless Technologies & Ecosystems",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200654506-0836/software-qa-engineer-wireless-technologies-ecosystems?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Test Automation Engineer, Business Process Re-engineering (Hyderabad)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200649733-1052/test-automation-engineer-business-process-re-engineering-hyderabad?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
     "title": "Senior Design Assurance Engineer - China",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200650676-3715/senior-design-assurance-engineer-china?team=OPMFG"
@@ -149,79 +156,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer, iPad",
+    "title": "Product Quality Engineer - AIML",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200645925-1340/manufacturing-quality-engineer-ipad?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Display Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646704-0836/display-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer - Battery",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200648338-3956/manufacturing-quality-engineer-battery?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Head of Technical Management / Manufacturing - Health China",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200650672-3715/head-of-technical-management-manufacturing-health-china?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Manager",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200652088-0836/manufacturing-quality-manager?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Product Quality Manager - Vision Pro",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200649387-0836/product-quality-manager-vision-pro?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Product Quality Manager- Watch",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646366-0836/product-quality-manager-watch?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Component Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200649463-1340/component-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer - Brittles",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200648317-0836/manufacturing-quality-engineer-brittles?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Product Quality Engineer-iPad",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200645948-1199/product-quality-engineer-ipad?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer (MQE) - Battery",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646770-3956/manufacturing-quality-engineer-mqe-battery?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200646580-3715/product-quality-engineer-aiml?team=OPMFG"
   },
   {
     "source": "apple",
@@ -233,6 +170,34 @@
   {
     "source": "apple",
     "company": "Apple",
+    "title": "Manufacturing Quality Manager",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200652088-0836/manufacturing-quality-manager?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Component Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200649463-1340/component-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Head of Technical Management / Manufacturing - Health China",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200650672-3715/head-of-technical-management-manufacturing-health-china?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Operations Reliability Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200653929-0836/operations-reliability-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
     "title": "Product Quality Engineer",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200646597-3916/product-quality-engineer?team=OPMFG"
@@ -240,9 +205,65 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "SME Manager, Coatings",
+    "title": "Product Quality Engineer-iPad",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646271-0836/sme-manager-coatings?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200645948-1199/product-quality-engineer-ipad?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer - Brittles",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200648317-0836/manufacturing-quality-engineer-brittles?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200649703-3435/manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer (MQE) - Battery",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200646770-3956/manufacturing-quality-engineer-mqe-battery?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Manager- Watch",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200646366-0836/product-quality-manager-watch?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Manager - Vision Pro",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200649387-0836/product-quality-manager-vision-pro?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer - Battery",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200648338-3956/manufacturing-quality-engineer-battery?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Operations Reliability Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200653929-3956/operations-reliability-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer, iPad",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200645925-1340/manufacturing-quality-engineer-ipad?team=OPMFG"
   },
   {
     "source": "apple",
@@ -257,26 +278,5 @@
     "title": "Product Quality Engineer - Vision Products Group",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200647306-0836/product-quality-engineer-vision-products-group?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Product Quality Engineer - AIML",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646580-3715/product-quality-engineer-aiml?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200649703-3435/manufacturing-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Test Automation Engineer, Business Process Re-engineering (Hyderabad)",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200649733-1052/test-automation-engineer-business-process-re-engineering-hyderabad?team=OPMFG"
   }
 ]
