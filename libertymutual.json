@@ -641,13 +641,6 @@
     "company": "Liberty Mutual",
     "title": "(Job)",
     "location": "",
-    "url": "https://careers-libertymutual.icims.com/jobs/75031/sales-representative%2c-inbound-remote/job"
-  },
-  {
-    "source": "icims",
-    "company": "Liberty Mutual",
-    "title": "(Job)",
-    "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/74783/senior-underwriting-officer%2c-north-american-specialty-casualty/job"
   },
   {
@@ -1398,5 +1391,12 @@
     "title": "(Job)",
     "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/75429/senior-underwriter%2c-middle-market-multi-industry/job"
+  },
+  {
+    "source": "icims",
+    "company": "Liberty Mutual",
+    "title": "(Job)",
+    "location": "",
+    "url": "https://careers-libertymutual.icims.com/jobs/73167/senior-solutions-engineer%2c-software-%28guidewire%29/job"
   }
 ]
