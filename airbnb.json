@@ -107,6 +107,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Engineering Manager, Checkout (Booking & Pricing)",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7859591?gh_jid=7859591"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Engineering Manager, Cloud Networking (Brazil)",
     "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/7381450?gh_jid=7381450"
@@ -194,13 +201,6 @@
     "title": "Experience Designer, Offline Design",
     "location": "San Francisco, CA",
     "url": "https://careers.airbnb.com/positions/7767673?gh_jid=7767673"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Fraud Investigations Manager",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7793255?gh_jid=7793255"
   },
   {
     "source": "greenhouse",
@@ -296,13 +296,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Knowledge Strategist (Mandarin)",
-    "location": "Seoul, South Korea",
-    "url": "https://careers.airbnb.com/positions/7672092?gh_jid=7672092"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Law Enforcement Engagement Lead - EMEA",
     "location": "France",
     "url": "https://careers.airbnb.com/positions/7742798?gh_jid=7742798"
@@ -327,13 +320,6 @@
     "title": "Lead, Advanced Analytics, Product",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7612790?gh_jid=7612790"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Lead, Advanced Analytics, Trust & Safety",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7572674?gh_jid=7572674"
   },
   {
     "source": "greenhouse",
@@ -527,13 +513,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Product Operations Lead",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7788387?gh_jid=7788387"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Programs and Business Operations Lead",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7834481?gh_jid=7834481"
@@ -551,6 +530,27 @@
     "title": "Programs & Business Operations Lead, Airbnb Services",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7812160?gh_jid=7812160"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Programs & Business Operations Lead, EMEA",
+    "location": "Barcelona, Spain",
+    "url": "https://careers.airbnb.com/positions/7866159?gh_jid=7866159"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Programs & Business Operations Lead, EMEA",
+    "location": "London, United Kingdom",
+    "url": "https://careers.airbnb.com/positions/7866325?gh_jid=7866325"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Programs & Business Operations Lead, EMEA",
+    "location": "Paris, France",
+    "url": "https://careers.airbnb.com/positions/7866324?gh_jid=7866324"
   },
   {
     "source": "greenhouse",
@@ -604,6 +604,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Safety Specialist",
+    "location": "Gurugram, India",
+    "url": "https://careers.airbnb.com/positions/7861010?gh_jid=7861010"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Sales Operations Lead, APAC",
     "location": "Singapore, Singapore",
     "url": "https://careers.airbnb.com/positions/7433769?gh_jid=7433769"
@@ -626,8 +633,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Android Automation Engineer",
-    "location": "Remote, Brazil",
+    "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/7380262?gh_jid=7380262"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Automation Engineer, Quality Platform",
+    "location": "Brazil",
+    "url": "https://careers.airbnb.com/positions/7863467?gh_jid=7863467"
   },
   {
     "source": "greenhouse",
@@ -726,13 +740,6 @@
     "title": "Senior Enablement Manager",
     "location": "Singapore",
     "url": "https://careers.airbnb.com/positions/7613446?gh_jid=7613446"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Frontend Engineer, Hosting Services",
-    "location": "London, England",
-    "url": "https://careers.airbnb.com/positions/7544451?gh_jid=7544451"
   },
   {
     "source": "greenhouse",
@@ -857,6 +864,13 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Market Manager",
+    "location": "San Francisco, United States",
+    "url": "https://careers.airbnb.com/positions/7592467?gh_jid=7592467"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Market Manager",
     "location": "Mexico",
     "url": "https://careers.airbnb.com/positions/7768237?gh_jid=7768237"
   },
@@ -870,30 +884,9 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Senior Market Manager, Services",
-    "location": "Mexico City, Mexico",
-    "url": "https://careers.airbnb.com/positions/7540550?gh_jid=7540550"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Senior MarTech Operations Manager",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7729205?gh_jid=7729205"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Platform Planning Manager",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7724030?gh_jid=7724030"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Privacy Architect Manager",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7782533?gh_jid=7782533"
   },
   {
     "source": "greenhouse",
@@ -940,16 +933,16 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Senior Software Engineer, App Foundation (Backend)",
+    "title": "Senior Software Engineer, AI Products",
     "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7717198?gh_jid=7717198"
+    "url": "https://careers.airbnb.com/positions/7175614?gh_jid=7175614"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Senior Software Engineer, Backend GraphQL",
-    "location": "Remote - USA",
-    "url": "https://careers.airbnb.com/positions/7547843?gh_jid=7547843"
+    "title": "Senior Software Engineer, App Foundation (Backend)",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7717198?gh_jid=7717198"
   },
   {
     "source": "greenhouse",
@@ -996,6 +989,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Senior Software Engineer, Insurance Platform",
+    "location": "Remote - USA",
+    "url": "https://careers.airbnb.com/positions/7862868?gh_jid=7862868"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Senior Software Engineer -Payments",
     "location": "Bangalore, India",
     "url": "https://careers.airbnb.com/positions/7581839?gh_jid=7581839"
@@ -1011,7 +1011,7 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Software Engineer, Quality Engineering",
-    "location": "Brazil - Remote",
+    "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/7380149?gh_jid=7380149"
   },
   {
@@ -1045,6 +1045,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Senior Software Engineer, Reputation",
+    "location": "Remote-USA",
+    "url": "https://careers.airbnb.com/positions/7775710?gh_jid=7775710"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Senior Software Engineer, Service Tools",
     "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/7490348?gh_jid=7490348"
@@ -1055,6 +1062,13 @@
     "title": "Senior Software Engineer,Trust Platform",
     "location": "Remote, USA",
     "url": "https://careers.airbnb.com/positions/7684833?gh_jid=7684833"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Software Engineer, Viaduct Backend GraphQL",
+    "location": "Remote - USA",
+    "url": "https://careers.airbnb.com/positions/7823003?gh_jid=7823003"
   },
   {
     "source": "greenhouse",
@@ -1206,6 +1220,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Senior Technical Program Manager, Payments",
+    "location": "Bangalore, India",
+    "url": "https://careers.airbnb.com/positions/7731737?gh_jid=7731737"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Software Engineer, Guest & Host",
     "location": "Remote, USA",
     "url": "https://careers.airbnb.com/positions/7579462?gh_jid=7579462"
@@ -1230,6 +1251,13 @@
     "title": "Software Engineer, Infrastructure",
     "location": "Brazil",
     "url": "https://careers.airbnb.com/positions/7365942?gh_jid=7365942"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Software Engineer, Trust",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7862376?gh_jid=7862376"
   },
   {
     "source": "greenhouse",
@@ -1328,13 +1356,6 @@
     "title": "Staff Android Engineer, Reservation Management & Additional Products",
     "location": "Remote - USA",
     "url": "https://careers.airbnb.com/positions/7539152?gh_jid=7539152"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Staff Backend Engineer, Core Entities Data Foundation",
-    "location": "Remote - US",
-    "url": "https://careers.airbnb.com/positions/7774153?gh_jid=7774153"
   },
   {
     "source": "greenhouse",
@@ -1444,13 +1465,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Staff Software Engineer, Communication Products",
-    "location": "Remote - USA",
-    "url": "https://careers.airbnb.com/positions/7655958?gh_jid=7655958"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Staff Software Engineer, Community Support Engineering",
     "location": "China",
     "url": "https://careers.airbnb.com/positions/6448191?gh_jid=6448191"
@@ -1545,6 +1559,13 @@
     "title": "Supervisor, Safety - Customer Service Delivery",
     "location": "Singapore",
     "url": "https://careers.airbnb.com/positions/7721430?gh_jid=7721430"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Supply Acquisition Lead, EMEA",
+    "location": "Dublin, Ireland",
+    "url": "https://careers.airbnb.com/positions/7866313?gh_jid=7866313"
   },
   {
     "source": "greenhouse",
