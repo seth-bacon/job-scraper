@@ -2,104 +2,6 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Senior AI/ML Software Development Engineer in Test",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200660852-0836/senior-ai-ml-software-development-engineer-in-test?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "AI/ML Tools and Automation Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200660856-3337/ai-ml-tools-and-automation-engineer?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Sr. Software QA Engineer, Siri Speech",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200643134-0836/sr-software-qa-engineer-siri-speech?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer - Intelligent Engineering Workflows",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200655381-3543/software-engineer-intelligent-engineering-workflows?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Data Engineer, Health Research Data",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200652830-0351/data-engineer-health-research-data?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Senior Software Engineer, Intelligent Automation & Developer Platforms",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200662429-0836/senior-software-engineer-intelligent-automation-developer-platforms?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Systems Engineer - Health Software Team",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200650677-3715/software-systems-engineer-health-software-team?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "iOS Native Apps Engineer, G&A Solutions Engineering (GSE)",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200657613-0157/ios-native-apps-engineer-g-a-solutions-engineering-gse?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer, Security",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200661789-2114/software-engineer-security?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Gate-level IR/EM CAD/NLP Engineer (m/f/d)",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200663150-1731/gate-level-ir-em-cad-nlp-engineer-m-f-d?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Cellular Software Enablement Engineer, Wireless Technologies & Ecosystems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200661207-3543/cellular-software-enablement-engineer-wireless-technologies-ecosystems?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer - Backend Systems, Software Delivery",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200661599-1731/software-engineer-backend-systems-software-delivery?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineering Systems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200662186-0836/software-engineering-systems?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Systems Software Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200663092-3543/systems-software-engineer?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
     "title": "Applied Networking Quality Engineer",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200662980-0836/applied-networking-quality-engineer?team=SFTWR"
@@ -114,13 +16,6 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Senior Machine Learning Engineer, Agentic Workflows - Software Delivery",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200662836-2114/senior-machine-learning-engineer-agentic-workflows-software-delivery?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
     "title": "Wifi/Bluetooth Software Engineer - Wireless Technologies & Ecosystems",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200662395-3543/wifi-bluetooth-software-engineer-wireless-technologies-ecosystems?team=SFTWR"
@@ -128,9 +23,16 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software Engineer - Analytics & Data Engineering",
+    "title": "Software Integrity Engineer, Camera & Photos",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200651399-2114/software-engineer-analytics-data-engineering?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200653661-0836/software-integrity-engineer-camera-photos?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "iOS Native Apps Engineer, G&A Solutions Engineering (GSE)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200657613-0157/ios-native-apps-engineer-g-a-solutions-engineering-gse?team=SFTWR"
   },
   {
     "source": "apple",
@@ -142,23 +44,100 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer, iPad",
+    "title": "Cellular Software Enablement Engineer, Wireless Technologies & Ecosystems",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200645925-1340/manufacturing-quality-engineer-ipad?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200661207-3543/cellular-software-enablement-engineer-wireless-technologies-ecosystems?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Materials Manufacturing Quality Engineer (MQE)",
+    "title": "Software Engineering Systems",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200661348-0836/materials-manufacturing-quality-engineer-mqe?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200662186-0836/software-engineering-systems?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Metal PVD Subject Matter Expert",
+    "title": "AI/ML Tools and Automation Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200657879-0836/metal-pvd-subject-matter-expert?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200660856-3337/ai-ml-tools-and-automation-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer - Backend Systems, Software Delivery",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200661599-1731/software-engineer-backend-systems-software-delivery?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Solution Architect- Customer Engagement",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200663543-0321/solution-architect-customer-engagement?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Gate-level IR/EM CAD/NLP Engineer (m/f/d)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200663150-1731/gate-level-ir-em-cad-nlp-engineer-m-f-d?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Solution Architect- Customer Engagement",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200663543-1052/solution-architect-customer-engagement?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Sr. Software QA Engineer, Siri Speech",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200643134-0836/sr-software-qa-engineer-siri-speech?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Senior AI/ML Software Development Engineer in Test",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200660852-0836/senior-ai-ml-software-development-engineer-in-test?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer - Intelligent Engineering Workflows",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200655381-3543/software-engineer-intelligent-engineering-workflows?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer, Accessibility",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200661027-3401/software-engineer-accessibility?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Senior Software Engineer, Intelligent Automation & Developer Platforms",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200662429-0836/senior-software-engineer-intelligent-automation-developer-platforms?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Systems Software Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200663092-3543/systems-software-engineer?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Senior Machine Learning Engineer, Agentic Workflows - Software Delivery",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200662836-2114/senior-machine-learning-engineer-agentic-workflows-software-delivery?team=SFTWR"
   },
   {
     "source": "apple",
@@ -170,30 +149,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Product Quality Engineer",
+    "title": "Metal PVD Subject Matter Expert",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200657113-3916/product-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200642137-3435/manufacturing-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer - Chennai",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200633507-3541/manufacturing-quality-engineer-chennai?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Product Quality Engineer, Mac",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200658321-1199/product-quality-engineer-mac?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200657879-0836/metal-pvd-subject-matter-expert?team=OPMFG"
   },
   {
     "source": "apple",
@@ -205,30 +163,30 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Product Quality Engineer, Mac",
+    "title": "Core Tech Supplier Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200658321-3715/product-quality-engineer-mac?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200660141-3916/core-tech-supplier-quality-engineer?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Product Quality Manager",
+    "title": "Product Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200660382-0836/product-quality-manager?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200663321-1340/product-quality-engineer?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Operations Reliability Engineer",
+    "title": "Manufacturing Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200657604-0836/operations-reliability-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200643033-3435/manufacturing-quality-engineer?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "DFM Engineer-Flex Assembly FPCA",
+    "title": "Product Quality Engineer, Display/Component - Japan",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200661771-3916/dfm-engineer-flex-assembly-fpca?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200663477-6482/product-quality-engineer-display-component-japan?team=OPMFG"
   },
   {
     "source": "apple",
@@ -240,9 +198,30 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Supplier Quality Engineer, Bare PCB",
+    "title": "Product Quality Engineer, Mac",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200655052-1340/supplier-quality-engineer-bare-pcb?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200658321-1199/product-quality-engineer-mac?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Manager",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200660382-0836/product-quality-manager?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Engineer, Mac",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200658321-3715/product-quality-engineer-mac?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer - Chennai",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200633507-3541/manufacturing-quality-engineer-chennai?team=OPMFG"
   },
   {
     "source": "apple",
@@ -256,7 +235,28 @@
     "company": "Apple",
     "title": "Manufacturing Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200643033-3435/manufacturing-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200642137-3435/manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Assurance",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200662280-3435/manufacturing-quality-assurance?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Supplier Quality Engineer (SQE), Display Component - Korea",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200663274-3631/supplier-quality-engineer-sqe-display-component-korea?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Materials Manufacturing Quality Engineer (MQE)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200661348-0836/materials-manufacturing-quality-engineer-mqe?team=OPMFG"
   },
   {
     "source": "apple",
@@ -268,15 +268,15 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Core Tech Supplier Quality Engineer",
+    "title": "Manufacturing Quality Engineer, iPad",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200660141-3916/core-tech-supplier-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200645925-1340/manufacturing-quality-engineer-ipad?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Assurance",
+    "title": "DFM Engineer-Flex Assembly FPCA",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200662280-3435/manufacturing-quality-assurance?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200661771-3916/dfm-engineer-flex-assembly-fpca?team=OPMFG"
   }
 ]
