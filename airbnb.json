@@ -269,15 +269,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Head of Homes Supply, Southeast Asia",
-    "location": "Singapore",
-    "url": "https://careers.airbnb.com/positions/7721178?gh_jid=7721178"
+    "location": "Bangkok, Thailand",
+    "url": "https://careers.airbnb.com/positions/7760751?gh_jid=7760751"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Head of Homes Supply, Southeast Asia",
-    "location": "Bangkok, Thailand",
-    "url": "https://careers.airbnb.com/positions/7760751?gh_jid=7760751"
+    "location": "Singapore",
+    "url": "https://careers.airbnb.com/positions/7721178?gh_jid=7721178"
   },
   {
     "source": "greenhouse",
@@ -388,13 +388,6 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Luxe Supply",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7895161?gh_jid=7895161"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Manager, Luxe Supply",
     "location": "Canada",
     "url": "https://careers.airbnb.com/positions/7895517?gh_jid=7895517"
   },
@@ -404,6 +397,13 @@
     "title": "Manager, Luxe Supply",
     "location": "London or Paris or Milan or Dublin",
     "url": "https://careers.airbnb.com/positions/7926559?gh_jid=7926559"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Manager, Luxe Supply",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7895161?gh_jid=7895161"
   },
   {
     "source": "greenhouse",
@@ -499,9 +499,9 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Premium Support Senior Associate",
-    "location": "Gurugram, India",
-    "url": "https://careers.airbnb.com/positions/7916842?gh_jid=7916842"
+    "title": "Principal AI/ML Researcher / Engineer Reasoning, Planning, and Decision-making systems",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7955573?gh_jid=7955573"
   },
   {
     "source": "greenhouse",
@@ -509,6 +509,13 @@
     "title": "Principal Engineer -In Bayesian, Large Foundational Systems, and Distributional Reinforcement Learning",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7947456?gh_jid=7947456"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Principal Machine Learning Engineer- LLM Fine-tuning and Optimization",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7955579?gh_jid=7955579"
   },
   {
     "source": "greenhouse",
@@ -563,8 +570,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Program Manager, Community Support",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/7927170?gh_jid=7927170"
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7944540?gh_jid=7944540"
   },
   {
     "source": "greenhouse",
@@ -577,8 +584,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Program Manager, Community Support",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7944540?gh_jid=7944540"
+    "location": "Canada",
+    "url": "https://careers.airbnb.com/positions/7927170?gh_jid=7927170"
   },
   {
     "source": "greenhouse",
@@ -668,13 +675,6 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Analyst, Advanced Analytics",
-    "location": "Paris, France",
-    "url": "https://careers.airbnb.com/positions/7867052?gh_jid=7867052"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Analyst, Advanced Analytics",
     "location": "Bangalore, India",
     "url": "https://careers.airbnb.com/positions/7602172?gh_jid=7602172"
   },
@@ -684,6 +684,13 @@
     "title": "Senior Analyst, Advanced Analytics",
     "location": "London, United Kingdom",
     "url": "https://careers.airbnb.com/positions/7866916?gh_jid=7866916"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Analyst, Advanced Analytics",
+    "location": "Paris, France",
+    "url": "https://careers.airbnb.com/positions/7867052?gh_jid=7867052"
   },
   {
     "source": "greenhouse",
@@ -927,6 +934,20 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Market Manager",
+    "location": "DC, United States",
+    "url": "https://careers.airbnb.com/positions/7586392?gh_jid=7586392"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Market Manager",
+    "location": "Rome, Italy",
+    "url": "https://careers.airbnb.com/positions/7591196?gh_jid=7591196"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Senior Market Manager",
     "location": "Mexico City, Mexico",
     "url": "https://careers.airbnb.com/positions/7895069?gh_jid=7895069"
   },
@@ -941,22 +962,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Market Manager",
-    "location": "DC, United States",
-    "url": "https://careers.airbnb.com/positions/7586392?gh_jid=7586392"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Market Manager",
     "location": "New York, United States",
     "url": "https://careers.airbnb.com/positions/7905012?gh_jid=7905012"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Market Manager",
-    "location": "Rome, Italy",
-    "url": "https://careers.airbnb.com/positions/7591196?gh_jid=7591196"
   },
   {
     "source": "greenhouse",
@@ -1102,15 +1109,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Software Engineer, Guest & Host",
-    "location": "London, United Kingdom",
-    "url": "https://careers.airbnb.com/positions/7898813?gh_jid=7898813"
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/7551565?gh_jid=7551565"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Software Engineer, Guest & Host",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/7551565?gh_jid=7551565"
+    "location": "London, United Kingdom",
+    "url": "https://careers.airbnb.com/positions/7898813?gh_jid=7898813"
   },
   {
     "source": "greenhouse",
@@ -1389,15 +1396,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Specialist, Premium Support",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/6852954?gh_jid=6852954"
+    "location": "Japan",
+    "url": "https://careers.airbnb.com/positions/7566181?gh_jid=7566181"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Specialist, Premium Support",
-    "location": "Japan",
-    "url": "https://careers.airbnb.com/positions/7566181?gh_jid=7566181"
+    "location": "Canada",
+    "url": "https://careers.airbnb.com/positions/6852954?gh_jid=6852954"
   },
   {
     "source": "greenhouse",
@@ -1636,13 +1643,6 @@
     "title": "Strategic Sourcing, Manager - Professional Services",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7881261?gh_jid=7881261"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Supply Acquisition Lead, EMEA",
-    "location": "Dublin, Ireland",
-    "url": "https://careers.airbnb.com/positions/7866313?gh_jid=7866313"
   },
   {
     "source": "greenhouse",
