@@ -2,6 +2,62 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Technical Product Manager, Marketing Technology",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Technical-Product-Manager--Marketing-Technology_P750145"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Product Counsel",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Counsel--StreetEasy---New-Construction_P750123-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Washington DC)",
+    "location": "Remote-DC",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-DC/Remote-Mortgage-Loan-Officer--Washington-DC-_P749593-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Virginia)",
+    "location": "Remote-VA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-VA/Remote-Mortgage-Loan-Officer--Virginia-_P749589-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Tennessee)",
+    "location": "Remote-TN",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-TN/Remote-Mortgage-Loan-Officer--Tennessee-_P749658"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Mississippi)",
+    "location": "Remote-MS",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MS/Remote-Mortgage-Loan-Officer--Mississippi-_P749652-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Georgia)",
+    "location": "Remote-GA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-GA/Remote-Mortgage-Loan-Officer--Georgia-_P749647-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Florida)",
+    "location": "Remote-FL",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-FL/Remote-Mortgage-Loan-Officer--Florida-_P749576-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Lifecycle Marketing Senior Specialist",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Lifecycle-Marketing-Senior-Specialist_P750294-1"
@@ -240,13 +296,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Technical Product Manager, Marketing Technology",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Technical-Product-Manager--Marketing-Technology_P750145"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Loan Officer Development Program (Seattle, WA)",
     "location": "Seattle-WA-2nd Ave",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Loan-Officer-Development-Program--Seattle--WA-_P750514-1"
@@ -362,48 +411,6 @@
     "title": "Senior AI-Native Product Engineer, Mobile",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-AI-Native-Product-Engineer--Mobile_P750290-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Maryland)",
-    "location": "Remote-MD",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MD/Remote-Mortgage-Loan-Officer--Maryland-_P749579-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Washington DC)",
-    "location": "Remote-DC",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-DC/Remote-Mortgage-Loan-Officer--Washington-DC-_P749593-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Virginia)",
-    "location": "Remote-VA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-VA/Remote-Mortgage-Loan-Officer--Virginia-_P749589-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Mississippi)",
-    "location": "Remote-MS",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MS/Remote-Mortgage-Loan-Officer--Mississippi-_P749652-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Tennessee)",
-    "location": "Remote-TN",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-TN/Remote-Mortgage-Loan-Officer--Tennessee-_P749658"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Florida)",
-    "location": "Remote-FL",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-FL/Remote-Mortgage-Loan-Officer--Florida-_P749576-1"
   },
   {
     "source": "workday",
@@ -765,13 +772,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Business Intelligence Analyst, Strategic Planning & Insights",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Business-Intelligence-Analyst_P750075-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Data Scientist, StreetEasy",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Data-Scientist--StreeyEasy_P750087-1"
@@ -859,13 +859,6 @@
     "title": "Senior Product Manager, Accounting",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Product-Manager--Finance-Technology_P749079-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Counsel, StreetEasy & New Construction",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Counsel--StreetEasy---New-Construction_P750123-1"
   },
   {
     "source": "workday",
@@ -1090,13 +1083,6 @@
     "title": "Marketing Senior Specialist, Media Planning",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Marketing-Senior-Specialist--Media-Planning_P749770"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Credit Specialist",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Credit-Specialist_P749781"
   },
   {
     "source": "workday",
