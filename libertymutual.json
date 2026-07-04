@@ -613,13 +613,6 @@
     "company": "Liberty Mutual",
     "title": "(Job)",
     "location": "",
-    "url": "https://careers-libertymutual.icims.com/jobs/76411/senior-analyst%2c-inland-marine-and-farm/job"
-  },
-  {
-    "source": "icims",
-    "company": "Liberty Mutual",
-    "title": "(Job)",
-    "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/76249/senior-claims-representative/job"
   },
   {
@@ -1398,5 +1391,12 @@
     "title": "(Job)",
     "location": "",
     "url": "https://careers-libertymutual.icims.com/jobs/75438/field-property-claims-adjuster/job"
+  },
+  {
+    "source": "icims",
+    "company": "Liberty Mutual",
+    "title": "(Job)",
+    "location": "",
+    "url": "https://careers-libertymutual.icims.com/jobs/75740/field-property-claims-adjuster/job"
   }
 ]
