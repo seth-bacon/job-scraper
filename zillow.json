@@ -2,9 +2,16 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "LOA Specialist (Part Time)",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/LOA-Specialist--Part-Time-_P750833-1"
+    "title": "Senior Systems Engineer",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Systems-Engineer_P749827-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Loan Officer Development Program (Seattle, WA)",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Loan-Officer-Development-Program--Seattle--WA-_P750514-1"
   },
   {
     "source": "workday",
@@ -12,6 +19,13 @@
     "title": "Senior Manager, Corporate Development",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--Corporate-Development_P750773"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "LOA Specialist (Part Time)",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/LOA-Specialist--Part-Time-_P750833-1"
   },
   {
     "source": "workday",
@@ -75,13 +89,6 @@
     "title": "Mid-Market Business Advisor, Single Family, Rentals",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mid-Market-Business-Advisor--Single-Family--Rentals_P750577-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mid-Market Account Executive, Single Family Rentals",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Mid-Market-Account-Executive--Single-Family-Rentals_P750642-1"
   },
   {
     "source": "workday",
@@ -233,20 +240,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Loan Officer Development Program (Seattle, WA)",
-    "location": "Seattle-WA-2nd Ave",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Loan-Officer-Development-Program--Seattle--WA-_P750514-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Systems Engineer",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Systems-Engineer_P749827-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Principal Product Manager, Renter Transactions & Partner Integrations",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager--Renter-Transactions---Partner-Integrations_P750355-1"
@@ -373,13 +366,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Director, Public Policy",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Director--Public-Policy_P750331"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Distinguished Scientist",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Distinguished-Scientist_P744870-1"
@@ -404,13 +390,6 @@
     "title": "Machine Learning Engineer, Agentic AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Machine-Learning-Engineer--Agentic-AI_P749437-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Machine Learning Engineer, Zillow Shopping AI",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Machine-Learning-Engineer--Zillow-Shopping-AI_P747947-1"
   },
   {
     "source": "workday",
@@ -884,13 +863,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Research Technologist",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Research-Technologist_P750148-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Sales Planning Manager",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Planning-Manager_P750524-1"
@@ -964,13 +936,6 @@
     "title": "Senior Technical Program Manager, FUB Engineering",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Technical-Program-Manager--FUB-Engineering_P749446-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Technical Program Manager, Product Development Acceleration",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Technical-Program-Manager--Product-Development-Acceleration_P750186-2"
   },
   {
     "source": "workday",
