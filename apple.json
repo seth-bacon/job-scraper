@@ -2,58 +2,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software Integrity Engineer, Sensing & Connectivity",
+    "title": "Software Engineer, Wireless Technologies & Ecosystems",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200670315-0836/software-integrity-engineer-sensing-connectivity?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Performance & Automation Test Engineer, Creativity Apps",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200675776-0836/performance-automation-test-engineer-creativity-apps?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineering Intern - AI Tools for Hardware Engineering PM",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200675600-3715/software-engineering-intern-ai-tools-for-hardware-engineering-pm?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Media Conferencing Quality Test Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200665280-3543/media-conferencing-quality-test-engineer?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Quality Engineering Manager, Apple Services Engineering",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200673912-0836/quality-engineering-manager-apple-services-engineering?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "AI Test Engineer, Sensing & Connectivity",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200676692-3543/ai-test-engineer-sensing-connectivity?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Location Software AI Tools Engineer, Sensing & Connectivity",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200671991-0836/location-software-ai-tools-engineer-sensing-connectivity?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Cellular Power Optimization Software Engineer, Wireless Technologies & Ecosystems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200657382-3543/cellular-power-optimization-software-engineer-wireless-technologies-ecosystems?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200675791-3956/software-engineer-wireless-technologies-ecosystems?team=SFTWR"
   },
   {
     "source": "apple",
@@ -65,37 +16,16 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software Development Engineer Test (SDET), Productivity Apps",
+    "title": "Software Engineering Intern - AI Tools for Hardware Engineering PM",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200677024-0157/software-development-engineer-test-sdet-productivity-apps?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200675600-3715/software-engineering-intern-ai-tools-for-hardware-engineering-pm?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Senior Software Development Engineer in Test — LLM Evaluation & Automation, T3E",
+    "title": "Wi-Fi Tools and Automation Engineer, Wireless Technologies & Ecosystems",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200674941-0836/senior-software-development-engineer-in-test-llm-evaluation-automation-t3e?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer, Wireless Technologies & Ecosystems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200675791-3956/software-engineer-wireless-technologies-ecosystems?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Senior Software Engineer - Java - Messaging Orchestration for Apple iCloud, Apple Music and more",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200653641-2114/senior-software-engineer-java-messaging-orchestration-for-apple-icloud-apple-music-and-more?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Developer in Test - Find My (Server)",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200649949-0836/software-developer-in-test-find-my-server?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200672212-3543/wi-fi-tools-and-automation-engineer-wireless-technologies-ecosystems?team=SFTWR"
   },
   {
     "source": "apple",
@@ -107,9 +37,16 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Staff Software Engineer, Apple Ads",
+    "title": "Senior Software Development Engineer in Test — LLM Evaluation & Automation, T3E",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200673649-3401/staff-software-engineer-apple-ads?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200674941-0836/senior-software-development-engineer-in-test-llm-evaluation-automation-t3e?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Quality Engineering Manager, Apple Services Engineering",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200673912-0836/quality-engineering-manager-apple-services-engineering?team=SFTWR"
   },
   {
     "source": "apple",
@@ -121,9 +58,51 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Staff Machine Learning Engineer, Tools and Framework AI",
+    "title": "Location Software AI Tools Engineer, Sensing & Connectivity",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200675799-0836/staff-machine-learning-engineer-tools-and-framework-ai?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200671991-0836/location-software-ai-tools-engineer-sensing-connectivity?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "AI Test Engineer, Sensing & Connectivity",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200676692-3543/ai-test-engineer-sensing-connectivity?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Developer in Test - Find My (Server)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200649949-0836/software-developer-in-test-find-my-server?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Development Engineer Test (SDET), Productivity Apps",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200677024-0157/software-development-engineer-test-sdet-productivity-apps?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Staff Software Engineer, Apple Ads",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200673649-3401/staff-software-engineer-apple-ads?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Performance & Automation Test Engineer, Creativity Apps",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200675776-0836/performance-automation-test-engineer-creativity-apps?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer in Test -AI/ML",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200677065-3337/software-engineer-in-test-ai-ml?team=SFTWR"
   },
   {
     "source": "apple",
@@ -142,51 +121,23 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "SMT(PCBA)DFM Engineer",
+    "title": "Software Integrity Engineer, Sensing & Connectivity",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200674718/smt-pcba-dfm-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200670315-0836/software-integrity-engineer-sensing-connectivity?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Reliability Engineer",
+    "title": "Software Development Engineer in Test, Creativity Apps",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200673037-3916/reliability-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200677395-3543/software-development-engineer-in-test-creativity-apps?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Technical Program Manager, System in Package Semiconductor Packaging Operations",
+    "title": "Software Development Engineer in Test, Car Key, Wireless Technologies & Ecosystems",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200676549-3715/technical-program-manager-system-in-package-semiconductor-packaging-operations?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Test Engineer, Audio & Home",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200657729-1340/test-engineer-audio-home?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Design & Manufacturing Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200675719-3435/manufacturing-design-manufacturing-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Product Quality Engineer, Display/Component - Korea",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200676545/product-quality-engineer-display-component-korea?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "MLB (Main Logic Board) Product Engineer - Chengdu",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200672850/mlb-main-logic-board-product-engineer-chengdu?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200677373-0836/software-development-engineer-in-test-car-key-wireless-technologies-ecosystems?team=SFTWR"
   },
   {
     "source": "apple",
@@ -198,16 +149,16 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "DFM Engineer-Flex Assembly / FPCA",
+    "title": "Technical Program Manager, System in Package",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200674248-3916/dfm-engineer-flex-assembly-fpca?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200676549-3916/technical-program-manager-system-in-package?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Software Engineer - Hardware Engineering Operations",
+    "title": "MLB (Main Logic Board) Product Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200665569-0157/software-engineer-hardware-engineering-operations?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200673782-3950/mlb-main-logic-board-product-engineer?team=OPMFG"
   },
   {
     "source": "apple",
@@ -219,6 +170,83 @@
   {
     "source": "apple",
     "company": "Apple",
+    "title": "SMT(PCBA)DFM Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200674294/smt-pcba-dfm-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Software Engineer - Hardware Engineering Operations",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200665569-0157/software-engineer-hardware-engineering-operations?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer, Beats",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200669742-1340/manufacturing-quality-engineer-beats?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "DFM Engineer-Flex Assembly / FPCA",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200674248-3916/dfm-engineer-flex-assembly-fpca?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Engineer, Display/Component - Korea",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200676545/product-quality-engineer-display-component-korea?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Design & Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200675719-3916/manufacturing-design-manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Test Engineer, Audio & Home",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200657729-1340/test-engineer-audio-home?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer, Battery",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200673786-3435/manufacturing-quality-engineer-battery?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Design & Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200675719-3435/manufacturing-design-manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer - Battery",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200676401-3956/manufacturing-quality-engineer-battery?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "SMT(PCBA)DFM Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200674718/smt-pcba-dfm-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
     "title": "Manufacturing Quality Engineer (MQE) - iPhone Enclosures",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200670527-0836/manufacturing-quality-engineer-mqe-iphone-enclosures?team=OPMFG"
@@ -226,9 +254,16 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Technical Program Manager, System in Package Semiconductor Packaging Operations",
+    "title": "Technical Program Manager, System in Package",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200676549-3916/technical-program-manager-system-in-package-semiconductor-packaging-operations?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200676549-3715/technical-program-manager-system-in-package?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Reliability Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200673037-3916/reliability-engineer?team=OPMFG"
   },
   {
     "source": "apple",
@@ -243,40 +278,5 @@
     "title": "Supplier Quality Engineer, Equipment",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200662535-1340/supplier-quality-engineer-equipment?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Design & Manufacturing Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200675719-3916/manufacturing-design-manufacturing-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer, Battery",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200673786-3435/manufacturing-quality-engineer-battery?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "MLB (Main Logic Board) Product Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200673782-3950/mlb-main-logic-board-product-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "SMT(PCBA)DFM Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200674294/smt-pcba-dfm-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer, Beats",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200669742-1340/manufacturing-quality-engineer-beats?team=OPMFG"
   }
 ]
