@@ -2,6 +2,41 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Workplace Coordinator",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Workplace-Coordinator_P750669"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Sales Enablement Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Enablement-Manager_P751130-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Scottsdale, AZ)",
+    "location": "Scottsdale-AZ-N Scottsdale Rd",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Scottsdale-AZ-N-Scottsdale-Rd/Remote-Mortgage-Loan-Officer--Scottsdale--AZ-_P750866-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Loan Officer (Irvine, CA)",
+    "location": "Irvine-CA-Michelson Dr",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Loan-Officer--Irvine--CA-_P749621-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Lead Counsel, Rentals",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Lead-Counsel--Rentals_P751112-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Senior Software Development Engineer, Big Data",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer--Big-Data_P750585-1"
@@ -240,13 +275,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Network Engineer",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Network-Engineer_P751083-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Data Scientist",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Data-Scientist_P750993-1"
@@ -271,13 +299,6 @@
     "title": "Senior SEO Product Manager, StreetEasy",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-SEO-Product-Manager--StreetEasy_P751024-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Scottsdale, AZ)",
-    "location": "Scottsdale-AZ-N Scottsdale Rd",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Scottsdale-AZ-N-Scottsdale-Rd/Remote-Mortgage-Loan-Officer--Scottsdale--AZ-_P750866-1"
   },
   {
     "source": "workday",
@@ -341,13 +362,6 @@
     "title": "Incident Manager",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Incident-Manager_P751038-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mortgage Loan Officer (Irvine, CA)",
-    "location": "Irvine-CA-Michelson Dr",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Loan-Officer--Irvine--CA-_P749621-1"
   },
   {
     "source": "workday",
@@ -639,13 +653,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Client Sales Manager, Mid-Market, New Construction",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Client-Sales-Manager--Mid-Market--New-Construction_P750848-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Systems Engineer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Systems-Engineer_P749827-1"
@@ -663,13 +670,6 @@
     "title": "Senior Data Scientist",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Data-Scientist_P750307-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Workplace Coordinator",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Workplace-Coordinator_P750669"
   },
   {
     "source": "workday",
@@ -775,13 +775,6 @@
     "title": "Senior Machine Learning Engineer, Rich Media Experiences",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Machine-Learning-Engineer--Rich-Media-Experiences_P750278-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Manager, Ads and Marketing Data Science",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Manager--Ads-and-Marketing-Data-Science_P750305"
   },
   {
     "source": "workday",
