@@ -2,6 +2,104 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Loan Officer Development Program (Overland Park, KS)",
+    "location": "Overland Park-KS-Foster Street",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Overland-Park-KS-Foster-Street/Loan-Officer-Development-Program--Overland-Park--KS-_P751199-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Loan Officer Development Program (Plano, TX)",
+    "location": "Plano-TX-Legacy Dr.-ZHL",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Plano-TX-Legacy-Dr-ZHL/Loan-Officer-Development-Program--Plano--TX-_P751198"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Loan Officer Development Program (Seattle, WA)",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Loan-Officer-Development-Program--Seattle--WA-_P751197-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Data Scientist",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Data-Scientist_P751133-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Loan Officer Development Program (Irvine, CA)",
+    "location": "Irvine-CA-Michelson Dr",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Loan-Officer-Development-Program--Irvine--CA-_P751196-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Atlanta, GA)",
+    "location": "Atlanta-GA-Howell Mill Road",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Atlanta-GA-Howell-Mill-Road/Remote-Mortgage-Loan-Officer--Atlanta--GA-_P750860-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Charlotte, NC)",
+    "location": "Charlotte-NC-S. Tryon Street, Suite 2700",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Charlotte-NC-S-Tryon-Street-Suite-2700/Remote-Mortgage-Loan-Officer--Charlotte--NC-_P750861"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Loan Officer (Seattle, WA)",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Mortgage-Loan-Officer--Seattle--WA-_P749620"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Loan Officer (Plano, TX)",
+    "location": "Plano-TX-Legacy Dr.-ZHL",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Plano-TX-Legacy-Dr-ZHL/Mortgage-Loan-Officer--Plano--TX-_P749661-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Scottsdale, AZ)",
+    "location": "Scottsdale-AZ-N Scottsdale Rd",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Scottsdale-AZ-N-Scottsdale-Rd/Remote-Mortgage-Loan-Officer--Scottsdale--AZ-_P750866-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Mortgage Loan Officer (Overland Park, KS)",
+    "location": "Overland Park-KS-Foster Street",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Overland-Park-KS-Foster-Street/Mortgage-Loan-Officer--Overland-Park--KS-_P749662-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Remote Mortgage Loan Officer (Chicago, IL)",
+    "location": "Chicago-IL-W Adams Street",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Chicago-IL-W-Adams-Street/Remote-Mortgage-Loan-Officer--Chicago--IL-_P750862-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Software Development Engineer, IOS",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Software-Development-Engineer--IOS_P751124-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Manager, Software Development Engineering",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Manager--Software-Development-Engineering_P750930-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Workplace Coordinator",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Workplace-Coordinator_P750669"
@@ -12,13 +110,6 @@
     "title": "Senior Sales Enablement Manager",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Enablement-Manager_P751130-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Scottsdale, AZ)",
-    "location": "Scottsdale-AZ-N Scottsdale Rd",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Scottsdale-AZ-N-Scottsdale-Rd/Remote-Mortgage-Loan-Officer--Scottsdale--AZ-_P750866-1"
   },
   {
     "source": "workday",
@@ -61,13 +152,6 @@
     "title": "Sr ServiceNow Developer",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Sr-ServiceNow-Developer_P751128-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Sr. Technical Program Manager",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Sr-Technical-Program-Manager_P751127-1"
   },
   {
     "source": "workday",
@@ -303,13 +387,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Machine Learning Engineer, Agentic AI",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Machine-Learning-Engineer--Agentic-AI_P749437-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Business Intelligence Manager, Product Analytics",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Business-Intelligence-Analyst_P750344-1"
@@ -327,27 +404,6 @@
     "title": "Photographer, Zillow Media Experts (Columbus, OH)",
     "location": "Remote-OH",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OH/Photographer--Zillow-Media-Experts--Columbus--OH-_P751093"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Loan Officer Development Program (Plano, TX)",
-    "location": "Plano-TX-Legacy Dr.-ZHL",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Plano-TX-Legacy-Dr-ZHL/Loan-Officer-Development-Program--Plano--TX-_P750462"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Loan Officer Development Program (Seattle, WA)",
-    "location": "Seattle-WA-2nd Ave",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Loan-Officer-Development-Program--Seattle--WA-_P750514-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Loan Officer Development Program (Irvine, CA)",
-    "location": "Irvine-CA-Michelson Dr",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Loan-Officer-Development-Program--Irvine--CA-_P750515"
   },
   {
     "source": "workday",
@@ -415,37 +471,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Mortgage Loan Officer (Plano, TX)",
-    "location": "Plano-TX-Legacy Dr.-ZHL",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Plano-TX-Legacy-Dr-ZHL/Mortgage-Loan-Officer--Plano--TX-_P749661-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mortgage Loan Officer (Overland Park, KS)",
-    "location": "Overland Park-KS-Foster Street",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Overland-Park-KS-Foster-Street/Mortgage-Loan-Officer--Overland-Park--KS-_P749662-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Chicago, IL)",
-    "location": "Chicago-IL-W Adams Street",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Chicago-IL-W-Adams-Street/Remote-Mortgage-Loan-Officer--Chicago--IL-_P750862-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Collateral Specialist",
     "location": "Irvine-CA-Michelson Dr",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Collateral-Specialist_P751000-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Loan Officer Development Program (Overland Park, KS)",
-    "location": "Overland Park-KS-Foster Street",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Overland-Park-KS-Foster-Street/Loan-Officer-Development-Program--Overland-Park--KS-_P750639-1"
   },
   {
     "source": "workday",
@@ -639,20 +667,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Charlotte, NC)",
-    "location": "Charlotte-NC-S. Tryon Street, Suite 2700",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Charlotte-NC-S-Tryon-Street-Suite-2700/Remote-Mortgage-Loan-Officer--Charlotte--NC-_P750861"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Remote Mortgage Loan Officer (Atlanta, GA)",
-    "location": "Atlanta-GA-Howell Mill Road",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Atlanta-GA-Howell-Mill-Road/Remote-Mortgage-Loan-Officer--Atlanta--GA-_P750860-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Systems Engineer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Systems-Engineer_P749827-1"
@@ -681,23 +695,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Mobile AI-Native Product Engineer",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Mobile-AI-Native-Product-Engineer_P750187"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Mortgage Disclosure Analyst",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Mortgage-Disclosure-Analyst_P750582-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mortgage Loan Officer (Seattle, WA)",
-    "location": "Seattle-WA-2nd Ave",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Mortgage-Loan-Officer--Seattle--WA-_P749620"
   },
   {
     "source": "workday",
