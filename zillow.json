@@ -2,6 +2,111 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Mortgage Loan Officer (Irvine, CA)",
+    "location": "Irvine-CA-Michelson Dr",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Loan-Officer--Irvine--CA-_P749621-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Network Engineer",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Network-Engineer_P751083-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Talent Intelligence Analyst",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Talent-Intelligence-Analyst_P751200-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Sales Enablement Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Enablement-Manager_P751130-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Director, Engineering",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Director--Engineering_P751170-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Manager, Customer Success - Enterprise",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Manager--Enterprise-Customer-Success_P750886-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Software Infrastructure Engineer - AI Tooling",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Infrastructure-Engineer---AI-Tooling_P751193"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Software Development Engineer, ZHL Operating System",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Software-Development-Engineer--ZHL-Operating-System_P751122-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sales Enablement Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Enablement-Manager_P751175-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Regional Designated Broker - Mid-Atlantic Territory Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Regional-Designated-Broker----Mid-Atlantic-Territory-Lead_P751213"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Regional Designated Broker - Southeast Territory Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Regional-Designated-Broker---Southeast-Territory-Lead_P751212"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Regional Designated Broker - Midwest Territory Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Regional-Designated-Broker---Midwest-Territory-Lead_P751211-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Regional Designated Broker - West Coast Territory Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Regional-Designated-Broker---West-Coast-Territory-Lead_P751214"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Regional Designated Broker - South Central Territory Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Regional-Designated-Broker---South-Central-Territory-Lead_P751215"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Product Manager, Listing Product",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager--Listing-Product_P751217-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Employee Service Coordinator",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Employee-Service-Coordinator_P751221-1"
@@ -103,20 +208,6 @@
     "title": "Workplace Coordinator",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Workplace-Coordinator_P750669"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Sales Enablement Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Enablement-Manager_P751130-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Mortgage Loan Officer (Irvine, CA)",
-    "location": "Irvine-CA-Michelson Dr",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Irvine-CA-Michelson-Dr/Mortgage-Loan-Officer--Irvine--CA-_P749621-1"
   },
   {
     "source": "workday",
@@ -236,13 +327,6 @@
     "title": "Senior GTM Process Architect",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-GTM-Process-Architect_P751068"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Manager, GTM Intelligence and Analytics",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Manager--GTM-Intelligence-and-Analytics_P751116-1"
   },
   {
     "source": "workday",
@@ -733,13 +817,6 @@
     "title": "Senior Machine Learning Engineer, Rich Media Experiences",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Machine-Learning-Engineer--Rich-Media-Experiences_P750278-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Software Development Engineer",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Software-Development-Engineer_P748924-1"
   },
   {
     "source": "workday",
