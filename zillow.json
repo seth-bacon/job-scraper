@@ -2,6 +2,34 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Fraud Operations Consultant, Rentals",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Fraud-Operations-Consultant--Rentals_P750699"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Employee Service Coordinator",
+    "location": "Mexico City",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Employee-Service-Coordinator_P751274"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sr Lead Counsel & Manager - Rentals",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Lead-Counsel--Rentals_P751112-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Software Development Engineer - Fullstack",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Software-Development-Engineer---Fullstack_P751269-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Remote Mortgage Loan Officer (Scottsdale, AZ)",
     "location": "Scottsdale-AZ-N Scottsdale Rd",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Scottsdale-AZ-N-Scottsdale-Rd/Remote-Mortgage-Loan-Officer--Scottsdale--AZ-_P750866-1"
@@ -100,13 +128,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Product Counsel, Real Estate Product",
-    "location": "Remote-WA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-WA/Senior-Product-Counsel---Real-Estate-Product_P751233-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Remote Mortgage Loan Officer (Philadelphia, PA)",
     "location": "Philadelphia-PA-Market Street",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Philadelphia-PA-Market-Street/Remote-Mortgage-Loan-Officer--Philadelphia--PA-_P750865-1"
@@ -152,13 +173,6 @@
     "title": "Director, Engineering",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Director--Engineering_P751170-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Manager, Customer Success - Enterprise",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Manager--Enterprise-Customer-Success_P750886-1"
   },
   {
     "source": "workday",
@@ -313,13 +327,6 @@
     "title": "Workplace Coordinator",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Workplace-Coordinator_P750669"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Lead Counsel, Rentals",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Lead-Counsel--Rentals_P751112-1"
   },
   {
     "source": "workday",
@@ -520,13 +527,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Photographer, Zillow Media Experts (Columbus, OH)",
-    "location": "Remote-OH",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-OH/Photographer--Zillow-Media-Experts--Columbus--OH-_P751093"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Incident Manager",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Incident-Manager_P751038-1"
@@ -688,13 +688,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior AI Program Manager, Talent",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-AI-Program-Manager--Talent_P750934"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Insurance Order Specialist",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Insurance-Order-Specialist_P750950-1"
@@ -779,13 +772,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Principal Software Engineer, Applied AI Services",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Principal-Software-Engineer--Applied-AI-Services_P750204-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior AI-Native Product Engineer, Full Stack",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-AI-Native-Product-Engineer--Full-Stack_P750295-1"
@@ -817,13 +803,6 @@
     "title": "Senior Machine Learning Engineer, Rich Media Experiences",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Machine-Learning-Engineer--Rich-Media-Experiences_P750278-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Software Engineer, Applied AI Services",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Engineer--Applied-AI-Services_P750190"
   },
   {
     "source": "workday",
