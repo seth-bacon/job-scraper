@@ -2,6 +2,104 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Software Development Engineer - Intern",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Software-Development-Engineer---Intern_P751630"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Program Manager, People Data Access & Governance",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Program-Manager--People-Data-Access---Governance_P751027-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Executive Assistant",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Executive-Assistant_P751550"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Applied Research Scientist, World Model",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Applied-Research-Scientist--World-Model_P751552-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Applied Scientist, Generative AI",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Applied-Scientist--Agentic-AI_P747465"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Machine Learning Engineer (Memory & Context)",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Machine-Learning-Engineer--Memory---Context-_P748680-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Applied Scientist (User Modeling)",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Applied-Scientist--User-Modeling-_P751443-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Applied Scientist (Economics) Intern",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Applied-Scientist--Economics--Intern_P751642-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Applied Scientist (Post-Training)",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Applied-Scientist_P751331"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Product Design Intern",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Product-Design-Intern_P751613"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Sales Development Representative, Rentals",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Sales-Development-Representative--Rentals_P751616"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Principal Machine Learning Engineer, Agentic AI",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Machine-Learning-Engineer--Agentic-AI_P747954"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Workforce Capability Lead",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Workforce-Capability-Lead_P751509-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Fullstack Engineer, Mortgage Fulfillment AI",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Fullstack-Engineer--Mortgage-Fulfillment-AI_P751548-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Principal Product Manager, Product Development Platforms",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager--Product-Development-Platforms_P751586-1"
@@ -285,13 +383,6 @@
     "title": "Remote Mortgage Loan Officer (Michigan)",
     "location": "Remote-MI",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-MI/Remote-Mortgage-Loan-Officer--Michigan-_P749581-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Content Creator & Cultural Specialist",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Content-Creator_P751372-1"
   },
   {
     "source": "workday",
@@ -870,23 +961,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Applied Scientist",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Applied-Scientist_P751331"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Product Manager, Rich Media",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Product-Manager--Rich-Media_P751273-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Machine Learning Engineer, Agentic AI",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Machine-Learning-Engineer--Agentic-AI_P747954"
   },
   {
     "source": "workday",
