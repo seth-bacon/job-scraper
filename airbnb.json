@@ -93,6 +93,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Early Career Software Engineer, Tech Foundations",
+    "location": "Sao Paulo - Brazil",
+    "url": "https://careers.airbnb.com/positions/8154749?gh_jid=8154749"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Engineering Manager, Guest & Host",
     "location": "London, United Kingdom",
     "url": "https://careers.airbnb.com/positions/7532824?gh_jid=7532824"
@@ -114,23 +121,9 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Engineering Manager, Tech Foundations",
-    "location": "Bangalore, India",
-    "url": "https://careers.airbnb.com/positions/8288417?gh_jid=8288417"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Gestionnaire, Excellence de la prestation de services",
     "location": "Ontario, Canada, Quebec, Canada",
     "url": "https://careers.airbnb.com/positions/8264827?gh_jid=8264827"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Gestionnaire sénior des opérations, Luxe",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/8279107?gh_jid=8279107"
   },
   {
     "source": "greenhouse",
@@ -206,15 +199,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Key Accounts - Hotels",
-    "location": "Dublin, Ireland",
-    "url": "https://careers.airbnb.com/positions/8303971?gh_jid=8303971"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Manager, Key Accounts - Hotels",
-    "location": "Barcelona, Spain",
-    "url": "https://careers.airbnb.com/positions/8303966?gh_jid=8303966"
+    "location": "Milan, Italy",
+    "url": "https://careers.airbnb.com/positions/8303967?gh_jid=8303967"
   },
   {
     "source": "greenhouse",
@@ -227,6 +213,13 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Key Accounts - Hotels",
+    "location": "Berlin, Germany",
+    "url": "https://careers.airbnb.com/positions/8303970?gh_jid=8303970"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Manager, Key Accounts - Hotels",
     "location": "London, United Kingdom",
     "url": "https://careers.airbnb.com/positions/8303917?gh_jid=8303917"
   },
@@ -234,22 +227,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Key Accounts - Hotels",
-    "location": "Milan, Italy",
-    "url": "https://careers.airbnb.com/positions/8303967?gh_jid=8303967"
+    "location": "Barcelona, Spain",
+    "url": "https://careers.airbnb.com/positions/8303966?gh_jid=8303966"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Manager, Key Accounts - Hotels",
-    "location": "Berlin, Germany",
-    "url": "https://careers.airbnb.com/positions/8303970?gh_jid=8303970"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Market Associate",
-    "location": "Paris, France",
-    "url": "https://careers.airbnb.com/positions/8306218?gh_jid=8306218"
+    "location": "Dublin, Ireland",
+    "url": "https://careers.airbnb.com/positions/8303971?gh_jid=8303971"
   },
   {
     "source": "greenhouse",
@@ -262,8 +248,8 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Market Associate",
-    "location": "Milan, Italy",
-    "url": "https://careers.airbnb.com/positions/8176559?gh_jid=8176559"
+    "location": "Paris, France",
+    "url": "https://careers.airbnb.com/positions/8306218?gh_jid=8306218"
   },
   {
     "source": "greenhouse",
@@ -275,16 +261,16 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Market Coordinator (12 Month Fixed-Term Contract)",
-    "location": "Paris, France",
-    "url": "https://careers.airbnb.com/positions/8303135?gh_jid=8303135"
+    "title": "Market Associate",
+    "location": "Milan, Italy",
+    "url": "https://careers.airbnb.com/positions/8176559?gh_jid=8176559"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Market Manager",
-    "location": "South Carolina, United States",
-    "url": "https://careers.airbnb.com/positions/8260010?gh_jid=8260010"
+    "title": "Market Coordinator (12 Month Fixed-Term Contract)",
+    "location": "Paris, France",
+    "url": "https://careers.airbnb.com/positions/8303135?gh_jid=8303135"
   },
   {
     "source": "greenhouse",
@@ -299,6 +285,13 @@
     "title": "Market Manager",
     "location": "Phoenix, Arizona",
     "url": "https://careers.airbnb.com/positions/8265896?gh_jid=8265896"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Market Manager",
+    "location": "South Carolina, United States",
+    "url": "https://careers.airbnb.com/positions/8260010?gh_jid=8260010"
   },
   {
     "source": "greenhouse",
@@ -415,13 +408,6 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Policy Manager, Quality",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/8185136?gh_jid=8185136"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
     "title": "Principal Machine Learning Engineer- LLM Fine-tuning and Optimization",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/7955579?gh_jid=7955579"
@@ -509,13 +495,6 @@
     "title": "Product Program Manager, Roadmap Planning & Program Management",
     "location": "San Francisco, United States",
     "url": "https://careers.airbnb.com/positions/8094412?gh_jid=8094412"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Program Manager, Community Support",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/8278753?gh_jid=8278753"
   },
   {
     "source": "greenhouse",
@@ -612,22 +591,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Compliance Lead, EMEA",
-    "location": "Dublin, Ireland",
-    "url": "https://careers.airbnb.com/positions/8318152?gh_jid=8318152"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Compliance Lead, EMEA",
     "location": "Brussels",
     "url": "https://careers.airbnb.com/positions/8318155?gh_jid=8318155"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
-    "title": "Senior Connectivity Partner Manager, Bangkok (SEA/IN)",
-    "location": "Bangkok, Thailand",
-    "url": "https://careers.airbnb.com/positions/8141377?gh_jid=8141377"
+    "title": "Senior Compliance Lead, EMEA",
+    "location": "Dublin, Ireland",
+    "url": "https://careers.airbnb.com/positions/8318152?gh_jid=8318152"
   },
   {
     "source": "greenhouse",
@@ -765,6 +737,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Senior Manager, Intelligence & Advocacy",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/8167113?gh_jid=8167113"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Senior Manager, Platform Product Management (Payments)",
     "location": "United States",
     "url": "https://careers.airbnb.com/positions/8175521?gh_jid=8175521"
@@ -838,20 +817,6 @@
     "title": "Senior Market Manager, Vietnamese Speaking (Bangkok Based)",
     "location": "Bangkok, Thailand",
     "url": "https://careers.airbnb.com/positions/8141266?gh_jid=8141266"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Operations Manager, Luxe",
-    "location": "United States",
-    "url": "https://careers.airbnb.com/positions/8279065?gh_jid=8279065"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Senior Operations Manager, Luxe",
-    "location": "Canada",
-    "url": "https://careers.airbnb.com/positions/8279103?gh_jid=8279103"
   },
   {
     "source": "greenhouse",
@@ -955,15 +920,15 @@
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Software Engineer, Tech Foundations",
-    "location": "San Francisco, CA",
-    "url": "https://careers.airbnb.com/positions/8209244?gh_jid=8209244"
+    "location": "USA",
+    "url": "https://careers.airbnb.com/positions/8197715?gh_jid=8197715"
   },
   {
     "source": "greenhouse",
     "company": "Airbnb",
     "title": "Senior Software Engineer, Tech Foundations",
-    "location": "USA",
-    "url": "https://careers.airbnb.com/positions/8197715?gh_jid=8197715"
+    "location": "San Francisco, CA",
+    "url": "https://careers.airbnb.com/positions/8209244?gh_jid=8209244"
   },
   {
     "source": "greenhouse",
@@ -1069,13 +1034,6 @@
     "title": "Software Engineer, Payments",
     "location": "Remote, USA",
     "url": "https://careers.airbnb.com/positions/8274152?gh_jid=8274152"
-  },
-  {
-    "source": "greenhouse",
-    "company": "Airbnb",
-    "title": "Software Engineer, Tech Foundations",
-    "location": "Sao Paulo - Brazil",
-    "url": "https://careers.airbnb.com/positions/8154749?gh_jid=8154749"
   },
   {
     "source": "greenhouse",
@@ -1297,6 +1255,13 @@
   {
     "source": "greenhouse",
     "company": "Airbnb",
+    "title": "Supervisor, Hotels",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/8283730?gh_jid=8283730"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
     "title": "Support Specialist, Premium",
     "location": "Canada",
     "url": "https://careers.airbnb.com/positions/8080766?gh_jid=8080766"
@@ -1307,6 +1272,13 @@
     "title": "Support Specialist, Premium",
     "location": "Canada",
     "url": "https://careers.airbnb.com/positions/6852954?gh_jid=6852954"
+  },
+  {
+    "source": "greenhouse",
+    "company": "Airbnb",
+    "title": "Support Specialist, R1",
+    "location": "Gurugram, India",
+    "url": "https://careers.airbnb.com/positions/8300382?gh_jid=8300382"
   },
   {
     "source": "greenhouse",
