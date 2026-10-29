@@ -2,9 +2,51 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Workforce Capability Lead",
+    "title": "Enterprise Customer Success Manager",
+    "location": "Remote-CO",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-CO/Enterprise-Customer-Success-Manager_P751358-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Recruiter",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Recruiter_P751413-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Applications Analyst - Billing (Zuora)",
     "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Workforce-Capability-Lead_P751509-1"
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Applications-Analyst---Billing_P751615"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "SEO Product Manager",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/SEO-Product-Manager_P751410-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "AV Engineer",
+    "location": "Seattle-WA-2nd Ave",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/AV-Engineer_P751376-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Growth Specialist I, Preferred",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Growth-Specialist--Preferred_P751575"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Accountant-Revenue",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Accountant-Revenue_P751617"
   },
   {
     "source": "workday",
@@ -576,13 +618,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Principal GTM Program Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Strategic-GTM-Program-Manager_P751279-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Principal Strategic Researcher",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Strategic-Researcher_P751568-1"
@@ -1136,13 +1171,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Recruiter",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Recruiter_P751413-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Mobile Engineer, iOS",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Mobile-Engineer--iOS_P751306-2"
@@ -1391,12 +1419,5 @@
     "title": "Senior Systems Engineer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Systems-Engineer_P749827-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Machine Learning Engineer",
-    "location": "Remote-Germany",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-Germany/Machine-Learning-Engineer_P750556-1"
   }
 ]
