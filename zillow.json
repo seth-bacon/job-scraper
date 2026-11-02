@@ -2,6 +2,34 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Strategic Account Executive, Agent Software and Advertising",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Strategic-Account-Executive--Agent-Software-and-Advertising_P751556-2"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Information Security Cyber Defense Incident Responder",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Information-Security-Cyber-Defense-Incident-Responder_P750946"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Data Scientist",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Data-Scientist_P750307-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Underwriting Enablement Manager",
+    "location": "Bengaluru",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Underwriting-Enablement-Manager_P751360-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Remote Mortgage Loan Officer (Washington DC)",
     "location": "Washington, DC-DC-Massachusetts Ave NW",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Washington-DC-DC-Massachusetts-Ave-NW/Remote-Mortgage-Loan-Officer--Washington-DC-_P749593-1"
@@ -415,13 +443,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Growth Specialist I, Preferred",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Growth-Specialist--Preferred_P751575"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Accountant-Revenue",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Accountant-Revenue_P751617"
@@ -453,13 +474,6 @@
     "title": "Senior Sourcing Specialist",
     "location": "Bengaluru",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Sourcing-Specialist_P750224"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Information Security Cyber Defense Incident Responder",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Information-Security-Cyber-Defense-Incident-Responder_P750946"
   },
   {
     "source": "workday",
@@ -506,13 +520,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Underwriting Enablement Manager",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Underwriting-Enablement-Manager_P751360-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Data Science Intern",
     "location": "Seattle-WA-2nd Ave",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Seattle-WA-2nd-Ave/Data-Science-Intern_P751677-1"
@@ -544,13 +551,6 @@
     "title": "Senior Software Development Engineer",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Software-Development-Engineer_P751373-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Software Development Engineer",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Software-Development-Engineer_P750928-1"
   },
   {
     "source": "workday",
@@ -702,13 +702,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Business Analyst, New Construction Sales Analytics",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Business-Analyst--New-Construction-Sales-Analytics_P751610"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Senior Frontend Software Development Engineer - Mexico",
     "location": "Mexico City",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Senior-Frontend-Software-Development-Engineer---Mexico_P751472-1"
@@ -821,13 +814,6 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Senior Data Scientist",
-    "location": "Bengaluru",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Bengaluru/Senior-Data-Scientist_P750307-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Applied Scientist",
     "location": "Remote-Germany",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-Germany/Applied-Scientist_P751407-1"
@@ -838,20 +824,6 @@
     "title": "Senior Applications Developer, Incentive Planning and Finance Operations",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Applications-Developer--Incentive-Planning-and-Finance-Operations_P751382-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Sales Systems Manager",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Systems-Manager_P751503-2"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Strategic Account Executive, Agent Software and Advertising",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Strategic-Account-Executive--Agent-Software-and-Advertising_P751556-2"
   },
   {
     "source": "workday",
@@ -1003,23 +975,9 @@
   {
     "source": "workday",
     "company": "Zillow",
-    "title": "Employee Service Coordinator",
-    "location": "Mexico City",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Mexico-City/Employee-Service-Coordinator_P751274"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
     "title": "Business SOX Compliance Manager",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Business-SOX-Compliance-Manager_P751341-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Principal Software Development Engineer, Backend",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Software-Development-Engineer--Backend_P751304-1"
   },
   {
     "source": "workday",
@@ -1062,13 +1020,6 @@
     "title": "Software Development Engineer",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Software-Development-Engineer_P748929-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Business Development Representative, Aryeo",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Business-Development-Representative--Aryeo_P751048-1"
   },
   {
     "source": "workday",
