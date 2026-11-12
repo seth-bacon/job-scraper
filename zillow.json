@@ -2,6 +2,41 @@
   {
     "source": "workday",
     "company": "Zillow",
+    "title": "Director, Workforce Planning",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Director--Workforce-Planning_P751529-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Software Development Engineer, Backend",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Software-Development-Engineer--Backend_P751857-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Client Experience Specialist, New Construction",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Client-Experience-Specialist--New-Construction_P751846-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Software Development Engineer, Fullstack",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Software-Development-Engineer_P748929-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
+    "title": "Senior Software Development Engineer, Fullstack",
+    "location": "Remote-USA",
+    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Software-Development-Engineer--Fullstack_P751859-1"
+  },
+  {
+    "source": "workday",
+    "company": "Zillow",
     "title": "Senior Sales Strategy Manager, New Construction",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Sales-Strategy-Manager--New-Construction_P751820-1"
@@ -33,13 +68,6 @@
     "title": "Senior Applied Scientist, Agentic AI",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Applied-Scientist--Agentic-AI_P751648-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Client Experience Specialist, New Construction",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Client-Experience-Specialist--New-Construction_P751846-1"
   },
   {
     "source": "workday",
@@ -271,13 +299,6 @@
     "title": "Principal Product Manager, Agentic AI Platform",
     "location": "Remote-USA",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Principal-Product-Manager---Agentic-AI-Platform_P751533-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Software Development Engineer",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Software-Development-Engineer_P751731-1"
   },
   {
     "source": "workday",
@@ -999,13 +1020,6 @@
     "title": "Applied Scientist",
     "location": "Remote-Germany",
     "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-Germany/Applied-Scientist_P751407-1"
-  },
-  {
-    "source": "workday",
-    "company": "Zillow",
-    "title": "Senior Applications Developer, Incentive Planning and Finance Operations",
-    "location": "Remote-USA",
-    "url": "https://zillow.wd5.myworkdayjobs.com/en-US/Zillow_Group_External/job/job/Remote-USA/Senior-Applications-Developer--Incentive-Planning-and-Finance-Operations_P751382-1"
   },
   {
     "source": "workday",
