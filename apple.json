@@ -2,100 +2,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Machine Learning Engineer, Evaluation and Quality, Creativity Apps",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693920-3350/machine-learning-engineer-evaluation-and-quality-creativity-apps?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Experienced CAD Automation Engineer (Design Verification)",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646200-3521/experienced-cad-automation-engineer-design-verification?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Development Engineer in Test - Camera API",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200694131-7141/software-development-engineer-in-test-camera-api?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software & Tools Engineering Project Manager",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693434-3749/software-tools-engineering-project-manager?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
     "title": "Senior Frontend Engineer - Mercury Frontend & Content",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200694548-2114/senior-frontend-engineer-mercury-frontend-content?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Engineering Manager, Siri Settings, Setup, and Compliance",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200686913-0836/engineering-manager-siri-settings-setup-and-compliance?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Tools & Automation Engineer — Early Career",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200692689-3956/tools-automation-engineer-early-career?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Senior QA Engineer - Apple TV App",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200694258-0215/senior-qa-engineer-apple-tv-app?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Senior Software Developer in Test - Embedded Sensors QE, Core OS",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693977-0836/senior-software-developer-in-test-embedded-sensors-qe-core-os?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Experienced CAD Automation Engineer (Design Verification)",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646200-1251/experienced-cad-automation-engineer-design-verification?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Tools and Automation Engineer - Media, Graphics, and Compute Technologies",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200691445-0836/tools-and-automation-engineer-media-graphics-and-compute-technologies?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Applied AI Engineer – Global Siri",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693675-6482/applied-ai-engineer-global-siri?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Software Engineer - Web UI Developer, Insights & Release Technologies",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200668586-1731/software-engineer-web-ui-developer-insights-release-technologies?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "ML Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693662-1418/ml-engineer?team=SFTWR"
   },
   {
     "source": "apple",
@@ -107,16 +16,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Experienced CAD Automation Engineer (Design Verification)",
+    "title": "Sr Software Engineer, Apple Ads",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200646200-2114/experienced-cad-automation-engineer-design-verification?team=SFTWR"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Cellular Software Enablement Engineer, Wireless Technologies & Ecosystems",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693290-3956/cellular-software-enablement-engineer-wireless-technologies-ecosystems?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200694621-0836/sr-software-engineer-apple-ads?team=SFTWR"
   },
   {
     "source": "apple",
@@ -128,6 +30,13 @@
   {
     "source": "apple",
     "company": "Apple",
+    "title": "Senior BE Automation Engineer - Video Tools",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200694737-0215/senior-be-automation-engineer-video-tools?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
     "title": "Software Development Engineer in Test - Camera API",
     "location": "",
     "url": "https://jobs.apple.com/en-us/details/200694131-3401/software-development-engineer-in-test-camera-api?team=SFTWR"
@@ -135,65 +44,79 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Intern - Software Automation Engineer",
+    "title": "Software Development Engineer in Test - Camera API",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693668-1418/intern-software-automation-engineer?team=SFTWR"
+    "url": "https://jobs.apple.com/en-us/details/200694131-7141/software-development-engineer-in-test-camera-api?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Operations Reliability Engineer",
+    "title": "Senior Software Developer in Test - Embedded Sensors QE, Core OS",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200690454-0836/operations-reliability-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200693977-0836/senior-software-developer-in-test-embedded-sensors-qe-core-os?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Assurance",
+    "title": "Senior QA Engineer - Apple TV App",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693657-3916/manufacturing-quality-assurance?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200694258-0215/senior-qa-engineer-apple-tv-app?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Assurance Intern",
+    "title": "UI Software Engineer - Apple TV",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200690946-3715/manufacturing-quality-assurance-intern?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200694832-3543/ui-software-engineer-apple-tv?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Assurance",
+    "title": "Embedded Systems Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200690073-3435/manufacturing-quality-assurance?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200694977-0836/embedded-systems-engineer?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer - Brittles",
+    "title": "Tools & Automation Engineer — Early Career",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200692692-0836/manufacturing-quality-engineer-brittles?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200692689-3956/tools-automation-engineer-early-career?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Product Quality Engineer (iPads)",
+    "title": "Senior Software Engineer, AI Inference Asset Delivery Platform",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200692407-1340/product-quality-engineer-ipads?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200694541-3337/senior-software-engineer-ai-inference-asset-delivery-platform?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer",
+    "title": "Software Development Engineer, Test Tooling",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200691879-3916/manufacturing-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200693291-0836/software-development-engineer-test-tooling?team=SFTWR"
   },
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Assurance Intern",
+    "title": "Machine Learning Engineer, Evaluation and Quality, Creativity Apps",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200690946-3435/manufacturing-quality-assurance-intern?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200691707-7141/machine-learning-engineer-evaluation-and-quality-creativity-apps?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Engineering Manager, Siri Settings, Setup, and Compliance",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200686913-0836/engineering-manager-siri-settings-setup-and-compliance?team=SFTWR"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Experienced CAD Automation Engineer (Design Verification)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200646200-2114/experienced-cad-automation-engineer-design-verification?team=SFTWR"
   },
   {
     "source": "apple",
@@ -212,9 +135,16 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer",
+    "title": "Manufacturing Quality Assurance Intern",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200691585-0836/manufacturing-quality-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200690946-3435/manufacturing-quality-assurance-intern?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Assurance",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200690073-3435/manufacturing-quality-assurance?team=OPMFG"
   },
   {
     "source": "apple",
@@ -226,30 +156,9 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Manufacturing Quality Engineer Intern",
+    "title": "Test Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200688443-3715/manufacturing-quality-engineer-intern?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200688401-3435/manufacturing-quality-engineer?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Assurance",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200693657-3715/manufacturing-quality-assurance?team=OPMFG"
-  },
-  {
-    "source": "apple",
-    "company": "Apple",
-    "title": "Manufacturing Quality Engineer Intern",
-    "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200688443-3435/manufacturing-quality-engineer-intern?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200691413-0157/test-engineer?team=OPMFG"
   },
   {
     "source": "apple",
@@ -261,16 +170,44 @@
   {
     "source": "apple",
     "company": "Apple",
-    "title": "Test Engineer",
+    "title": "Manufacturing Quality Engineer",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200691413-0157/test-engineer?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200691585-0836/manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer Intern",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200688443-3715/manufacturing-quality-engineer-intern?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Product Quality Engineer (iPads)",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200692407-1340/product-quality-engineer-ipads?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200688401-3435/manufacturing-quality-engineer?team=OPMFG"
+  },
+  {
+    "source": "apple",
+    "company": "Apple",
+    "title": "Manufacturing Quality Engineer",
+    "location": "",
+    "url": "https://jobs.apple.com/en-us/details/200691879-3916/manufacturing-quality-engineer?team=OPMFG"
   },
   {
     "source": "apple",
     "company": "Apple",
     "title": "Manufacturing Quality Assurance",
     "location": "",
-    "url": "https://jobs.apple.com/en-us/details/200690073-3916/manufacturing-quality-assurance?team=OPMFG"
+    "url": "https://jobs.apple.com/en-us/details/200693657-3916/manufacturing-quality-assurance?team=OPMFG"
   },
   {
     "source": "apple",
